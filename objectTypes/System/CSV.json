@@ -1,0 +1,12 @@
+{
+	"name": "CSV",
+	"plugin-id": "CSV",
+	"sid": 581744411807465,
+	"singleglobal-inst": {
+		"type": "CSV",
+		"properties": {},
+		"uid": 725,
+		"sid": 573201238213166,
+		"tags": ""
+	}
+}

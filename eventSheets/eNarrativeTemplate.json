@@ -1,0 +1,517 @@
+{
+	"name": "eNarrativeTemplate",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "heightIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 498460128254183
+		},
+		{
+			"eventType": "variable",
+			"name": "currentSceneID",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 972349804569411
+		},
+		{
+			"eventType": "variable",
+			"name": "charIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 344903156728576
+		},
+		{
+			"eventType": "variable",
+			"name": "typewriterSpeed",
+			"type": "number",
+			"initialValue": "0.025",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 613396951612866
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 471638410880428
+				}
+			],
+			"actions": [
+				{
+					"id": "request-project-file",
+					"objectClass": "AJAX",
+					"sid": 478620247872767,
+					"parameters": {
+						"tag": "\"Request_Dialogues\"",
+						"file": "dialogues_es.csv"
+					}
+				},
+				{
+					"callFunction": "InitializeDialogueTemplate",
+					"sid": 303968171271974
+				}
+			],
+			"sid": 452249456784654
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-completed",
+					"objectClass": "AJAX",
+					"sid": 449140956153938,
+					"parameters": {
+						"tag": "\"Request_Dialogues\""
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "parse-csv",
+					"objectClass": "CSV",
+					"sid": 685963168067138,
+					"parameters": {
+						"csv": "AJAX.LastData",
+						"delimiter": "\";\"",
+						"array": "CSV_Array",
+						"data-type": "auto"
+					}
+				},
+				{
+					"callFunction": "SetDialogueInstance",
+					"sid": 432885975504330
+				}
+			],
+			"sid": 882911555960201
+		},
+		{
+			"eventType": "comment",
+			"text": "Click en \"Next\": Si el texto no está terminado, terminarlo. Si está terminado, si el prox texto es de otra escena, pasa de escena. Si no, settea la próxima línea de diálogo"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "Btn_Next",
+					"sid": 251711371755469
+				}
+			],
+			"actions": [],
+			"sid": 321046251879769,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 170415613918220,
+							"parameters": {
+								"first-value": "charIndex",
+								"comparison": 5,
+								"second-value": "len(CSV_Array.At(5,heightIndex))"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 463767271884385,
+							"parameters": {
+								"variable": "heightIndex",
+								"value": "1"
+							}
+						}
+					],
+					"sid": 553484069368922,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-xy",
+									"objectClass": "CSV_Array",
+									"sid": 241930987695271,
+									"parameters": {
+										"x": "0",
+										"y": "heightIndex",
+										"comparison": 1,
+										"value": "currentSceneID"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-to-eventvar",
+									"objectClass": "System",
+									"sid": 720046790504914,
+									"parameters": {
+										"variable": "currentSceneID",
+										"value": "1"
+									}
+								},
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 577841579390758,
+									"parameters": {
+										"layout": "Credits"
+									}
+								}
+							],
+							"sid": 745115326600489
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 727289273371067
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "SetDialogueInstance",
+									"sid": 311764395798359
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 732650089850937,
+									"parameters": {
+										"variable": "charIndex",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 497398230107779
+						}
+					]
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "else",
+							"objectClass": "System",
+							"sid": 465112714972028
+						}
+					],
+					"actions": [
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 965751193235377,
+							"parameters": {
+								"variable": "charIndex",
+								"value": "len(CSV_Array.At(5,heightIndex))"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Txt_Dialogue",
+							"sid": 769251401508684,
+							"parameters": {
+								"text": "left(CSV_Array.At(5,heightIndex), charIndex)"
+							}
+						}
+					],
+					"sid": 374061484982927
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Efecto de Máquina de Escribir --> No puede ser dentro de función si no no puede usar every X seconds"
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-two-values",
+					"objectClass": "System",
+					"sid": 150513208164010,
+					"parameters": {
+						"first-value": "charIndex",
+						"comparison": 2,
+						"second-value": "len(CSV_Array.At(5,heightIndex))"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 105303725860268,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "every-x-seconds",
+							"objectClass": "System",
+							"sid": 991110133709421,
+							"parameters": {
+								"interval-seconds": "typewriterSpeed"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 693162197983250,
+							"parameters": {
+								"variable": "charIndex",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Txt_Dialogue",
+							"sid": 874674183974716,
+							"parameters": {
+								"text": "left(CSV_Array.At(5,heightIndex), charIndex)"
+							}
+						}
+					],
+					"sid": 236629499561775
+				}
+			]
+		},
+		{
+			"eventType": "comment",
+			"text": "Por ahora las funciones aca, capaz dsps cambiamos agrupaciones"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Funciones",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "InitializeDialogueTemplate",
+					"functionDescription": "Inicializar variables, objetos",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [
+						{
+							"id": "set-visible",
+							"objectClass": "LeftPortrait",
+							"sid": 797371045861728,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "RightPortrait",
+							"sid": 138484301994794,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Txt_LeftName",
+							"sid": 608006329550979,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Txt_RightName",
+							"sid": 870828897537405,
+							"parameters": {
+								"text": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "Txt_Dialogue",
+							"sid": 543542302127531,
+							"parameters": {
+								"text": "\"\""
+							}
+						}
+					],
+					"sid": 982640068187093
+				},
+				{
+					"functionName": "SetDialogueInstance",
+					"functionDescription": "Settear una \"instancia\" de dialogo (poner cada cosita del archivo .csv) ",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 707230112501400,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-xy",
+									"objectClass": "CSV_Array",
+									"sid": 177629706395338,
+									"parameters": {
+										"x": "2",
+										"y": "heightIndex",
+										"comparison": 0,
+										"value": "\"Left\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "LeftPortrait",
+									"sid": 267603726759322,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "RightPortrait",
+									"sid": 540361859672964,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_LeftName",
+									"sid": 135081559189835,
+									"parameters": {
+										"text": "CSV_Array.At(4, heightIndex)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_RightName",
+									"sid": 402711390812413,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_Dialogue",
+									"sid": 226973757155675,
+									"disabled": true,
+									"parameters": {
+										"text": "CSV_Array.At(5, heightIndex)"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "Txt_Dialogue",
+									"sid": 626144132247442,
+									"parameters": {
+										"horizontal-alignment": "left"
+									}
+								}
+							],
+							"sid": 842243465769039
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-at-xy",
+									"objectClass": "CSV_Array",
+									"sid": 242254855297529,
+									"parameters": {
+										"x": "2",
+										"y": "heightIndex",
+										"comparison": 0,
+										"value": "\"Right\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-visible",
+									"objectClass": "LeftPortrait",
+									"sid": 822523526002545,
+									"parameters": {
+										"visibility": "invisible"
+									}
+								},
+								{
+									"id": "set-visible",
+									"objectClass": "RightPortrait",
+									"sid": 140119279459182,
+									"parameters": {
+										"visibility": "visible"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_RightName",
+									"sid": 462400996947428,
+									"parameters": {
+										"text": "CSV_Array.At(4, heightIndex)"
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_LeftName",
+									"sid": 380151633717073,
+									"parameters": {
+										"text": "\"\""
+									}
+								},
+								{
+									"id": "set-text",
+									"objectClass": "Txt_Dialogue",
+									"sid": 495448269830148,
+									"disabled": true,
+									"parameters": {
+										"text": "CSV_Array.At(5, heightIndex)"
+									}
+								},
+								{
+									"id": "set-horizontal-alignment",
+									"objectClass": "Txt_Dialogue",
+									"sid": 393940286866299,
+									"parameters": {
+										"horizontal-alignment": "right"
+									}
+								}
+							],
+							"sid": 810702659145275
+						}
+					]
+				}
+			],
+			"sid": 677259803924488
+		}
+	],
+	"sid": 914459006665222
+}

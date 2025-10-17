@@ -1,0 +1,25 @@
+{
+	"name": "Txt_Dialogue",
+	"plugin-id": "Text",
+	"sid": 725459834276403,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [
+		{
+			"name": "timer",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 861191164320732
+		},
+		{
+			"name": "timerMax",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 784995800308107
+		}
+	],
+	"behaviorTypes": [],
+	"effectTypes": []
+}
