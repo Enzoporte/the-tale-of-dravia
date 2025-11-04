@@ -3712,6 +3712,108 @@
 									"conditions": [
 										{
 											"id": "pick-by-unique-id",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 298663940719307,
+											"parameters": {
+												"unique-id": "enemyUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 259633738549927,
+											"parameters": {
+												"animation": "\"Hurt_\" & En_MeleeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 188581550233260,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 478749156501804,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 246967994919658,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										}
+									],
+									"sid": 692611063574362
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 678706140316413,
+											"parameters": {
+												"unique-id": "enemyUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 355311141024533,
+											"parameters": {
+												"animation": "\"Hurt_\" & En_RangeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 370792606907392,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 593685646296727,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 450106864809424,
+											"parameters": {
+												"collisions": "disabled"
+											}
+										}
+									],
+									"sid": 666162960306261
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
 											"objectClass": "En_Ghost_Mask",
 											"sid": 489766896530195,
 											"parameters": {
@@ -4074,6 +4176,90 @@
 									"conditions": [
 										{
 											"id": "pick-by-unique-id",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 931459339135666,
+											"parameters": {
+												"unique-id": "pairUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 169434932021370,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "choose(\"Idle\", \"Attack\")"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 373984743757469,
+											"parameters": {
+												"collisions": "enabled"
+											}
+										}
+									],
+									"sid": 826610557519413
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 506739931713245,
+											"parameters": {
+												"unique-id": "pairUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 112935371055151,
+											"parameters": {
+												"animation": "\"Idle_\" & En_MeleeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 460040094805709,
+											"parameters": {
+												"instance-variable": "State",
+												"value": "\"Idle\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 904960956202268,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-collisions-enabled",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 414326530736745,
+											"parameters": {
+												"collisions": "enabled"
+											}
+										}
+									],
+									"sid": 825637447026145
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
 											"objectClass": "En_Ghost_Mask",
 											"sid": 136030410332422,
 											"parameters": {
@@ -4298,6 +4484,110 @@
 										}
 									],
 									"sid": 762170528745716
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 310272073925758,
+											"parameters": {
+												"unique-id": "pairUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Audio_Play_Sound",
+											"sid": 783445236280396,
+											"parameters": [
+												"\"Enemy_Destroy\"",
+												"0",
+												"\"Enemy_Destroy\""
+											]
+										},
+										{
+											"id": "destroy",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 430951909412217
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 667484492303376,
+											"parameters": {
+												"object-to-create": "Particle",
+												"layer": "\"Objects\"",
+												"x": "En_MeleeGuard_Mask.X",
+												"y": "En_MeleeGuard_Mask.Y - 8",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"callFunction": "Drop_Collectible",
+											"sid": 626550250383644,
+											"parameters": [
+												"En_MeleeGuard_Mask.X",
+												"En_MeleeGuard_Mask.Y - 8",
+												"int(3 + random(6))"
+											]
+										}
+									],
+									"sid": 762325908535994
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "pick-by-unique-id",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 364100180052289,
+											"parameters": {
+												"unique-id": "pairUid"
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Audio_Play_Sound",
+											"sid": 175342072356886,
+											"parameters": [
+												"\"Enemy_Destroy\"",
+												"0",
+												"\"Enemy_Destroy\""
+											]
+										},
+										{
+											"id": "destroy",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 648869447654017
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 114965177097320,
+											"parameters": {
+												"object-to-create": "Particle",
+												"layer": "\"Objects\"",
+												"x": "En_RangeGuard_Mask.X",
+												"y": "En_RangeGuard_Mask.Y - 8",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"callFunction": "Drop_Collectible",
+											"sid": 166498583178704,
+											"parameters": [
+												"En_RangeGuard_Mask.X",
+												"En_RangeGuard_Mask.Y - 8",
+												"int(3 + random(6))"
+											]
+										}
+									],
+									"sid": 872610515570784
 								},
 								{
 									"eventType": "block",
@@ -7095,6 +7385,1442 @@
 						}
 					],
 					"sid": 383585511002508
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "MeleeGuard",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Passive"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "En_MeleeGuard_Base",
+									"sid": 907924805245258
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "En_MeleeGuard_Base",
+									"sid": 918188944736780,
+									"parameters": {
+										"instance-variable": "Pair_ID",
+										"value": "En_MeleeGuard_Mask.UID"
+									}
+								}
+							],
+							"sid": 833860754595026
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 699062901620184
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "En_MeleeGuard_Mask",
+									"sid": 109776982990868,
+									"parameters": {
+										"x": "En_MeleeGuard_Base.X",
+										"y": "En_MeleeGuard_Base.Y"
+									}
+								}
+							],
+							"sid": 352539578322844
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 998312195546490,
+									"parameters": {
+										"object": "En_MeleeGuard_Base"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "En_MeleeGuard_Mask",
+									"sid": 887448045745997,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"Idle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "En_MeleeGuard_Base",
+									"sid": 113517671253705,
+									"parameters": {
+										"instance-variable": "Player_AngleDiff",
+										"value": "((angle(Player_Base.X,Player_Base.Y,En_MeleeGuard_Base.X,En_MeleeGuard_Base.Y)+360)%360) - 180"
+									}
+								}
+							],
+							"sid": 483946270950604,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 295823161333216,
+											"parameters": {
+												"angle-1": "En_MeleeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "270"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 963189522651072,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Up\""
+											}
+										}
+									],
+									"sid": 602729557529934
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 178208926010808,
+											"parameters": {
+												"angle-1": "En_MeleeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "180"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 152273518327803,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Left\""
+											}
+										}
+									],
+									"sid": 425029488215363
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 627685596952193,
+											"parameters": {
+												"angle-1": "En_MeleeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "90"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 929445942451978,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Down\""
+											}
+										}
+									],
+									"sid": 394841203726228
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 861142457482684,
+											"parameters": {
+												"angle-1": "En_MeleeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 795004864238291,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Right\""
+											}
+										}
+									],
+									"sid": 638183515684105
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": "Behavior"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "En_MeleeGuard_Mask",
+									"sid": 181173154438098,
+									"parameters": {
+										"instance-variable": "Active"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 243692461154753,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 508393165913711,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 932318682057833,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 972791242124305,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 516902793100316
+								},
+								{
+									"eventType": "comment",
+									"text": " Idle"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 849725748324270,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Idle\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 940708096148994,
+											"parameters": {
+												"animation": "\"Idle_\" & En_MeleeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 469082596025599,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 268146284396843,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"comparison": 5,
+														"value": "Self.StateLimit"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 275848454472660,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 477721737517679,
+															"parameters": {
+																"first-value": "distance(En_MeleeGuard_Base.X,En_MeleeGuard_Base.Y,Player_Base.X,Player_Base.Y)",
+																"comparison": 3,
+																"second-value": "30"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 134129894669192,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Attack\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 500093205962272,
+															"parameters": {
+																"instance-variable": "State_Timer",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 662549673515302,
+															"parameters": {
+																"instance-variable": "StateLimit",
+																"value": "0.2 + random(0.8)"
+															}
+														}
+													],
+													"sid": 340414914430318
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 992633235880827
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 247016553201832,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Walk\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 917896280189653,
+															"parameters": {
+																"instance-variable": "State_Timer",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_MeleeGuard_Mask",
+															"sid": 997618542228258,
+															"parameters": {
+																"instance-variable": "StateLimit",
+																"value": "0.2 + random(0.8)"
+															}
+														}
+													],
+													"sid": 413307758101575
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Walk"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 598292197000282,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Walk\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 830959139522561,
+											"parameters": {
+												"animation": "\"Walk_\" & En_MeleeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 885625731376194,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-x": "cos(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)) * 80"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "En_MeleeGuard_Base",
+											"sid": 227987799367830,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-y": "sin(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)) * 80"
+											}
+										}
+									],
+									"sid": 503943173759481,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-two-values",
+													"objectClass": "System",
+													"sid": 219413320550851,
+													"parameters": {
+														"first-value": "distance(En_MeleeGuard_Base.X,En_MeleeGuard_Base.Y,Player_Base.X,Player_Base.Y)",
+														"comparison": 3,
+														"second-value": "35"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 767146269257262,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Attack\""
+													}
+												}
+											],
+											"sid": 945799067918119
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Attack"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_MeleeGuard_Mask",
+											"sid": 202461450098844,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Attack\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 129470680905039,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Finish slash"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 430588372438051,
+													"parameters": {
+														"animation": "\"Attack_\" & En_MeleeGuard_Base.Direction"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 929099247547461,
+													"parameters": {
+														"animation": "\"Attack_\" & En_MeleeGuard_Base.Direction",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 599365868405437
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-frame-changed",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 470615191880321
+												},
+												{
+													"id": "is-animation-playing",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 987586666649323,
+													"parameters": {
+														"animation": "\"Attack_\" & En_MeleeGuard_Base.Direction"
+													}
+												},
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 469173824032376,
+													"parameters": {
+														"comparison": 0,
+														"number": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 271385604533121,
+													"parameters": {
+														"object-to-create": "SwordSlash",
+														"layer": "\"Objects\"",
+														"x": "En_MeleeGuard_Mask.X",
+														"y": "En_MeleeGuard_Mask.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "SwordSlash",
+													"sid": 272405225225229,
+													"parameters": {
+														"animation": "En_MeleeGuard_Mask.AnimationName",
+														"from": "beginning"
+													}
+												},
+												{
+													"callFunction": "Audio_Play_Sound",
+													"sid": 559950628322105,
+													"parameters": [
+														"\"Skeleton_Throw\"",
+														"0",
+														"\"\""
+													]
+												}
+											],
+											"sid": 193442413560162
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 461267137024246,
+													"parameters": {
+														"animation": "\"Attack_\" & En_MeleeGuard_Base.Direction"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 924144622355383,
+													"parameters": {
+														"instance-variable": "State",
+														"comparison": 0,
+														"value": "\"Attack\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 943252953723421,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Idle\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 505463250079041,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_MeleeGuard_Mask",
+													"sid": 201844476217477,
+													"parameters": {
+														"instance-variable": "StateLimit",
+														"value": "0.5+ random(0.5)"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "SwordSlash",
+													"sid": 375818672497700
+												}
+											],
+											"sid": 735758941488687
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						}
+					],
+					"sid": 739732151319412
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "RangeGuard",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Passive"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "En_RangeGuard_Base",
+									"sid": 591523853303621
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "En_RangeGuard_Base",
+									"sid": 962545382214881,
+									"parameters": {
+										"instance-variable": "Pair_ID",
+										"value": "En_RangeGuard_Mask.UID"
+									}
+								}
+							],
+							"sid": 131237212757234
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 256818484327900
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "En_RangeGuard_Mask",
+									"sid": 721282203232338,
+									"parameters": {
+										"x": "En_RangeGuard_Base.X",
+										"y": "En_RangeGuard_Base.Y"
+									}
+								}
+							],
+							"sid": 254929956173005
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for-each",
+									"objectClass": "System",
+									"sid": 104907975970308,
+									"parameters": {
+										"object": "En_RangeGuard_Base"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "En_RangeGuard_Mask",
+									"sid": 407297266672365,
+									"parameters": {
+										"instance-variable": "State",
+										"comparison": 0,
+										"value": "\"Idle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "En_RangeGuard_Base",
+									"sid": 357620878509028,
+									"parameters": {
+										"instance-variable": "Player_AngleDiff",
+										"value": "((angle(Player_Base.X,Player_Base.Y,En_RangeGuard_Base.X,En_RangeGuard_Base.Y)+360)%360) - 180"
+									}
+								}
+							],
+							"sid": 430936290421527,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 762623166716022,
+											"parameters": {
+												"angle-1": "En_RangeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "270"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 956206992546221,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Up\""
+											}
+										}
+									],
+									"sid": 727776905802028
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 886425058104037,
+											"parameters": {
+												"angle-1": "En_RangeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "180"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 113646875109254,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Left\""
+											}
+										}
+									],
+									"sid": 113876895360499
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 629467612269222,
+											"parameters": {
+												"angle-1": "En_RangeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "90"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 573676723584475,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Down\""
+											}
+										}
+									],
+									"sid": 233476219737901
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "is-within-angle",
+											"objectClass": "System",
+											"sid": 792813510015673,
+											"parameters": {
+												"angle-1": "En_RangeGuard_Base.Player_AngleDiff",
+												"within": "45",
+												"angle-2": "0"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-instvar-value",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 669888112687666,
+											"parameters": {
+												"instance-variable": "Direction",
+												"value": "\"Right\""
+											}
+										}
+									],
+									"sid": 741338789491547
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						},
+						{
+							"eventType": "comment",
+							"text": "Behavior"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "En_RangeGuard_Mask",
+									"sid": 466737577625907,
+									"parameters": {
+										"instance-variable": "Active"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 750766116840571,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 227964771430110,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"comparison": 1,
+												"value": "-1"
+											}
+										},
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 365048468427398,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 1,
+												"value": "\"\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "add-to-instvar",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 321463950307019,
+											"parameters": {
+												"instance-variable": "State_Timer",
+												"value": "dt"
+											}
+										}
+									],
+									"sid": 738241590162470
+								},
+								{
+									"eventType": "comment",
+									"text": " Idle"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 362689301958725,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Idle\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 573887577468056,
+											"parameters": {
+												"animation": "\"Idle_\" & En_RangeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 634547353927135,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 623373794664938,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"comparison": 5,
+														"value": "Self.StateLimit"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 588546146114290,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 307199452795204,
+															"parameters": {
+																"first-value": "distance(En_RangeGuard_Base.X,En_RangeGuard_Base.Y,Player_Base.X,Player_Base.Y)",
+																"comparison": 3,
+																"second-value": "75"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 715644020739166,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "choose(\"Walk\", \"Attack\")"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 178999907460639,
+															"parameters": {
+																"instance-variable": "State_Timer",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 991342458250916,
+															"parameters": {
+																"instance-variable": "StateLimit",
+																"value": "0.75 + random(0.5)"
+															}
+														}
+													],
+													"sid": 149336302870476
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 662769872502989
+														},
+														{
+															"id": "compare-two-values",
+															"objectClass": "System",
+															"sid": 345219446924695,
+															"parameters": {
+																"first-value": "distance(En_RangeGuard_Base.X,En_RangeGuard_Base.Y,Player_Base.X,Player_Base.Y)",
+																"comparison": 3,
+																"second-value": "175"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 490805315502034,
+															"parameters": {
+																"instance-variable": "State",
+																"value": "\"Attack\""
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 762548578543761,
+															"parameters": {
+																"instance-variable": "State_Timer",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 799255107553181,
+															"parameters": {
+																"instance-variable": "StateLimit",
+																"value": "2 + random(0.5)"
+															}
+														}
+													],
+													"sid": 231530694903054
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "else",
+															"objectClass": "System",
+															"sid": 276248538127391
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 299723452202443,
+															"parameters": {
+																"instance-variable": "State_Timer",
+																"value": "0"
+															}
+														},
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_RangeGuard_Mask",
+															"sid": 591402616132822,
+															"parameters": {
+																"instance-variable": "StateLimit",
+																"value": "0.2 + random(0.8)"
+															}
+														}
+													],
+													"sid": 725702281264786
+												}
+											]
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Walk (Retreat)"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 302678320743995,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Walk\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 932479244087679,
+											"parameters": {
+												"animation": "\"Walk_\" & En_RangeGuard_Base.Direction",
+												"from": "beginning"
+											}
+										},
+										{
+											"id": "set-vector-x",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 184325566262174,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-x": "cos(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)+180) * 100"
+											}
+										},
+										{
+											"id": "set-vector-y",
+											"objectClass": "En_RangeGuard_Base",
+											"sid": 489807601840670,
+											"behaviorType": "8Direction",
+											"parameters": {
+												"vector-y": "sin(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y) +180) * 100"
+											}
+										}
+									],
+									"sid": 332092816959666,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 382238382375901,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"comparison": 5,
+														"value": "Self.StateLimit"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "RangeGuardStateIdle",
+													"sid": 624032700186334,
+													"parameters": [
+														"En_RangeGuard_Mask.UID"
+													]
+												}
+											],
+											"sid": 146119054401045
+										},
+										{
+											"functionName": "RangeGuardStateIdle",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [
+												{
+													"name": "skeletonUid",
+													"type": "number",
+													"initialValue": "0",
+													"comment": "",
+													"sid": 242748369801728
+												}
+											],
+											"eventType": "function-block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 391791395988989,
+													"parameters": {
+														"unique-id": "skeletonUid"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 458360056336915,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Idle\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 686105280447490,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 122000296787918,
+													"parameters": {
+														"instance-variable": "StateLimit",
+														"value": "0.75 + random(0.5)"
+													}
+												}
+											],
+											"sid": 819316057258952
+										}
+									]
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_RangeGuard_Mask",
+											"sid": 168424558412238,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Attack\""
+											}
+										}
+									],
+									"actions": [],
+									"sid": 393187640059513,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-animation-playing",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 924022278368281,
+													"parameters": {
+														"animation": "\"Attack_\" & En_RangeGuard_Base.Direction"
+													},
+													"isInverted": true
+												}
+											],
+											"actions": [
+												{
+													"id": "set-animation",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 374697793003142,
+													"parameters": {
+														"animation": "\"Attack_\" & En_RangeGuard_Base.Direction",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 813072966515108
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-frame-changed",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 128560470297788
+												},
+												{
+													"id": "is-animation-playing",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 566858464125590,
+													"parameters": {
+														"animation": "\"Attack_\" & En_RangeGuard_Base.Direction"
+													}
+												},
+												{
+													"id": "compare-animation-frame",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 884650086020461,
+													"parameters": {
+														"comparison": 0,
+														"number": "1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 738509977100410,
+													"parameters": {
+														"object-to-create": "Projectile_RangeGuard",
+														"layer": "\"Objects\"",
+														"x": "En_RangeGuard_Mask.X",
+														"y": "En_RangeGuard_Mask.Y",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-angle-of-motion",
+													"objectClass": "Projectile_RangeGuard",
+													"sid": 560108755200868,
+													"behaviorType": "Bullet",
+													"parameters": {
+														"angle": "angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)"
+													}
+												},
+												{
+													"callFunction": "Audio_Play_Sound",
+													"sid": 792701342301523,
+													"parameters": [
+														"\"Statue_Shoot\"",
+														"0",
+														"\"\""
+													]
+												}
+											],
+											"sid": 473018768000491
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "on-animation-finished",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 376984424914002,
+													"parameters": {
+														"animation": "\"Attack_\" & En_RangeGuard_Base.Direction"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 203549469945768,
+													"parameters": {
+														"instance-variable": "State",
+														"comparison": 0,
+														"value": "\"Attack\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 334345094139602,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Idle\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 345029793151077,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"value": "0"
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_RangeGuard_Mask",
+													"sid": 826729927752004,
+													"parameters": {
+														"instance-variable": "StateLimit",
+														"value": "0.25+ random(0.5)"
+													}
+												}
+											],
+											"sid": 351336289995546
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Attack"
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-collision-with-another-object",
+									"objectClass": "Projectile_RangeGuard",
+									"sid": 270365557141893,
+									"parameters": {
+										"object": "Tilemap_Collision"
+									}
+								},
+								{
+									"id": "is-on-screen",
+									"objectClass": "Projectile_RangeGuard",
+									"sid": 151944161305930,
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "Projectile_RangeGuard",
+									"sid": 436743063573920
+								}
+							],
+							"sid": 132620979196726,
+							"isOrBlock": true
+						},
+						{
+							"eventType": "comment",
+							"text": ""
+						}
+					],
+					"sid": 930344513043330
 				},
 				{
 					"eventType": "group",

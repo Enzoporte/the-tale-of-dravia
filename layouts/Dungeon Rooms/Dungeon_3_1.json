@@ -2400,6 +2400,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": false,
 						"origin": "top-left",
 						"seams": "overlap"

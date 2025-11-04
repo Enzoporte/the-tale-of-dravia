@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44902,
+	"savedWithRelease": 45802,
 	"name": "The Tale of Dravia",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -308,7 +308,13 @@
 					"Projectile_Demon_Sword",
 					"Projectile_Golem",
 					"En_FlameTrap",
-					"En_FlameTimer"
+					"En_FlameTimer",
+					"En_MeleeGuard_Base",
+					"En_MeleeGuard_Mask",
+					"SwordSlash",
+					"En_RangeGuard_Mask",
+					"En_RangeGuard_Base",
+					"Projectile_RangeGuard"
 				],
 				"subfolders": [],
 				"name": "Enemies"
@@ -387,6 +393,13 @@
 				],
 				"subfolders": [],
 				"name": "JoJos Hut"
+			},
+			{
+				"items": [
+					"NPC_Prueba"
+				],
+				"subfolders": [],
+				"name": "NPC"
 			}
 		]
 	},
@@ -433,6 +446,18 @@
 			"members": [
 				"En_Demon_Base",
 				"En_Demon_Mask"
+			]
+		},
+		{
+			"members": [
+				"En_MeleeGuard_Base",
+				"En_MeleeGuard_Mask"
+			]
+		},
+		{
+			"members": [
+				"En_RangeGuard_Base",
+				"En_RangeGuard_Mask"
 			]
 		}
 	],
@@ -486,7 +511,9 @@
 					"Dungeon_3_2",
 					"Dungeon_3_3",
 					"Dungeon_3_4",
-					"Dungeon_3_5"
+					"Dungeon_3_5",
+					"Dungeon_PRUEBA",
+					"Dungeon_NPC_Prueba"
 				],
 				"subfolders": [],
 				"name": "Dungeon Rooms"
@@ -875,7 +902,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-scale",
+		"fullscreenMode": "letterbox-integer-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
@@ -899,8 +926,8 @@
 		],
 		"orientations": "any",
 		"webgpu": "auto",
+		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
-		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"sampling": "nearest",
 		"downscaling": "medium",
@@ -909,14 +936,15 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "progress",
+		"loaderStyle": "none",
 		"preloadSounds": true,
+		"uidAllocationMode": "increment",
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"exportFileStructure": "folders",
-		"uidAllocationMode": "increment"
+		"scriptsType": "module"
 	},
-	"viewportWidth": 960,
-	"viewportHeight": 540,
-	"firstLayout": "NarrativeTemplate"
+	"viewportWidth": 312,
+	"viewportHeight": 240,
+	"firstLayout": "TitleScreen"
 }

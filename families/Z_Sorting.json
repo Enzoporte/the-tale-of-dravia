@@ -16,6 +16,9 @@
 		"En_Ghost_Mask",
 		"En_Golem_Mask",
 		"En_Demon_Mask",
-		"JoJo"
+		"JoJo",
+		"En_MeleeGuard_Mask",
+		"En_RangeGuard_Mask",
+		"NPC_Prueba"
 	]
 }

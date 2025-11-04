@@ -527,6 +527,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -566,6 +568,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -605,6 +609,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -644,6 +650,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -683,6 +691,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -722,6 +732,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -761,6 +773,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -800,6 +814,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
@@ -839,6 +855,8 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
