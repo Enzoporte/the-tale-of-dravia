@@ -18,9 +18,9 @@
 				{
 					"id": "play",
 					"objectClass": "Audio",
-					"sid": 292703005197080,
+					"sid": 881013939642057,
 					"parameters": {
-						"audio-file": "Town",
+						"audio-file": "townmusic",
 						"loop": "looping",
 						"volume": "0",
 						"stereo-pan": "0",

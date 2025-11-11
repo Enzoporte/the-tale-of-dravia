@@ -7,6 +7,54 @@
 			"subLayers": [],
 			"instances": [
 				{
+					"type": "NPC_Zone",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 769,
+					"sid": 173804746839239,
+					"tags": "",
+					"instanceVariables": {
+						"Highlighted": false,
+						"Pair_ID": 0
+					},
+					"behaviors": {},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 173804746839239,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -4,
+						"y": 140,
+						"width": 32,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 6.283069956508763,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "En_Demon_Trail",
 					"properties": {
 						"initially-visible": true,
@@ -2629,6 +2677,56 @@
 						"height": 15,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "NPC_Quieto",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 768,
+					"sid": 119984185874260,
+					"tags": "",
+					"instanceVariables": {
+						"SelectDelay": 0,
+						"DialogueText": "\"Hola buenas a todos! Enzo es un gilipollas\""
+					},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						},
+						"Timer": {
+							"properties": {}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 119984185874260,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -4,
+						"y": 140,
+						"width": 32,
+						"height": 38,
+						"originX": 0.4375,
+						"originY": 0.8157894736842105,
 						"color": [
 							1,
 							1,

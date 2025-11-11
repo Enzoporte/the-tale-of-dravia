@@ -519,375 +519,6 @@
 					}
 				},
 				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 179,
-					"sid": 424754788160043,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 20,
-						"y": 84,
-						"width": 124,
-						"height": 64,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 178,
-					"sid": 947212415444909,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 180,
-						"y": 64,
-						"width": 100,
-						"height": 60,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 342,
-					"sid": 218389681421362,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 164,
-						"y": 132,
-						"width": 132,
-						"height": 40,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 378,
-					"sid": 351568457158202,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 168,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 389,
-					"sid": 341155627969738,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 188,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 391,
-					"sid": 690591414717660,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 208,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 392,
-					"sid": 131883988949500,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 236,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 393,
-					"sid": 794085247684874,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 256,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "DialogueBox2",
-					"properties": {
-						"left-margin": 4,
-						"right-margin": 4,
-						"top-margin": 4,
-						"bottom-margin": 4,
-						"edges": "stretch",
-						"fill": "stretch",
-						"image-scale-x": 1,
-						"image-scale-y": 1,
-						"initially-visible": true,
-						"origin": "top-left",
-						"seams": "overlap"
-					},
-					"uid": 394,
-					"sid": 497863014990027,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 276,
-						"y": 152,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "SpriteFont_Menu",
 					"properties": {
 						"text": "Warp to Gatewood",
@@ -1923,6 +1554,43 @@
 						"height": 18,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "ResetSquare",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 939,
+					"sid": 673378215104362,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 673378215104362,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 312,
+						"y": 360,
+						"width": 24,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

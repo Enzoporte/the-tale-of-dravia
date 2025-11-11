@@ -226,7 +226,14 @@
 	],
 	"uniqueId": "reh1ov8kbj7",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"tile_1",
+			"tile_2",
+			"Darkness2",
+			"PlayerLight",
+			"DialogueBox2",
+			"tilemap_black_packed"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -328,7 +335,8 @@
 					"CameraZone",
 					"Door",
 					"Trigger_Warp",
-					"DungeonDoor"
+					"DungeonDoor",
+					"DialogueStatue"
 				],
 				"subfolders": [],
 				"name": "Objects"
@@ -358,7 +366,6 @@
 					"DialogueBox",
 					"SpriteFont_Dialogue",
 					"SpriteFont_Menu",
-					"DialogueBox2",
 					"DialogueBox_AreaName",
 					"Pause_Item",
 					"SpriteFont_AreaName",
@@ -396,10 +403,28 @@
 			},
 			{
 				"items": [
-					"NPC_Prueba"
+					"NPC_Zone",
+					"NPC_Arrow"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"NPC_Quieto"
+						],
+						"subfolders": [],
+						"name": "NPCs"
+					}
+				],
+				"name": "NPC"
+			},
+			{
+				"items": [
+					"InstructionSquare",
+					"ResetSquare",
+					"NeutralSquare"
 				],
 				"subfolders": [],
-				"name": "NPC"
+				"name": "Puzzle"
 			}
 		]
 	},
@@ -459,6 +484,12 @@
 				"En_RangeGuard_Base",
 				"En_RangeGuard_Mask"
 			]
+		},
+		{
+			"members": [
+				"NPC_Quieto",
+				"NPC_Zone"
+			]
 		}
 	],
 	"families": {
@@ -466,7 +497,8 @@
 			"EnemyBases",
 			"Z_Sorting",
 			"EnemyMasks",
-			"Hazards"
+			"Hazards",
+			"NPCs"
 		],
 		"subfolders": []
 	},
@@ -495,9 +527,9 @@
 			{
 				"items": [
 					"Dungeon Intro",
-					"Dungeon Entrance",
+					"Dungeon Entrance2",
 					"Dungeon_Template",
-					"Dungeon_1_1",
+					"Dungeon_1_1x",
 					"Dungeon_1_2",
 					"Dungeon_1_3",
 					"Dungeon_1_4",
@@ -512,8 +544,11 @@
 					"Dungeon_3_3",
 					"Dungeon_3_4",
 					"Dungeon_3_5",
-					"Dungeon_PRUEBA",
-					"Dungeon_NPC_Prueba"
+					"Dungeon_1_1",
+					"Dungeon Entrance",
+					"Dungeon_1_5X",
+					"Dungeon_Puzzle_Test",
+					"Dungeon_Puzzle"
 				],
 				"subfolders": [],
 				"name": "Dungeon Rooms"
@@ -795,6 +830,14 @@
 					"name": "Boss.webm",
 					"type": "audio/webm; codecs=opus",
 					"sid": 371829586040885,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "townmusic.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 688270875311231,
 					"file-info": {
 						"purpose": "none"
 					}

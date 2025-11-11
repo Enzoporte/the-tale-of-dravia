@@ -1,0 +1,32 @@
+{
+	"name": "NPCs",
+	"plugin-id": "Sprite",
+	"sid": 270652620046250,
+	"instanceVariables": [
+		{
+			"name": "SelectDelay",
+			"type": "number",
+			"desc": "",
+			"show": true,
+			"sid": 208201534651667
+		},
+		{
+			"name": "DialogueText",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 749711868242682
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "solid",
+			"name": "Solid",
+			"sid": 515960477472505
+		}
+	],
+	"effectTypes": [],
+	"members": [
+		"NPC_Quieto"
+	]
+}

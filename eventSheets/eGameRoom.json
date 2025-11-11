@@ -8770,10 +8770,10 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "En_RangeGuard_Mask",
-													"sid": 826729927752004,
+													"sid": 220286346514613,
 													"parameters": {
 														"instance-variable": "StateLimit",
-														"value": "0.25+ random(0.5)"
+														"value": "1 + random(0.5)"
 													}
 												}
 											],
@@ -8794,6 +8794,7 @@
 									"id": "on-collision-with-another-object",
 									"objectClass": "Projectile_RangeGuard",
 									"sid": 270365557141893,
+									"disabled": true,
 									"parameters": {
 										"object": "Tilemap_Collision"
 									}
@@ -8812,8 +8813,7 @@
 									"sid": 436743063573920
 								}
 							],
-							"sid": 132620979196726,
-							"isOrBlock": true
+							"sid": 132620979196726
 						},
 						{
 							"eventType": "comment",
@@ -12191,6 +12191,540 @@
 			"sid": 466395262510090
 		},
 		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Puzzle Room",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 363220751568023
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 517579917107090,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Dungeon_Puzzle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 796732375276770,
+							"parameters": {
+								"group-name": "\"Player Engine\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 331914986041578,
+							"parameters": {
+								"variable": "PauseLock",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "DialogueStatue",
+							"sid": 628288430970651,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "0.5",
+								"type": "once",
+								"tag": "\"Dialogo\""
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "PlayerLight",
+							"sid": 685713390572077,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Player_Mask",
+								"x": true,
+								"y": true,
+								"angle": true,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						}
+					],
+					"sid": 457174343560835
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "DialogueStatue",
+							"sid": 637054351532471,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Dialogo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 507043433457285,
+							"parameters": {
+								"object-to-create": "DialogueBox",
+								"layer": "\"Dialogue\"",
+								"x": "57",
+								"y": "122",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogueBox",
+							"sid": 412105380945603,
+							"parameters": {
+								"instance-variable": "Tag",
+								"value": "\"PuzzleRey\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 458818650811540,
+							"parameters": {
+								"object-to-create": "Dialogue_Arrow",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.BBoxRight - 8",
+								"y": "DialogueBox.BBoxBottom - 6",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 624555417886590,
+							"parameters": {
+								"object-to-create": "SpriteFont_Dialogue",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.X + 4",
+								"y": "DialogueBox.Y + 4",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont_Dialogue",
+							"sid": 467193574005795,
+							"parameters": {
+								"text": "\"Bienvenido al puzzle\""
+							}
+						}
+					],
+					"sid": 990987391377125
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 651337171377533,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 389011004779072,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-b"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 524558041345595,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 248632070875353,
+									"parameters": {
+										"first-value": "DialogueBox.Count",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "DialogueBox",
+									"sid": 189594594698557,
+									"parameters": {
+										"instance-variable": "Tag",
+										"comparison": 0,
+										"value": "\"PuzzleRey\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DialogueBox",
+									"sid": 487060100474164
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 701781970685506
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogue_Arrow",
+									"sid": 491558489441906
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 400709119600299,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 177655742366484,
+									"parameters": {
+										"variable": "PauseLock",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 696311493850379
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 338588198461540,
+									"parameters": {
+										"first-value": "DialogueBox.Count",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "DialogueBox",
+									"sid": 477963890878911,
+									"parameters": {
+										"instance-variable": "Tag",
+										"comparison": 0,
+										"value": "\"PuzzlePista\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DialogueBox",
+									"sid": 105599764326300
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 803261400837740
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogue_Arrow",
+									"sid": 427752964399593
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 156156961521753,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 605617405321373,
+									"parameters": {
+										"variable": "PauseLock",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 464487363102359
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 258866212633814,
+							"parameters": {
+								"object": "ResetSquare"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 945046650607016
+						}
+					],
+					"sid": 168042697394290
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 199271673023152,
+							"parameters": {
+								"object": "NeutralSquare"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "NeutralSquare",
+							"sid": 692094059679837,
+							"parameters": {
+								"instance-variable": "hasStepped",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 679476349232556
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 584039242353930,
+							"parameters": {
+								"object": "InstructionSquare"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 546864040986509
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "InstructionSquare",
+							"sid": 821345658166595,
+							"parameters": {
+								"instance-variable": "hasStepped",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 500070843590012,
+							"parameters": {
+								"group-name": "\"Player Engine\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 617977321999281,
+							"parameters": {
+								"object-to-create": "DialogueBox",
+								"layer": "\"Dialogue\"",
+								"x": "57",
+								"y": "122",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogueBox",
+							"sid": 224265190885401,
+							"parameters": {
+								"instance-variable": "Tag",
+								"value": "\"PuzzlePista\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 751938990551285,
+							"parameters": {
+								"object-to-create": "Dialogue_Arrow",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.BBoxRight - 8",
+								"y": "DialogueBox.BBoxBottom - 6",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 226910507050523,
+							"parameters": {
+								"object-to-create": "SpriteFont_Dialogue",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.X + 4",
+								"y": "DialogueBox.Y + 4",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont_Dialogue",
+							"sid": 375969512667323,
+							"parameters": {
+								"text": "InstructionSquare.Text"
+							}
+						}
+					],
+					"sid": 928527958351563
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 282633263143280,
+							"parameters": {
+								"object": "InstructionSquare"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "InstructionSquare",
+							"sid": 451899749885111,
+							"parameters": {
+								"instance-variable": "hasStepped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "InstructionSquare",
+							"sid": 614627700996287
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 328093756140816,
+							"parameters": {
+								"object-to-create": "ResetSquare",
+								"layer": "\"Objects\"",
+								"x": "InstructionSquare.X",
+								"y": "InstructionSquare.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 161474410190560
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 326129518259970,
+							"parameters": {
+								"object": "NeutralSquare"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 828717096831318,
+							"parameters": {
+								"object": "NeutralSquare"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NeutralSquare",
+							"sid": 351539326688472,
+							"parameters": {
+								"instance-variable": "hasStepped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "destroy",
+							"objectClass": "NeutralSquare",
+							"sid": 473363658154115
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 172262033531388,
+							"parameters": {
+								"object-to-create": "ResetSquare",
+								"layer": "\"Objects\"",
+								"x": "NeutralSquare.X",
+								"y": "NeutralSquare.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						}
+					],
+					"sid": 377945889552098
+				}
+			],
+			"sid": 557962233667547
+		},
+		{
 			"eventType": "comment",
 			"text": "Effects"
 		},
@@ -12256,6 +12790,969 @@
 		{
 			"eventType": "comment",
 			"text": "Shop"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Menu",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"functionName": "Menu_Select",
+					"functionDescription": "Automatically converted from 'Menu_Select'",
+					"functionCategory": "",
+					"functionReturnType": "none",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
+						{
+							"name": "text",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 209818972647708
+						},
+						{
+							"name": "menu",
+							"type": "string",
+							"initialValue": "",
+							"comment": "",
+							"sid": 541771307933290
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 825071006103056,
+					"children": [
+						{
+							"eventType": "comment",
+							"text": "Chat"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 515839869415867,
+									"parameters": {
+										"variable": "menu",
+										"comparison": 0,
+										"value": "\"Chat\""
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "NPCs",
+									"sid": 299503425415316,
+									"parameters": {
+										"instance-variable": "SelectDelay",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SpriteFont_Menu",
+									"sid": 151362938223195,
+									"parameters": {
+										"instance-variable": "Menu",
+										"comparison": 0,
+										"value": "\"Chat\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "NPCs",
+									"sid": 480438808506816,
+									"parameters": {
+										"instance-variable": "SelectDelay",
+										"value": "0.1"
+									}
+								}
+							],
+							"sid": 277569796062209,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Salir como ultima línea"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 777670156663917,
+											"parameters": {
+												"variable": "text",
+												"comparison": 0,
+												"value": "\"OK\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "DialogueBox",
+											"sid": 885272408988890
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Dialogue",
+											"sid": 216183952991685
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Dialogue_Arrow",
+											"sid": 664031380827207
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Menu",
+											"sid": 217455756161443
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 858817375973356,
+											"parameters": {
+												"group-name": "\"Player Engine\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 885093693311330,
+											"parameters": {
+												"variable": "PauseLock",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 346180301761059
+								},
+								{
+									"eventType": "comment",
+									"text": "siguiente dialogo?"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 674540138511446,
+											"parameters": {
+												"variable": "text",
+												"comparison": 0,
+												"value": "\">>\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 744705032851084,
+											"parameters": {
+												"object-to-create": "DialogueBox",
+												"layer": "\"Dialogue\"",
+												"x": "57",
+												"y": "122",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-instvar-value",
+											"objectClass": "DialogueBox",
+											"sid": 614007733654414,
+											"parameters": {
+												"instance-variable": "Tag",
+												"value": "\"NPC Amigo\""
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 508191795848188,
+											"parameters": {
+												"object-to-create": "Dialogue_Arrow",
+												"layer": "\"Dialogue\"",
+												"x": "DialogueBox.BBoxRight - 8",
+												"y": "DialogueBox.BBoxBottom - 6",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "create-object",
+											"objectClass": "System",
+											"sid": 757441005696666,
+											"parameters": {
+												"object-to-create": "SpriteFont_Dialogue",
+												"layer": "\"Dialogue\"",
+												"x": "DialogueBox.X + 4",
+												"y": "DialogueBox.Y + 4",
+												"create-hierarchy": false,
+												"template-name": "\"\""
+											}
+										},
+										{
+											"id": "set-text",
+											"objectClass": "SpriteFont_Dialogue",
+											"sid": 934847217631421,
+											"parameters": {
+												"text": "\"BlaBlaBla\""
+											}
+										}
+									],
+									"sid": 749151172684528
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Menu selection in JoJo's hut"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 603443583889927,
+									"parameters": {
+										"variable": "menu",
+										"comparison": 0,
+										"value": "\"Purchase Item\""
+									}
+								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "Item",
+									"sid": 554899224336540,
+									"parameters": {
+										"instance-variable": "Highlighted"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "JoJo",
+									"sid": 761440654473688,
+									"parameters": {
+										"instance-variable": "ItemSelectDelay",
+										"comparison": 3,
+										"value": "0"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "SpriteFont_Menu",
+									"sid": 308343543888469,
+									"parameters": {
+										"instance-variable": "Menu",
+										"comparison": 0,
+										"value": "\"Purchase Item\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "JoJo",
+									"sid": 120288237723346,
+									"parameters": {
+										"instance-variable": "ItemSelectDelay",
+										"value": "0.1"
+									}
+								}
+							],
+							"sid": 875359983171173,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": "Decline tem"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 540169481278726,
+											"parameters": {
+												"variable": "text",
+												"comparison": 0,
+												"value": "\"No\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "DialogueBox",
+											"sid": 542604566006146
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Dialogue",
+											"sid": 846657252927498
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Dialogue_Arrow",
+											"sid": 601051060267754
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Menu",
+											"sid": 837038337476833
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 162546555277474,
+											"parameters": {
+												"group-name": "\"Player Engine\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 361043108578899,
+											"parameters": {
+												"variable": "PauseLock",
+												"value": "0"
+											}
+										}
+									],
+									"sid": 373736022928708
+								},
+								{
+									"eventType": "comment",
+									"text": "Accept item"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-eventvar",
+											"objectClass": "System",
+											"sid": 962247845240164,
+											"parameters": {
+												"variable": "text",
+												"comparison": 0,
+												"value": "\"Yes\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "destroy",
+											"objectClass": "DialogueBox",
+											"sid": 541307962034749
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Dialogue",
+											"sid": 739667330085441
+										},
+										{
+											"id": "destroy",
+											"objectClass": "Dialogue_Arrow",
+											"sid": 136193818320742
+										},
+										{
+											"id": "destroy",
+											"objectClass": "SpriteFont_Menu",
+											"sid": 489708727135290
+										}
+									],
+									"sid": 464098117134742,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "Not enough gems"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "Dictionary",
+													"sid": 585842436952946,
+													"parameters": {
+														"key": "\"Gems\"",
+														"comparison": 2,
+														"value": "Item.Price"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 328559616477588,
+													"parameters": {
+														"object-to-create": "DialogueBox",
+														"layer": "\"Dialogue\"",
+														"x": "57",
+														"y": "122",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "DialogueBox",
+													"sid": 811132232008447,
+													"parameters": {
+														"instance-variable": "Tag",
+														"value": "\"Jojo\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 981822901548321,
+													"parameters": {
+														"object-to-create": "Dialogue_Arrow",
+														"layer": "\"Dialogue\"",
+														"x": "DialogueBox.BBoxRight - 8",
+														"y": "DialogueBox.BBoxBottom - 6",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 680308450172557,
+													"parameters": {
+														"object-to-create": "SpriteFont_Dialogue",
+														"layer": "\"Dialogue\"",
+														"x": "DialogueBox.X + 4",
+														"y": "DialogueBox.Y + 4",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-text",
+													"objectClass": "SpriteFont_Dialogue",
+													"sid": 207162543330217,
+													"parameters": {
+														"text": "\"Psh! Come back with more gems or I'll turn you into a frog and sell you to the next guy!\""
+													}
+												},
+												{
+													"callFunction": "Audio_Play_Sound",
+													"sid": 835650290401061,
+													"parameters": [
+														"\"Menu_Invalid\"",
+														"0",
+														"\"Menu_Invalid\""
+													]
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "JoJo",
+													"sid": 102188499444795,
+													"parameters": {
+														"animation": "\"LiftStaff\"",
+														"from": "beginning"
+													}
+												}
+											],
+											"sid": 521099546210078
+										},
+										{
+											"eventType": "comment",
+											"text": "Has enough gems"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-value",
+													"objectClass": "Dictionary",
+													"sid": 250619729509913,
+													"parameters": {
+														"key": "\"Gems\"",
+														"comparison": 5,
+														"value": "Item.Price"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 953724022034144,
+													"parameters": {
+														"key": "\"Gems\"",
+														"value": "Self.Get(\"Gems\") - Item.Price"
+													}
+												},
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 261802490366085,
+													"parameters": {
+														"key": "Item.ItemKey",
+														"value": "1"
+													}
+												},
+												{
+													"id": "destroy",
+													"objectClass": "Item",
+													"sid": 868239069931726
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 520054781304714,
+													"parameters": {
+														"group-name": "\"Player Engine\"",
+														"state": "activated"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 137042717364797,
+													"parameters": {
+														"variable": "PauseLock",
+														"value": "0"
+													}
+												},
+												{
+													"callFunction": "Audio_Play_Sound",
+													"sid": 648570389325567,
+													"parameters": [
+														"\"Collectible_Pickup\"",
+														"0",
+														"\"Collectible_Pickup\""
+													]
+												}
+											],
+											"sid": 691199251401818,
+											"children": [
+												{
+													"eventType": "comment",
+													"text": "Increase stats with certain items"
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Item",
+															"sid": 421799667687012,
+															"parameters": {
+																"instance-variable": "ItemKey",
+																"comparison": 0,
+																"value": "\"Gold Sword\""
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Item",
+															"sid": 130900863370403,
+															"parameters": {
+																"instance-variable": "ItemKey",
+																"comparison": 0,
+																"value": "\"Purple Sword\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "add-key",
+															"objectClass": "Dictionary",
+															"sid": 331697813545830,
+															"parameters": {
+																"key": "\"Strength\"",
+																"value": "Self.Get(\"Strength\") + 1"
+															}
+														}
+													],
+													"sid": 747227846050324,
+													"isOrBlock": true
+												},
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Item",
+															"sid": 573098500234262,
+															"parameters": {
+																"instance-variable": "ItemKey",
+																"comparison": 0,
+																"value": "\"Blue Cloak\""
+															}
+														},
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "Item",
+															"sid": 820982176656203,
+															"parameters": {
+																"instance-variable": "ItemKey",
+																"comparison": 0,
+																"value": "\"Red Cloak\""
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "add-key",
+															"objectClass": "Dictionary",
+															"sid": 767368464613762,
+															"parameters": {
+																"key": "\"Defense\"",
+																"value": "Self.Get(\"Defense\") + 1"
+															}
+														}
+													],
+													"sid": 848906876350812,
+													"isOrBlock": true
+												}
+											]
+										}
+									]
+								}
+							]
+						},
+						{
+							"eventType": "comment",
+							"text": "Warping to Gatewood"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 629039179110339,
+									"parameters": {
+										"variable": "text",
+										"comparison": 0,
+										"value": "\"Warp to Gatewood\""
+									}
+								}
+							],
+							"actions": [],
+							"sid": 689068258532445,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 166302989473722,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Gatewood\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 555976276897268,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 0,
+												"second-value": "\"Jojos Hut\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Audio_Play_Sound",
+											"sid": 865142628430461,
+											"parameters": [
+												"\"Menu_Invalid\"",
+												"0",
+												"\"Menu_Invalid\""
+											]
+										}
+									],
+									"sid": 149109299657110,
+									"isOrBlock": true
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 369244567612020,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"Gatewood\""
+											}
+										},
+										{
+											"id": "compare-two-values",
+											"objectClass": "System",
+											"sid": 909036178545538,
+											"parameters": {
+												"first-value": "LayoutName",
+												"comparison": 1,
+												"second-value": "\"Jojos Hut\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"callFunction": "Pause_Close",
+											"sid": 642338707953109
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 676571761257669,
+											"parameters": {
+												"variable": "Pause",
+												"value": "0"
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 683729092269398,
+											"parameters": {
+												"group-name": "\"Player\"",
+												"state": "deactivated"
+											}
+										},
+										{
+											"callFunction": "Transition",
+											"sid": 578876230288713,
+											"parameters": [
+												"\"Out\"",
+												"\"LayoutChange\""
+											]
+										},
+										{
+											"id": "wait-for-signal",
+											"objectClass": "System",
+											"sid": 837171395043106,
+											"parameters": {
+												"tag": "\"LayoutChange\""
+											}
+										},
+										{
+											"id": "set-group-active",
+											"objectClass": "System",
+											"sid": 249835271512131,
+											"parameters": {
+												"group-name": "\"Player\"",
+												"state": "activated"
+											}
+										},
+										{
+											"id": "set-eventvar-value",
+											"objectClass": "System",
+											"sid": 775331044644905,
+											"parameters": {
+												"variable": "Door_ID",
+												"value": "2"
+											}
+										},
+										{
+											"id": "go-to-layout-by-name",
+											"objectClass": "System",
+											"sid": 747745963659849,
+											"parameters": {
+												"layout": "\"Gatewood\""
+											}
+										},
+										{
+											"id": "stop-all",
+											"objectClass": "Audio",
+											"sid": 765962054059535
+										}
+									],
+									"sid": 513327281757875
+								}
+							]
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 164252563462529,
+									"parameters": {
+										"variable": "text",
+										"comparison": 0,
+										"value": "\"Save + Quit\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-item",
+									"objectClass": "LocalStorage",
+									"sid": 797325447662639,
+									"parameters": {
+										"key": "\"SaveData\"",
+										"value": "Dictionary.AsJSON"
+									}
+								},
+								{
+									"id": "close",
+									"objectClass": "Browser",
+									"sid": 813912466806885
+								}
+							],
+							"sid": 218734836105230
+						},
+						{
+							"eventType": "comment",
+							"text": "Title screen commands"
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 756462585254324,
+									"parameters": {
+										"variable": "text",
+										"comparison": 0,
+										"value": "\"New Game\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "remove-item",
+									"objectClass": "LocalStorage",
+									"sid": 328742921123180,
+									"parameters": {
+										"key": "\"SaveData\""
+									}
+								},
+								{
+									"callFunction": "SaveData_SetDefault",
+									"sid": 433088694132774
+								},
+								{
+									"callFunction": "Transition",
+									"sid": 319971480066699,
+									"parameters": [
+										"\"Out\"",
+										"\"LayoutChange\""
+									]
+								},
+								{
+									"id": "wait-for-signal",
+									"objectClass": "System",
+									"sid": 992037967197497,
+									"parameters": {
+										"tag": "\"LayoutChange\""
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 676501951949977,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 930108416398327,
+									"parameters": {
+										"layout": "\"Gatewood\""
+									}
+								}
+							],
+							"sid": 475465307579585
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-eventvar",
+									"objectClass": "System",
+									"sid": 552834382753379,
+									"parameters": {
+										"variable": "text",
+										"comparison": 0,
+										"value": "\"Load Game\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Transition",
+									"sid": 455760589432885,
+									"parameters": [
+										"\"Out\"",
+										"\"LayoutChange\""
+									]
+								},
+								{
+									"id": "wait-for-signal",
+									"objectClass": "System",
+									"sid": 134891514652207,
+									"parameters": {
+										"tag": "\"LayoutChange\""
+									}
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 575390776903229,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "go-to-layout-by-name",
+									"objectClass": "System",
+									"sid": 139210483497652,
+									"parameters": {
+										"layout": "\"Gatewood\""
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 858982847436288,
+									"parameters": {
+										"variable": "Door_ID",
+										"value": "2"
+									}
+								}
+							],
+							"sid": 794527342280577
+						}
+					]
+				}
+			],
+			"sid": 229552175749818
 		},
 		{
 			"eventType": "group",
@@ -13071,219 +14568,296 @@
 						}
 					],
 					"isOrBlock": true
+				}
+			],
+			"sid": 352801036812269
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Dialogue",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "comment",
+					"text": "Para NPC_Quieto --> Esto para cualquier NPC que no se vaya a mover. Se pueden agregar sprites de NPC's distintos como nuevas animaciones. Se cambia la animación "
 				},
 				{
-					"functionName": "Menu_Select",
-					"functionDescription": "Automatically converted from 'Menu_Select'",
-					"functionCategory": "",
-					"functionReturnType": "none",
-					"functionCopyPicked": false,
-					"functionIsAsync": false,
-					"functionParameters": [
-						{
-							"name": "text",
-							"type": "string",
-							"initialValue": "",
-							"comment": "",
-							"sid": 209818972647708
-						},
-						{
-							"name": "menu",
-							"type": "string",
-							"initialValue": "",
-							"comment": "",
-							"sid": 541771307933290
-						}
-					],
-					"eventType": "function-block",
-					"conditions": [],
-					"actions": [],
-					"sid": 668102212890837,
+					"eventType": "group",
+					"disabled": false,
+					"title": "NPC_Quieto",
+					"description": "",
+					"isActiveOnStart": true,
 					"children": [
-						{
-							"eventType": "comment",
-							"text": "Menu selection in JoJo's hut"
-						},
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 773672857824911,
-									"parameters": {
-										"variable": "menu",
-										"comparison": 0,
-										"value": "\"Purchase Item\""
-									}
-								},
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "Item",
-									"sid": 388585192014148,
-									"parameters": {
-										"instance-variable": "Highlighted"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "JoJo",
-									"sid": 727576734659878,
-									"parameters": {
-										"instance-variable": "ItemSelectDelay",
-										"comparison": 3,
-										"value": "0"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "SpriteFont_Menu",
-									"sid": 857737626880827,
-									"parameters": {
-										"instance-variable": "Menu",
-										"comparison": 0,
-										"value": "\"Purchase Item\""
-									}
+									"id": "on-created",
+									"objectClass": "NPC_Zone",
+									"sid": 131440595561449
 								}
 							],
 							"actions": [
 								{
 									"id": "set-instvar-value",
-									"objectClass": "JoJo",
-									"sid": 354141161657372,
+									"objectClass": "NPC_Zone",
+									"sid": 488360692254659,
 									"parameters": {
-										"instance-variable": "ItemSelectDelay",
-										"value": "0.1"
+										"instance-variable": "Pair_ID",
+										"value": "NPC_Quieto.UID"
 									}
 								}
 							],
-							"sid": 987079332142581,
-							"children": [
+							"sid": 694772590235376
+						},
+						{
+							"eventType": "block",
+							"conditions": [
 								{
-									"eventType": "comment",
-									"text": "Decline tem"
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player_Base",
+									"sid": 554646048191661,
+									"parameters": {
+										"object": "NPC_Zone"
+									}
 								},
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "NPC_Zone",
+									"sid": 378382368687963,
+									"parameters": {
+										"instance-variable": "Highlighted"
+									},
+									"isInverted": true
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 945785303195840,
+									"parameters": {
+										"object-to-create": "NPC_Arrow",
+										"layer": "\"Objects\"",
+										"x": "NPC_Quieto.X",
+										"y": "NPC_Quieto.BBoxTop - 8",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "NPC_Zone",
+									"sid": 182241701496122,
+									"parameters": {
+										"instance-variable": "Highlighted",
+										"value": "true"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "NPC_Zone",
+									"sid": 571618977185624,
+									"parameters": {
+										"effect": "\"Brightness\"",
+										"parameter-index": "0",
+										"value": "135"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player_Mask",
+									"sid": 437379618568715,
+									"parameters": {
+										"instance-variable": "Event",
+										"value": "true"
+									}
+								}
+							],
+							"sid": 139618831435601
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-overlapping-another-object",
+									"objectClass": "Player_Base",
+									"sid": 340867381695335,
+									"parameters": {
+										"object": "NPC_Zone"
+									},
+									"isInverted": true
+								},
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 865493329360423,
+									"parameters": {
+										"first-value": "Dialogue_Arrow.Count",
+										"comparison": 0,
+										"second-value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "NPC_Arrow",
+									"sid": 969451794183071
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "NPC_Zone",
+									"sid": 613122629064087,
+									"parameters": {
+										"instance-variable": "Highlighted",
+										"value": "false"
+									}
+								},
+								{
+									"id": "set-effect-parameter",
+									"objectClass": "NPC_Zone",
+									"sid": 446631143614472,
+									"parameters": {
+										"effect": "\"Brightness\"",
+										"parameter-index": "0",
+										"value": "100"
+									}
+								},
+								{
+									"id": "set-boolean-instvar",
+									"objectClass": "Player_Mask",
+									"sid": 967871897128216,
+									"parameters": {
+										"instance-variable": "Event",
+										"value": "false"
+									}
+								}
+							],
+							"sid": 413699135240647
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "NPC_Quieto",
+									"sid": 815259455332113,
+									"parameters": {
+										"instance-variable": "SelectDelay",
+										"comparison": 4,
+										"value": "0"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "subtract-from-instvar",
+									"objectClass": "NPC_Quieto",
+									"sid": 119743932817030,
+									"parameters": {
+										"instance-variable": "SelectDelay",
+										"value": "dt"
+									}
+								}
+							],
+							"sid": 962456934515233
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-key-pressed",
+									"objectClass": "Keyboard",
+									"sid": 198541966953266,
+									"parameters": {
+										"key": 90
+									}
+								},
+								{
+									"id": "on-button-pressed",
+									"objectClass": "Gamepad",
+									"sid": 463940102791018,
+									"parameters": {
+										"gamepad": "0",
+										"button": "button-b"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 742857904457280,
+							"children": [
 								{
 									"eventType": "block",
 									"conditions": [
 										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 505129528483257,
+											"id": "is-boolean-instance-variable-set",
+											"objectClass": "NPC_Zone",
+											"sid": 168026545168412,
 											"parameters": {
-												"variable": "text",
-												"comparison": 0,
-												"value": "\"No\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "DialogueBox",
-											"sid": 729488015958342
-										},
-										{
-											"id": "destroy",
-											"objectClass": "SpriteFont_Dialogue",
-											"sid": 273938237955856
-										},
-										{
-											"id": "destroy",
-											"objectClass": "Dialogue_Arrow",
-											"sid": 976105346824387
-										},
-										{
-											"id": "destroy",
-											"objectClass": "SpriteFont_Menu",
-											"sid": 422623329046918
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 891763970020516,
-											"parameters": {
-												"group-name": "\"Player Engine\"",
-												"state": "activated"
+												"instance-variable": "Highlighted"
 											}
 										},
 										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 220293343473571,
+											"id": "compare-instance-variable",
+											"objectClass": "NPCs",
+											"sid": 718022435556017,
 											"parameters": {
-												"variable": "PauseLock",
+												"instance-variable": "SelectDelay",
+												"comparison": 3,
 												"value": "0"
 											}
 										}
 									],
-									"sid": 260254963017936
-								},
-								{
-									"eventType": "comment",
-									"text": "Accept item"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-eventvar",
-											"objectClass": "System",
-											"sid": 287284574095529,
-											"parameters": {
-												"variable": "text",
-												"comparison": 0,
-												"value": "\"Yes\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "destroy",
-											"objectClass": "DialogueBox",
-											"sid": 701962103577938
-										},
-										{
-											"id": "destroy",
-											"objectClass": "SpriteFont_Dialogue",
-											"sid": 612994729313061
-										},
-										{
-											"id": "destroy",
-											"objectClass": "Dialogue_Arrow",
-											"sid": 957940453024676
-										},
-										{
-											"id": "destroy",
-											"objectClass": "SpriteFont_Menu",
-											"sid": 518881074435618
-										}
-									],
-									"sid": 762200920931069,
+									"actions": [],
+									"sid": 199127830911355,
 									"children": [
 										{
-											"eventType": "comment",
-											"text": "Not enough gems"
-										},
-										{
 											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "Dictionary",
-													"sid": 202016937555303,
-													"parameters": {
-														"key": "\"Gems\"",
-														"comparison": 2,
-														"value": "Item.Price"
-													}
-												}
-											],
+											"conditions": [],
 											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "NPC_Quieto",
+													"sid": 452191576612870,
+													"parameters": {
+														"instance-variable": "SelectDelay",
+														"value": "0.1"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 797621721719371,
+													"parameters": {
+														"variable": "PauseLock",
+														"value": "1"
+													}
+												},
+												{
+													"id": "set-group-active",
+													"objectClass": "System",
+													"sid": 952480289480237,
+													"parameters": {
+														"group-name": "\"Player Engine\"",
+														"state": "deactivated"
+													}
+												},
+												{
+													"id": "set-eventvar-value",
+													"objectClass": "System",
+													"sid": 715091839828957,
+													"parameters": {
+														"variable": "Current_Menu",
+														"value": "\"Chat\""
+													}
+												},
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 248670109930275,
+													"sid": 784830465274756,
 													"parameters": {
 														"object-to-create": "DialogueBox",
 														"layer": "\"Dialogue\"",
@@ -13296,29 +14870,20 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "DialogueBox",
-													"sid": 307872667207046,
+													"sid": 286081029002700,
 													"parameters": {
 														"instance-variable": "Tag",
-														"value": "\"Jojo\""
+														"value": "\"Chat\""
 													}
+												},
+												{
+													"type": "comment",
+													"text": "SF_Dialogue es el texto de dialogo"
 												},
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 679480580396961,
-													"parameters": {
-														"object-to-create": "Dialogue_Arrow",
-														"layer": "\"Dialogue\"",
-														"x": "DialogueBox.BBoxRight - 8",
-														"y": "DialogueBox.BBoxBottom - 6",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 976912955164640,
+													"sid": 740919412537523,
 													"parameters": {
 														"object-to-create": "SpriteFont_Dialogue",
 														"layer": "\"Dialogue\"",
@@ -13331,511 +14896,133 @@
 												{
 													"id": "set-text",
 													"objectClass": "SpriteFont_Dialogue",
-													"sid": 694940111204147,
+													"sid": 981478160449438,
 													"parameters": {
-														"text": "\"Psh! Come back with more gems or I'll turn you into a frog and sell you to the next guy!\""
+														"text": "Functions.SelectNPCDialogue(NPC_Zone.Pair_ID)"
 													}
 												},
 												{
-													"callFunction": "Audio_Play_Sound",
-													"sid": 386672155741312,
-													"parameters": [
-														"\"Menu_Invalid\"",
-														"0",
-														"\"Menu_Invalid\""
-													]
+													"type": "comment",
+													"text": "SF_Menu son los botones si y no"
 												},
 												{
-													"id": "set-animation",
-													"objectClass": "JoJo",
-													"sid": 178448290891679,
-													"parameters": {
-														"animation": "\"LiftStaff\"",
-														"from": "beginning"
-													}
-												}
-											],
-											"sid": 819747745694231
-										},
-										{
-											"eventType": "comment",
-											"text": "Has enough gems"
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-value",
-													"objectClass": "Dictionary",
-													"sid": 188194691878688,
-													"parameters": {
-														"key": "\"Gems\"",
-														"comparison": 5,
-														"value": "Item.Price"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "add-key",
-													"objectClass": "Dictionary",
-													"sid": 544705893157976,
-													"parameters": {
-														"key": "\"Gems\"",
-														"value": "Self.Get(\"Gems\") - Item.Price"
-													}
-												},
-												{
-													"id": "add-key",
-													"objectClass": "Dictionary",
-													"sid": 852623651973948,
-													"parameters": {
-														"key": "Item.ItemKey",
-														"value": "1"
-													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "Item",
-													"sid": 421363029182191
-												},
-												{
-													"id": "set-group-active",
+													"id": "create-object",
 													"objectClass": "System",
-													"sid": 478269197752113,
+													"sid": 672040167530956,
 													"parameters": {
-														"group-name": "\"Player Engine\"",
-														"state": "activated"
+														"object-to-create": "SpriteFont_Menu",
+														"layer": "\"Dialogue\"",
+														"x": "DialogueBox.BBoxRight - 28",
+														"y": "DialogueBox.BBoxBottom - 28",
+														"create-hierarchy": false,
+														"template-name": "\"\""
 													}
 												},
 												{
-													"id": "set-eventvar-value",
-													"objectClass": "System",
-													"sid": 818149699833995,
+													"id": "set-text",
+													"objectClass": "SpriteFont_Menu",
+													"sid": 734514784726510,
 													"parameters": {
-														"variable": "PauseLock",
+														"text": "\"OK\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "SpriteFont_Menu",
+													"sid": 478498107816295,
+													"parameters": {
+														"instance-variable": "Menu",
+														"value": "\"Chat\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "SpriteFont_Menu",
+													"sid": 552240525491592,
+													"parameters": {
+														"instance-variable": "Link_ID",
 														"value": "0"
 													}
 												},
 												{
-													"callFunction": "Audio_Play_Sound",
-													"sid": 627771096911802,
-													"parameters": [
-														"\"Collectible_Pickup\"",
-														"0",
-														"\"Collectible_Pickup\""
-													]
+													"id": "set-instvar-value",
+													"objectClass": "Ctrl_Menu",
+													"sid": 580005289665122,
+													"parameters": {
+														"instance-variable": "CurrentLink",
+														"value": "0"
+													}
 												}
 											],
-											"sid": 420826903007352,
-											"children": [
-												{
-													"eventType": "comment",
-													"text": "Increase stats with certain items"
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Item",
-															"sid": 129924134456814,
-															"parameters": {
-																"instance-variable": "ItemKey",
-																"comparison": 0,
-																"value": "\"Gold Sword\""
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Item",
-															"sid": 468073278832130,
-															"parameters": {
-																"instance-variable": "ItemKey",
-																"comparison": 0,
-																"value": "\"Purple Sword\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "add-key",
-															"objectClass": "Dictionary",
-															"sid": 330122515563961,
-															"parameters": {
-																"key": "\"Strength\"",
-																"value": "Self.Get(\"Strength\") + 1"
-															}
-														}
-													],
-													"sid": 350718295060544,
-													"isOrBlock": true
-												},
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Item",
-															"sid": 448692963077015,
-															"parameters": {
-																"instance-variable": "ItemKey",
-																"comparison": 0,
-																"value": "\"Blue Cloak\""
-															}
-														},
-														{
-															"id": "compare-instance-variable",
-															"objectClass": "Item",
-															"sid": 999516558073283,
-															"parameters": {
-																"instance-variable": "ItemKey",
-																"comparison": 0,
-																"value": "\"Red Cloak\""
-															}
-														}
-													],
-													"actions": [
-														{
-															"id": "add-key",
-															"objectClass": "Dictionary",
-															"sid": 568016556346154,
-															"parameters": {
-																"key": "\"Defense\"",
-																"value": "Self.Get(\"Defense\") + 1"
-															}
-														}
-													],
-													"sid": 440856739731051,
-													"isOrBlock": true
-												}
-											]
+											"sid": 528580471329515
 										}
 									]
 								}
-							]
-						},
+							],
+							"isOrBlock": true
+						}
+					],
+					"sid": 972833747366729
+				},
+				{
+					"functionName": "SelectNPCDialogue",
+					"functionDescription": "",
+					"functionCategory": "",
+					"functionReturnType": "string",
+					"functionCopyPicked": false,
+					"functionIsAsync": false,
+					"functionParameters": [
 						{
-							"eventType": "comment",
-							"text": "Warping to Gatewood"
-						},
+							"name": "NpcUID",
+							"type": "number",
+							"initialValue": "0",
+							"comment": "",
+							"sid": 914783826896965
+						}
+					],
+					"eventType": "function-block",
+					"conditions": [],
+					"actions": [],
+					"sid": 724203882233382,
+					"children": [
 						{
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "compare-eventvar",
+									"id": "for-each",
 									"objectClass": "System",
-									"sid": 951306020629300,
+									"sid": 289974770167993,
 									"parameters": {
-										"variable": "text",
-										"comparison": 0,
-										"value": "\"Warp to Gatewood\""
+										"object": "NPCs"
 									}
-								}
-							],
-							"actions": [],
-							"sid": 438624636721492,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 795596837898179,
-											"parameters": {
-												"first-value": "LayoutName",
-												"comparison": 0,
-												"second-value": "\"Gatewood\""
-											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 296973243301207,
-											"parameters": {
-												"first-value": "LayoutName",
-												"comparison": 0,
-												"second-value": "\"Jojos Hut\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Audio_Play_Sound",
-											"sid": 150666248550717,
-											"parameters": [
-												"\"Menu_Invalid\"",
-												"0",
-												"\"Menu_Invalid\""
-											]
-										}
-									],
-									"sid": 826400061157477,
-									"isOrBlock": true
 								},
 								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 796679652076534,
-											"parameters": {
-												"first-value": "LayoutName",
-												"comparison": 1,
-												"second-value": "\"Gatewood\""
-											}
-										},
-										{
-											"id": "compare-two-values",
-											"objectClass": "System",
-											"sid": 162223327112963,
-											"parameters": {
-												"first-value": "LayoutName",
-												"comparison": 1,
-												"second-value": "\"Jojos Hut\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Pause_Close",
-											"sid": 157780121910278
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 596063870075333,
-											"parameters": {
-												"variable": "Pause",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 224275060826926,
-											"parameters": {
-												"group-name": "\"Player\"",
-												"state": "deactivated"
-											}
-										},
-										{
-											"callFunction": "Transition",
-											"sid": 822425225582074,
-											"parameters": [
-												"\"Out\"",
-												"\"LayoutChange\""
-											]
-										},
-										{
-											"id": "wait-for-signal",
-											"objectClass": "System",
-											"sid": 222860434243156,
-											"parameters": {
-												"tag": "\"LayoutChange\""
-											}
-										},
-										{
-											"id": "set-group-active",
-											"objectClass": "System",
-											"sid": 587938241260335,
-											"parameters": {
-												"group-name": "\"Player\"",
-												"state": "activated"
-											}
-										},
-										{
-											"id": "set-eventvar-value",
-											"objectClass": "System",
-											"sid": 147522975278773,
-											"parameters": {
-												"variable": "Door_ID",
-												"value": "2"
-											}
-										},
-										{
-											"id": "go-to-layout-by-name",
-											"objectClass": "System",
-											"sid": 832749979954763,
-											"parameters": {
-												"layout": "\"Gatewood\""
-											}
-										},
-										{
-											"id": "stop-all",
-											"objectClass": "Audio",
-											"sid": 407937798581910
-										}
-									],
-									"sid": 946570706801785
-								}
-							]
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
 									"id": "compare-eventvar",
 									"objectClass": "System",
-									"sid": 400440844294288,
+									"sid": 915380331858958,
 									"parameters": {
-										"variable": "text",
+										"variable": "NpcUID",
 										"comparison": 0,
-										"value": "\"Save + Quit\""
+										"value": "NPCs.UID"
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "set-item",
-									"objectClass": "LocalStorage",
-									"sid": 723457749232650,
+									"id": "set-function-return-value",
+									"objectClass": "Functions",
+									"sid": 209995786918781,
 									"parameters": {
-										"key": "\"SaveData\"",
-										"value": "Dictionary.AsJSON"
-									}
-								},
-								{
-									"id": "close",
-									"objectClass": "Browser",
-									"sid": 204604653840650
-								}
-							],
-							"sid": 558216104413159
-						},
-						{
-							"eventType": "comment",
-							"text": "Title screen commands"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 479532058703159,
-									"parameters": {
-										"variable": "text",
-										"comparison": 0,
-										"value": "\"New Game\""
+										"value": "NPCs.DialogueText"
 									}
 								}
 							],
-							"actions": [
-								{
-									"id": "remove-item",
-									"objectClass": "LocalStorage",
-									"sid": 320806644878362,
-									"parameters": {
-										"key": "\"SaveData\""
-									}
-								},
-								{
-									"callFunction": "SaveData_SetDefault",
-									"sid": 727661354355529
-								},
-								{
-									"callFunction": "Transition",
-									"sid": 911936566548081,
-									"parameters": [
-										"\"Out\"",
-										"\"LayoutChange\""
-									]
-								},
-								{
-									"id": "wait-for-signal",
-									"objectClass": "System",
-									"sid": 941043541855128,
-									"parameters": {
-										"tag": "\"LayoutChange\""
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 370960944600513,
-									"parameters": {
-										"group-name": "\"Player Engine\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 801027411645662,
-									"parameters": {
-										"layout": "\"Gatewood\""
-									}
-								}
-							],
-							"sid": 434101654932883
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-eventvar",
-									"objectClass": "System",
-									"sid": 102242420723781,
-									"parameters": {
-										"variable": "text",
-										"comparison": 0,
-										"value": "\"Load Game\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"callFunction": "Transition",
-									"sid": 780327654092308,
-									"parameters": [
-										"\"Out\"",
-										"\"LayoutChange\""
-									]
-								},
-								{
-									"id": "wait-for-signal",
-									"objectClass": "System",
-									"sid": 879344890989203,
-									"parameters": {
-										"tag": "\"LayoutChange\""
-									}
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 168788802739798,
-									"parameters": {
-										"group-name": "\"Player Engine\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "go-to-layout-by-name",
-									"objectClass": "System",
-									"sid": 302061097732788,
-									"parameters": {
-										"layout": "\"Gatewood\""
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 208930763286565,
-									"parameters": {
-										"variable": "Door_ID",
-										"value": "2"
-									}
-								}
-							],
-							"sid": 888120876580072
+							"sid": 600214085716180
 						}
 					]
 				}
 			],
-			"sid": 352801036812269
+			"sid": 741373011443622
 		},
 		{
 			"eventType": "comment",
@@ -15859,9 +17046,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "SpriteFont_AreaName",
-									"sid": 184868848355918,
+									"sid": 674814368333041,
 									"parameters": {
-										"text": "\"Dungeon\""
+										"text": "\"Torre del Rey\""
 									}
 								}
 							],
