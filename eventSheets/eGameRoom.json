@@ -12247,15 +12247,24 @@
 							}
 						},
 						{
+							"id": "set-position",
+							"objectClass": "PlayerLight",
+							"sid": 231803784919993,
+							"parameters": {
+								"x": "Player_Base.X",
+								"y": "Player_Base.Y - 8"
+							}
+						},
+						{
 							"id": "pin-to-object-properties",
 							"objectClass": "PlayerLight",
-							"sid": 685713390572077,
+							"sid": 347805639859583,
 							"behaviorType": "Pin",
 							"parameters": {
 								"pin-to": "Player_Mask",
 								"x": true,
 								"y": true,
-								"angle": true,
+								"angle": false,
 								"width-type": "no",
 								"height-type": "no",
 								"z": false
@@ -12329,9 +12338,9 @@
 						{
 							"id": "set-text",
 							"objectClass": "SpriteFont_Dialogue",
-							"sid": 467193574005795,
+							"sid": 722475130413124,
 							"parameters": {
-								"text": "\"Bienvenido al puzzle\""
+								"text": "\"Un tablero perfecto… para un mundo perfecto. \r\nAvanza, pieza.\""
 							}
 						}
 					],
@@ -12666,6 +12675,14 @@
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ResetSquare",
+							"sid": 392296029430883,
+							"parameters": {
+								"visibility": "invisible"
+							}
 						}
 					],
 					"sid": 161474410190560
@@ -12716,6 +12733,14 @@
 								"y": "NeutralSquare.Y",
 								"create-hierarchy": false,
 								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ResetSquare",
+							"sid": 268996980416899,
+							"parameters": {
+								"visibility": "invisible"
 							}
 						}
 					],

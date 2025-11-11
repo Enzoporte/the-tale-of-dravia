@@ -226,14 +226,7 @@
 	],
 	"uniqueId": "reh1ov8kbj7",
 	"objectTypes": {
-		"items": [
-			"tile_1",
-			"tile_2",
-			"Darkness2",
-			"PlayerLight",
-			"DialogueBox2",
-			"tilemap_black_packed"
-		],
+		"items": [],
 		"subfolders": [
 			{
 				"items": [
@@ -421,7 +414,11 @@
 				"items": [
 					"InstructionSquare",
 					"ResetSquare",
-					"NeutralSquare"
+					"NeutralSquare",
+					"PlayerLight",
+					"tile_1",
+					"tile_2",
+					"Darkness2"
 				],
 				"subfolders": [],
 				"name": "Puzzle"
@@ -526,31 +523,38 @@
 			},
 			{
 				"items": [
-					"Dungeon Intro",
-					"Dungeon Entrance2",
 					"Dungeon_Template",
-					"Dungeon_1_1x",
-					"Dungeon_1_2",
-					"Dungeon_1_3",
-					"Dungeon_1_4",
-					"Dungeon_1_5",
-					"Dungeon_2_1",
-					"Dungeon_2_2",
-					"Dungeon_2_3",
-					"Dungeon_2_4",
-					"Dungeon_2_5",
-					"Dungeon_3_1",
-					"Dungeon_3_2",
-					"Dungeon_3_3",
-					"Dungeon_3_4",
-					"Dungeon_3_5",
-					"Dungeon_1_1",
 					"Dungeon Entrance",
-					"Dungeon_1_5X",
+					"Dungeon_1_1",
+					"Dungeon_1_5",
+					"Dungeon_3_4",
 					"Dungeon_Puzzle_Test",
 					"Dungeon_Puzzle"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"Dungeon Intro",
+							"Dungeon Entrance2",
+							"Dungeon_1_1x",
+							"Dungeon_1_2",
+							"Dungeon_1_3",
+							"Dungeon_1_4",
+							"Dungeon_1_5X",
+							"Dungeon_2_1",
+							"Dungeon_2_2",
+							"Dungeon_2_3",
+							"Dungeon_2_4",
+							"Dungeon_2_5",
+							"Dungeon_3_1",
+							"Dungeon_3_2",
+							"Dungeon_3_3",
+							"Dungeon_3_5"
+						],
+						"subfolders": [],
+						"name": "Demonoire Rooms"
+					}
+				],
 				"name": "Dungeon Rooms"
 			}
 		]

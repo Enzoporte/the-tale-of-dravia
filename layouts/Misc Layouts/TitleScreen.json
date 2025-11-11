@@ -193,7 +193,7 @@
 						"IsCurrentMenu": false,
 						"Menu": "TitleScreen",
 						"CurrentLink": 0,
-						"MaxLinks": 1
+						"MaxLinks": 0
 					},
 					"behaviors": {},
 					"showing": true,
@@ -253,7 +253,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "Arrows: Move\nEnter: Pause Menu\nZ: Dash / Confirm\nX: Attack\n",
+						"text": "Arrows: Move\nEnter: Pause Menu\nZ: Dash / Interact\nX: Attack\nC: Secondary Attack\n",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -297,9 +297,9 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 196,
+						"y": 180,
 						"width": 188,
-						"height": 44,
+						"height": 60,
 						"originX": 0,
 						"originY": 0,
 						"color": [
