@@ -35,10 +35,10 @@
 					"ownData": {
 						"tilemapData": {
 							"width": 13,
-							"height": 10,
+							"height": 11,
 							"max-width": 19,
-							"max-height": 11,
-							"data": "10x1,0,5x1,4x0,1,0,5x1,4v,3x0,1,0,5x1,4x0,1,0,5x1,4x0,1,0,2x1,20x0,2x1,9x0,5x1,4x0,1,0,5x1,4x0,1,0,5x1,4v,3x0,1,0,5x1,4x0,1,0,10x1,67x0"
+							"max-height": 12,
+							"data": "10x1,2x0,5x1,4x0,1,2x0,5x1,4v,3x0,1,2x0,5x1,4x0,1,2x0,5x1,4x0,2x1,0,2x1,8x0,1,11x0,1,0,2x1,8x0,1,0,5x1,4x0,2x1,0,5x1,4x0,1,2x0,5x1,4v,3x0,1,2x0,5x1,4x0,1,2x0,10x1,74x0"
 						},
 						"tile-width": 24,
 						"tile-height": 24,
@@ -53,7 +53,7 @@
 						"x": 0,
 						"y": 0,
 						"width": 312,
-						"height": 240,
+						"height": 264,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -623,11 +623,11 @@
 					"sid": 425902712548665,
 					"tags": "",
 					"instanceVariables": {
-						"Room": "Gatewood",
-						"ID": 2,
+						"Room": "",
+						"ID": 0,
 						"Direction": "Up",
-						"StartingDoor": true,
-						"Void": false
+						"StartingDoor": false,
+						"Void": true
 					},
 					"behaviors": {},
 					"showing": true,
@@ -706,8 +706,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 156,
-						"y": 0,
+						"x": 216,
+						"y": -36,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -828,7 +828,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"SelectDelay": 0,
-						"DialogueText": "El de la izquierda tiene razon..."
+						"DialogueText": "Hola"
 					},
 					"behaviors": {
 						"Solid": {
@@ -854,6 +854,45 @@
 						"height": 38,
 						"originX": 0.4375,
 						"originY": 0.8157894736842105,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Trigger_Door",
+					"properties": {
+						"initially-visible": false,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 948,
+					"sid": 598036490243066,
+					"tags": "",
+					"instanceVariables": {
+						"Room": "Dungeon Puzzle",
+						"ID": 0,
+						"Direction": "",
+						"StartingDoor": false,
+						"Void": false
+					},
+					"behaviors": {},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 156,
+						"y": 0,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

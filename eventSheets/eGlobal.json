@@ -73,6 +73,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "hasTriggeredADialogue",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 497995537894219
+		},
+		{
+			"eventType": "variable",
 			"name": "Door_ID",
 			"type": "number",
 			"initialValue": "0",
@@ -228,10 +238,10 @@
 						{
 							"id": "add-key",
 							"objectClass": "Dictionary",
-							"sid": 109466839064416,
+							"sid": 388098277825209,
 							"parameters": {
 								"key": "\"Gems\"",
-								"value": "999"
+								"value": "0"
 							}
 						},
 						{

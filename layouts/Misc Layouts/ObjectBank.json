@@ -177,8 +177,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
-						"y": 0,
+						"x": 8,
+						"y": 16,
 						"width": 320,
 						"height": 240,
 						"originX": 0,
@@ -233,211 +233,6 @@
 						"height": 48,
 						"originX": 0.5,
 						"originY": 0.791667,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Player_Mask",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle_Down",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 0,
-					"sid": 273055663489855,
-					"tags": "",
-					"instanceVariables": {
-						"Direction": "Down",
-						"Attacking": false,
-						"Hurt": false,
-						"HurtTimer": 0,
-						"IsKnockedBack": false,
-						"KnockBackTimer": 0,
-						"Walking": false,
-						"Dashing": false,
-						"DashTimer": 0,
-						"LastAngleX": 0,
-						"LastAngleY": 0,
-						"LastAngle": 0,
-						"Event": false,
-						"Dead": false,
-						"DeathTimer": 0
-					},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Brightness": {
-							"isEnabled": true,
-							"parameters": {
-								"brightness": 1
-							}
-						},
-						"ReplaceColor_Sword_1": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.6666666666666666,
-									0.6313725490196078,
-									0.6039215686274509,
-									1
-								],
-								"replace-color": [
-									0.6666666666666666,
-									0.6313725490196078,
-									0.6039215686274509,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"ReplaceColor_Sword_2": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.8156862745098039,
-									0.8,
-									0.7450980392156863,
-									1
-								],
-								"replace-color": [
-									0.8156862745098039,
-									0.8,
-									0.7450980392156863,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"ReplaceColor_Cloak_1": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.0784313725490196,
-									0.2784313725490196,
-									0.23137254901960785,
-									1
-								],
-								"replace-color": [
-									0.0784313725490196,
-									0.2784313725490196,
-									0.23137254901960785,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"ReplaceColor_Cloak_2": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.1411764705882353,
-									0.4235294117647059,
-									0.23137254901960785,
-									1
-								],
-								"replace-color": [
-									0.1411764705882353,
-									0.4235294117647059,
-									0.23137254901960785,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"ReplaceColor_Cloak_3": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.1843137254901961,
-									0.5764705882352941,
-									0.3215686274509804,
-									1
-								],
-								"replace-color": [
-									0.1843137254901961,
-									0.5764705882352941,
-									0.3215686274509804,
-									1
-								],
-								"tolerance": 0.01
-							}
-						},
-						"ReplaceColor_Cloak_4": {
-							"isEnabled": true,
-							"parameters": {
-								"source-color": [
-									0.4117647058823529,
-									0.6941176470588235,
-									0.34509803921568627,
-									1
-								],
-								"replace-color": [
-									0.4117647058823529,
-									0.6941176470588235,
-									0.34509803921568627,
-									1
-								],
-								"tolerance": 0.01
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 16,
-						"y": 40,
-						"width": 32,
-						"height": 48,
-						"originX": 0.5,
-						"originY": 0.833333,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Player_Sword",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Slash_Down",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 10,
-					"sid": 469353907212557,
-					"tags": "",
-					"instanceVariables": {
-						"Direction": "",
-						"Attacking": false
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 44,
-						"y": 40,
-						"width": 48,
-						"height": 48,
-						"originX": 0.5,
-						"originY": 0.833333,
 						"color": [
 							1,
 							1,
@@ -2127,6 +1922,17 @@
 								"step": false,
 								"enabled": true
 							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 150,
+								"acceleration": 300,
+								"deceleration": 500,
+								"rotate-speed": 1000,
+								"set-angle": false,
+								"stop-on-solids": true,
+								"enabled": true
+							}
 						}
 					},
 					"showing": true,
@@ -2134,10 +1940,10 @@
 					"world": {
 						"x": 300,
 						"y": 288,
-						"width": 32,
-						"height": 32,
-						"originX": 0.5,
-						"originY": 0.59375,
+						"width": 11,
+						"height": 19,
+						"originX": 0.5714285714285714,
+						"originY": 0.5909090909090909,
 						"color": [
 							1,
 							1,
@@ -2727,6 +2533,336 @@
 						"height": 38,
 						"originX": 0.4375,
 						"originY": 0.8157894736842105,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "player_knife",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1016,
+					"sid": 475029808171252,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Bullet": {
+							"properties": {
+								"speed": 400,
+								"acceleration": 0,
+								"gravity": 0,
+								"bounce-off-solids": false,
+								"set-angle": true,
+								"step": false,
+								"enabled": true
+							}
+						},
+						"MoveTo": {
+							"properties": {
+								"max-speed": 200,
+								"acceleration": 600,
+								"deceleration": 600,
+								"rotate-speed": 0,
+								"set-angle": true,
+								"stop-on-solids": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 475029808171252,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": -4,
+						"y": -20,
+						"width": 16,
+						"height": 16,
+						"originX": 0.25,
+						"originY": 0.5625,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Particles",
+					"properties": {
+						"rate": 25,
+						"spray-cone": 60,
+						"type": "one-shot",
+						"object": -1,
+						"initially-visible": true,
+						"live-preview": false,
+						"speed": 200,
+						"size": 32,
+						"opacity": 100,
+						"grow-rate": 0,
+						"x-randomiser": 0,
+						"y-randomiser": 0,
+						"initial-speed-randomiser": 0,
+						"size-randomiser": 0,
+						"grow-rate-randomiser": 0,
+						"acceleration": -150,
+						"gravity": 0,
+						"angle-randomiser": 0,
+						"life-speed-randomiser": 800,
+						"opacity-randomiser": 0,
+						"destroy-mode": "fade-to-invisible",
+						"timeout": 1
+					},
+					"uid": 1017,
+					"sid": 306825183462542,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 306825183462542,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 68,
+						"y": -72,
+						"width": 44,
+						"height": 44,
+						"originX": 0,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 4.71238898038469,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1013,
+					"sid": 735931276044071,
+					"tags": "",
+					"instanceVariables": {
+						"Direction": "Down",
+						"Attacking": false,
+						"Hurt": false,
+						"HurtTimer": 0,
+						"IsKnockedBack": false,
+						"KnockBackTimer": 0,
+						"Walking": false,
+						"Dashing": false,
+						"DashTimer": 0,
+						"LastAngleX": 0,
+						"LastAngleY": 0,
+						"LastAngle": 0,
+						"Event": false,
+						"Dead": false,
+						"DeathTimer": 0,
+						"throwing": false,
+						"canThrow": true,
+						"lastDirection": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						},
+						"ReplaceColor_Sword_1": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColor_Sword_2": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColor_Cloak_1": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColor_Cloak_2": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColor_Cloak_3": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						},
+						"ReplaceColor_Cloak_4": {
+							"isEnabled": true,
+							"parameters": {
+								"source-color": [
+									1,
+									1,
+									1,
+									1
+								],
+								"replace-color": [
+									0,
+									0,
+									0,
+									1
+								],
+								"tolerance": 0.01
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 735931276044071,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 24,
+						"y": 28,
+						"width": 32,
+						"height": 32,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Player_Sword",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Slash_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1014,
+					"sid": 816090205528073,
+					"tags": "",
+					"instanceVariables": {
+						"Direction": "",
+						"Attacking": false
+					},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 816090205528073,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 52,
+						"y": 40,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.833333,
 						"color": [
 							1,
 							1,

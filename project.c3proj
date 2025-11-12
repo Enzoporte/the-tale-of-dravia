@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -162,6 +169,13 @@
 		},
 		{
 			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
 			"id": "Pin",
 			"name": "Pin",
 			"author": "Scirra",
@@ -226,7 +240,10 @@
 	],
 	"uniqueId": "reh1ov8kbj7",
 	"objectTypes": {
-		"items": [],
+		"items": [
+			"player_knife",
+			"Particles"
+		],
 		"subfolders": [
 			{
 				"items": [
@@ -273,9 +290,9 @@
 			},
 			{
 				"items": [
+					"Player_Base",
 					"Player_Sword",
-					"Player_Mask",
-					"Player_Base"
+					"Player_Mask"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -430,12 +447,6 @@
 	"containers": [
 		{
 			"members": [
-				"Player_Base",
-				"Player_Mask"
-			]
-		},
-		{
-			"members": [
 				"En_Slime_Base",
 				"En_Slime_Mask"
 			]
@@ -487,6 +498,12 @@
 				"NPC_Quieto",
 				"NPC_Zone"
 			]
+		},
+		{
+			"members": [
+				"Player_Base",
+				"Player_Mask"
+			]
 		}
 	],
 	"families": {
@@ -507,8 +524,9 @@
 					"ObjectBank",
 					"GlobalLayers",
 					"TitleScreen",
-					"Credits",
-					"NarrativeTemplate"
+					"CreditsDemonoire",
+					"NarrativeTemplate",
+					"Credits"
 				],
 				"subfolders": [],
 				"name": "Misc Layouts"
@@ -523,24 +541,24 @@
 			},
 			{
 				"items": [
+					"Dungeon Intro",
 					"Dungeon_Template",
 					"Dungeon Entrance",
 					"Dungeon_1_1",
-					"Dungeon_1_5",
 					"Dungeon_3_4",
 					"Dungeon_Puzzle_Test",
-					"Dungeon_Puzzle"
+					"Dungeon Puzzle",
+					"Dungeon Rey"
 				],
 				"subfolders": [
 					{
 						"items": [
-							"Dungeon Intro",
 							"Dungeon Entrance2",
 							"Dungeon_1_1x",
 							"Dungeon_1_2",
 							"Dungeon_1_3",
 							"Dungeon_1_4",
-							"Dungeon_1_5X",
+							"Dungeon_1_5",
 							"Dungeon_2_1",
 							"Dungeon_2_2",
 							"Dungeon_2_3",
@@ -549,7 +567,7 @@
 							"Dungeon_3_1",
 							"Dungeon_3_2",
 							"Dungeon_3_3",
-							"Dungeon_3_5"
+							"Dungeon_3_5x"
 						],
 						"subfolders": [],
 						"name": "Demonoire Rooms"
