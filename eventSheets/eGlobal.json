@@ -333,6 +333,24 @@
 								"key": "\"DungeonKey\"",
 								"value": "0"
 							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 901003766290918,
+							"parameters": {
+								"key": "\"hasTorre_Izquierda\"",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 779972764390219,
+							"parameters": {
+								"key": "\"hasTorre_Derecha\"",
+								"value": "0"
+							}
 						}
 					],
 					"sid": 106964702889197

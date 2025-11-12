@@ -1,5 +1,5 @@
 {
-	"name": "Dungeon Entrance",
+	"name": "Torre_Derecha",
 	"layers": [
 		{
 			"name": "Collisions",
@@ -20,8 +20,8 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 753,
-					"sid": 726416592653681,
+					"uid": 960,
+					"sid": 122543495782780,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {
@@ -34,11 +34,11 @@
 					},
 					"ownData": {
 						"tilemapData": {
-							"width": 13,
-							"height": 11,
-							"max-width": 19,
-							"max-height": 12,
-							"data": "10x1,2x0,5x1,4x0,1,2x0,5x1,4v,3x0,1,2x0,5x1,4x0,1,2x0,5x1,4x0,2x1,0,2x1,8x0,1,11x0,1,0,2x1,8x0,1,0,5x1,4x0,2x1,0,5x1,4x0,1,2x0,5x1,4v,3x0,1,2x0,5x1,4x0,1,2x0,10x1,74x0"
+							"width": 29,
+							"height": 12,
+							"max-width": 86,
+							"max-height": 61,
+							"data": "0,11x1,50x0,3x1,7x0,1,50x0,3x1,7x0,1,50x0,3x1,4vd,3x0,3x4d,1,50x0,3x1,1hvd,4hv,0,4h,3x1hvd,1,50x0,3x1,1hvd,4hv,0,4h,1hvd,2x4hd,1,50x0,3x1,1hvd,4hv,0,4h,1hvd,2x0,1,50x0,3x1,1hvd,4hv,0,4h,1hvd,2x0,1,50x0,3x1,1hvd,4hv,0,4h,3x1hvd,1,50x0,3x1,1hvd,4hv,2x0,2x4hd,2x1,50x0,3x1,1hvd,4hv,4x0,2x1,50x0,3x1,1hvd,4hv,4x0,2x1,50x0,3x1,4x1hvd,4hv,0,2x1,50x0,3x1,3x0,1hvd,4hv,0,2x1,50x0,3x1,3x0,1hvd,4hv,0,2x1,50x0,3x1,3x0,1hvd,4hv,0,2x1,50x0,3x1,4x1hvd,4hv,0,2x1,50x0,3x1,1hvd,4hv,4x0,2x1,50x0,3x1,1hvd,4hv,4x0,2x1,50x0,3x1,1hvd,4hv,0,4h,4x1,50x0,3x1,1hvd,4hv,0,4h,1,2x4hvd,1,50x0,3x1,1hvd,4hv,0,4h,1,2x0,1,50x0,3x1,1hvd,4hv,0,4h,1,2x0,1,50x0,3x1,1hvd,4hv,0,4h,4x1,50x0,3x1,1hvd,4hv,0,4h,4x1,50x0,2x1,1hvd,7x0,1,50x0,2x1,1hvd,7x0,1,50x0,3x1,7x4vd,1,50x0,11x1hvd,3526x0"
 						},
 						"tile-width": 24,
 						"tile-height": 24,
@@ -50,10 +50,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 0,
-						"y": 0,
-						"width": 312,
-						"height": 264,
+						"x": -24,
+						"y": -24,
+						"width": 708,
+						"height": 288,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -66,7 +66,7 @@
 					}
 				}
 			],
-			"sid": 243696478739362,
+			"sid": 530706863935961,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
@@ -78,9 +78,9 @@
 				1
 			],
 			"backgroundColor": [
-				1,
-				1,
-				1,
+				0,
+				0,
+				0,
 				1
 			],
 			"isTransparent": false,
@@ -101,11 +101,11 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Tilemap_Dungeon",
+					"type": "Tilemap_Dungeon2",
 					"properties": {
 						"initially-visible": true,
-						"tile-width": 24,
-						"tile-height": 24,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -114,21 +114,21 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 754,
-					"sid": 919619816217116,
+					"uid": 965,
+					"sid": 388245353160543,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 13,
-							"height": 10,
-							"max-width": 13,
-							"max-height": 10,
-							"data": "3x1,3,16h,4x15d,16d,3x1,3,15h,28vd,2x27vd,28hv,15v,3x1,3,15h,27,74hd,74,27hv,15v,4h,2x3vd,2h,15h,27,75hv,75,27hv,15v,2h,16h,2x15d,14h,27,75hv,75,27hv,14hv,15d,14h,28vd,2x27vd,26vd,75hv,75,26hv,27vd,39hd,40hd,27,98,87,86,75hv,75,85h,97h,15hd,14,28,2x27hd,26,75hv,75,26hd,27hd,2,16,2x15hd,14,27,75hv,75,27hv,14v,4,2x3hd,2,15,27,75hv,75,27hv,15v,3x1,3,15,27,74hv,74vd,27hv,15v,3x1,3,15,28,2x27hd,28hd,15v,3x1,3,16,4x15hd,16v"
+							"width": 40,
+							"height": 15,
+							"max-width": 87,
+							"max-height": 15,
+							"data": "266,303,340,377,414,10x0,267,304,341,378,415,10x0,268,305,342,379,416,10x0,269,306,343,380,417,10x0,270,307,344,381,418,10x0,271,308,345,382,419,10x0,272,309,346,383,420,10x0,273,310,347,384,421,10x0,274,311,348,385,422,10x0,275,312,349,386,423,10x0,266,303,340,377,414,10x0,267,304,341,378,415,10x0,268,305,342,379,416,10x0,269,306,343,380,417,10x0,270,307,344,381,418,10x0,271,308,345,382,419,10x0,272,309,346,383,420,10x0,273,310,347,384,421,10x0,274,311,348,385,422,10x0,275,312,349,386,423,10x0,266,303,340,377,414,10x0,267,304,341,378,415,10x0,268,305,342,379,416,10x0,269,306,343,380,417,10x0,270,307,344,381,418,10x0,271,308,345,382,419,10x0,272,309,346,383,420,10x0,273,310,347,384,421,10x0,274,311,348,385,422,10x0,275,312,349,386,423,10x0,266,303,340,377,414,10x0,267,304,341,378,415,10x0,268,305,342,379,416,10x0,269,306,343,380,417,10x0,270,307,344,381,418,10x0,271,308,345,382,419,10x0,272,309,346,383,420,10x0,273,310,347,384,421,10x0,274,311,348,385,422,10x0,266h,303h,340h,377h,423,715x0"
 						},
-						"tile-width": 24,
-						"tile-height": 24,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -152,7 +152,72 @@
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 312,
+						"width": 640,
+						"height": 240,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Tilemap_Dungeon2",
+					"properties": {
+						"initially-visible": true,
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0,
+						"tile-x-drawing-offset": 0,
+						"tile-y-drawing-offset": 0,
+						"drawing-mode": "top-to-right"
+					},
+					"uid": 991,
+					"sid": 352762862884193,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"ownData": {
+						"tilemapData": {
+							"width": 40,
+							"height": 15,
+							"max-width": 115,
+							"max-height": 20,
+							"data": "4x0,836,1593,1483,1520,1481,1483,1520,1592,1483,1520,1593,9x0,835,1593,1481,1518,1484,1481,1518,1593,1481,1518,1594,9x0,835,1593,1482,1519,1483,1482,1519,1594,1482,1519,1593,9x0,836,1594,1483,1520,1484,1483,1520,1595,1483,1520,1594,9x0,834,2x300,3x1484,5x300,9x0,835,872,910,2x1285,1248,197,2x84,121,158,9x0,836,873,909,2x1285,1248,197,4x85,9x0,834,871,910,1285,2x1248,2x197,2x1481,1518,9x0,835,872,908,1285,2x1248,2x197,1482,861,898,9x0,836,873,909,1285,2x1248,2x197,1481,862,899,9x0,834,871,910,1285,2x1248,2x197,1482,1481h,1518h,9x0,835,872,908,1285,2x1248,2x197,3x85,9x0,836,873,909,1285,2x1248,197,2x85,2x84,9x0,837,874,911,1285,3x1248,1285,2x1248,300,9x0,838,875,912,1285,2x1248,2x1285,2x1248,944,9x0,835,872,910,1285,2x1248,2x1285,2x1248,945,9x0,836,871,908,4x85,1285,2x1248,300,9x0,834,871,909,4x85,1285,2x1248,947,9x0,835,823,860,823,828,865,85,1285,2x1248,945,9x0,836,824,861,824,829,866,85,3x1248,946,9x0,835,828,865,825,862,899,85,3x1248,197,9x0,835,829,866,826,863,900,85,1285,2x1248,197,9x0,836,872,909,4x85,1285,2x1248,197,9x0,834,871,908,4x85,1285,2x1248,300,9x0,835,873,910,5x1285,2x1248,197,9x0,836,872,909,3x1285,1248,1285,2x1248,197,9x0,835,872,909,2x1285,2x1248,1285,2x1248,300,9x0,836,873,910,2x1285,1248,3x85,2x84,9x0,834,871,908,1285,2x1248,5x85,9x0,835,872,909,1285,2x1248,2x85,1481,1482,1519,9x0,836,873,910,1285,2x1248,2x85,1482,861,898,9x0,834,871,908,1285,2x1248,2x85,1481,828,865,9x0,835,872,909,1285,2x1248,2x85,1482,1481h,1518h,9x0,836,873,910,1285,2x1248,5x85,9x0,835,873,910,1285,2x1248,5x122h,9x0,835,2x300,3x1484,5x300,9x0,836,1593,1483,1520,1481,1483,1520,1592,1483,1520,1593,9x0,837,1593,1481,1518,1484,1481,1518,1593,1481,1518,1594,9x0,838,1593,1482,1519,1483,1482,1519,1594,1482,1519,1593,9x0,836,1594,1483,1520,1484,1483,1520,1595,1483,1520,1594,1505x0"
+						},
+						"tile-width": 16,
+						"tile-height": 16,
+						"tile-x-offset": 0,
+						"tile-y-offset": 0,
+						"tile-x-spacing": 0,
+						"tile-y-spacing": 0
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 0,
+						"width": 648,
 						"height": 240,
 						"originX": 0,
 						"originY": 0,
@@ -166,7 +231,7 @@
 					}
 				}
 			],
-			"sid": 986741216422130,
+			"sid": 192905901139144,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -201,195 +266,11 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Animated_Tile",
+					"type": "Tilemap_DungeonObjects",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Torch",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 755,
-					"sid": 866105468328395,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 24,
-						"y": 96,
-						"width": 24,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Animated_Tile",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Torch",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 756,
-					"sid": 927527732632328,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 72,
-						"y": 96,
-						"width": 24,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Animated_Tile",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Torch",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 757,
-					"sid": 682490761038532,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 216,
-						"y": 96,
-						"width": 24,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Animated_Tile",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Torch",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 758,
-					"sid": 979929986901114,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 264,
-						"y": 96,
-						"width": 24,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Tilemap_Dungeon",
-					"properties": {
-						"initially-visible": true,
-						"tile-width": 24,
-						"tile-height": 24,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
@@ -398,45 +279,36 @@
 						"tile-y-drawing-offset": 0,
 						"drawing-mode": "top-to-right"
 					},
-					"uid": 759,
-					"sid": 189378956592081,
+					"uid": 992,
+					"sid": 615032352948301,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
 					"ownData": {
 						"tilemapData": {
-							"width": 13,
-							"height": 10,
-							"max-width": 13,
-							"max-height": 10,
-							"data": "24x0,79,91,25x0,29,41,18x0,29,41,31x0,79,91,24x0"
+							"width": 40,
+							"height": 15,
+							"max-width": 43,
+							"max-height": 18,
+							"data": "13x0,188,220,312x0,188,220,52x0,188,220,332x0,188,220,57x0"
 						},
-						"tile-width": 24,
-						"tile-height": 24,
+						"tile-width": 16,
+						"tile-height": 16,
 						"tile-x-offset": 0,
 						"tile-y-offset": 0,
 						"tile-x-spacing": 0,
 						"tile-y-spacing": 0
 					},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
+					"instanceFolderItem": {
+						"sid": 615032352948301,
+						"expanded": true
 					},
 					"showing": true,
 					"locked": false,
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 312,
+						"width": 648,
 						"height": 240,
 						"originX": 0,
 						"originY": 0,
@@ -448,9 +320,166 @@
 						],
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "Door",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1021,
+					"sid": 908594770426796,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"tags": ""
+							}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 908594770426796,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 600,
+						"y": 60,
+						"width": 24,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "GateStatue",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1022,
+					"sid": 991810543794274,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 991810543794274,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 576,
+						"y": 60,
+						"width": 24,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "GateStatue",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1048,
+					"sid": 430631072837364,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 430631072837364,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 624,
+						"y": 60,
+						"width": 24,
+						"height": 48,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
-			"sid": 326033894572099,
+			"sid": 883044026297308,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -484,7 +513,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 998350210464849,
+			"sid": 846795076774394,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -519,98 +548,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "GateStatue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 760,
-					"sid": 710628727271234,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 240,
-						"y": 96,
-						"width": 24,
-						"height": 48,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "GateStatue",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Default",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 761,
-					"sid": 879233788728173,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 48,
-						"y": 96,
-						"width": 24,
-						"height": 48,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Trigger_Door",
 					"properties": {
 						"initially-visible": false,
@@ -619,241 +556,26 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 762,
-					"sid": 425902712548665,
+					"uid": 994,
+					"sid": 613484263973970,
 					"tags": "",
 					"instanceVariables": {
 						"Room": "",
 						"ID": 0,
-						"Direction": "Up",
-						"StartingDoor": false,
+						"Direction": "Right",
+						"StartingDoor": true,
 						"Void": true
 					},
 					"behaviors": {},
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 156,
-						"y": 252,
-						"width": 72,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Ctrl_Cutscenes",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 763,
-					"sid": 535398984225969,
-					"tags": "",
-					"instanceVariables": {
-						"Name": "Dungeon Intro",
-						"State": ""
-					},
-					"behaviors": {
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
 						"x": 0,
-						"y": -12,
-						"width": 8,
-						"height": 8,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Trigger_Warp",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 764,
-					"sid": 510082667761631,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 216,
-						"y": -36,
+						"y": 132,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
 						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "NPC_Quieto",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 767,
-					"sid": 740715463939348,
-					"tags": "",
-					"instanceVariables": {
-						"SelectDelay": 0,
-						"DialogueText": "Hola buenas a todos! Enzo es un gilipollas"
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 740715463939348,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 96,
-						"y": 156,
-						"width": 32,
-						"height": 38,
-						"originX": 0.4375,
-						"originY": 0.8157894736842105,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Ctrl_Menu",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 178,
-					"sid": 408863576079649,
-					"tags": "",
-					"instanceVariables": {
-						"IsCurrentMenu": false,
-						"Menu": "Chat",
-						"CurrentLink": 0,
-						"MaxLinks": 0
-					},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 408863576079649,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": -24,
-						"y": -24,
-						"width": 16,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "NPC_Quieto",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 179,
-					"sid": 138450513377404,
-					"tags": "",
-					"instanceVariables": {
-						"SelectDelay": 0,
-						"DialogueText": "Hola"
-					},
-					"behaviors": {
-						"Solid": {
-							"properties": {
-								"enabled": true,
-								"tags": ""
-							}
-						},
-						"Timer": {
-							"properties": {}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 138450513377404,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 216,
-						"y": 156,
-						"width": 32,
-						"height": 38,
-						"originX": 0.4375,
-						"originY": 0.8157894736842105,
 						"color": [
 							1,
 							1,
@@ -873,8 +595,8 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 948,
-					"sid": 598036490243066,
+					"uid": 1002,
+					"sid": 602959830576183,
 					"tags": "",
 					"instanceVariables": {
 						"Room": "Dungeon Inicial",
@@ -887,8 +609,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 156,
-						"y": 0,
+						"x": 612,
+						"y": 72,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -902,9 +624,345 @@
 						"angle": 0,
 						"zElevation": 0
 					}
+				},
+				{
+					"type": "En_RangeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 962,
+					"sid": 109496794820815,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 109496794820815,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 144,
+						"y": 228,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_RangeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1018,
+					"sid": 466005701088459,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 466005701088459,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 492,
+						"y": 228,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_RangeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1019,
+					"sid": 761999449469824,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 761999449469824,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 324,
+						"y": 108,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_RangeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1020,
+					"sid": 326941750923479,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 326941750923479,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 312,
+						"y": 144,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_MeleeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1015,
+					"sid": 403480885315601,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 403480885315601,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 612,
+						"y": 216,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_MeleeGuard_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle_Down",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1049,
+					"sid": 262979082874359,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": false,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0.25,
+						"StateLimit": 0
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 262979082874359,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 612,
+						"y": 132,
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.8125,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
 				}
 			],
-			"sid": 949034403716187,
+			"sid": 850509983155743,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -938,7 +996,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 572585630349966,
+			"sid": 611308295861607,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -950,43 +1008,9 @@
 				1
 			],
 			"backgroundColor": [
-				0.5019607843137255,
-				0.5019607843137255,
-				0.5019607843137255,
-				1
-			],
-			"isTransparent": true,
-			"parallaxX": 1,
-			"parallaxY": 1,
-			"scaleRate": 1,
-			"forceOwnTexture": false,
-			"renderingMode": "3d",
-			"drawOrder": "z-order",
-			"useRenderCells": false,
-			"blendMode": "normal",
-			"zElevation": 0,
-			"global": false
-		},
-		{
-			"name": "Dialogue",
-			"overriden": 0,
-			"subLayers": [],
-			"instances": [],
-			"sid": 308680960668290,
-			"effectTypes": [],
-			"isInitiallyVisible": true,
-			"isInitiallyInteractive": true,
-			"isHTMLElementsLayer": false,
-			"color": [
 				1,
 				1,
 				1,
-				1
-			],
-			"backgroundColor": [
-				0.3686274509803922,
-				0.3686274509803922,
-				0.3686274509803922,
 				1
 			],
 			"isTransparent": true,
@@ -1021,8 +1045,8 @@
 						"origin": "top-left",
 						"seams": "overlap"
 					},
-					"uid": 766,
-					"sid": 844432285484656,
+					"uid": 1023,
+					"sid": 148662725534028,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -1031,7 +1055,7 @@
 					"world": {
 						"x": 0,
 						"y": 0,
-						"width": 312,
+						"width": 640,
 						"height": 240,
 						"originX": 0,
 						"originY": 0,
@@ -1046,7 +1070,7 @@
 					}
 				}
 			],
-			"sid": 286411772921958,
+			"sid": 475870449590412,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1080,7 +1104,7 @@
 			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 798024277858782,
+			"sid": 591623924503608,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1114,7 +1138,7 @@
 			"overriden": 0,
 			"subLayers": [],
 			"instances": [],
-			"sid": 966343089976458,
+			"sid": 730063952844984,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -1148,7 +1172,7 @@
 			"overriden": 1,
 			"subLayers": [],
 			"instances": [],
-			"sid": 245429649271718,
+			"sid": 347133314962984,
 			"effectTypes": [],
 			"isInitiallyVisible": false,
 			"isInitiallyInteractive": true,
@@ -1182,7 +1206,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 829796702944767,
+	"sid": 978047004786011,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 10,

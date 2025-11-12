@@ -1788,10 +1788,10 @@
 												{
 													"id": "add-key",
 													"objectClass": "Dictionary",
-													"sid": 477680377548771,
+													"sid": 771586795064795,
 													"parameters": {
 														"key": "\"Stamina\"",
-														"value": "Self.Get(\"Stamina\") - 15"
+														"value": "Self.Get(\"Stamina\") - 20"
 													}
 												},
 												{
@@ -1890,9 +1890,16 @@
 													"id": "on-collision-with-another-object",
 													"objectClass": "player_knife",
 													"sid": 707522647728691,
+													"disabled": true,
 													"parameters": {
 														"object": "Tilemap_Collision"
 													}
+												},
+												{
+													"id": "is-on-screen",
+													"objectClass": "player_knife",
+													"sid": 392374735689039,
+													"isInverted": true
 												}
 											],
 											"actions": [
@@ -5006,11 +5013,11 @@
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 626550250383644,
+											"sid": 985462494191914,
 											"parameters": [
 												"En_MeleeGuard_Mask.X",
 												"En_MeleeGuard_Mask.Y - 8",
-												"int(3 + random(6))"
+												"int(1+ random(5))"
 											]
 										}
 									],
@@ -5058,11 +5065,11 @@
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 166498583178704,
+											"sid": 605695925612955,
 											"parameters": [
 												"En_RangeGuard_Mask.X",
 												"En_RangeGuard_Mask.Y - 8",
-												"int(3 + random(6))"
+												"int(1+ random(5))"
 											]
 										}
 									],
@@ -8191,36 +8198,55 @@
 															}
 														}
 													],
-													"actions": [
+													"actions": [],
+													"sid": 340414914430318,
+													"children": [
 														{
-															"id": "set-instvar-value",
-															"objectClass": "En_MeleeGuard_Mask",
-															"sid": 134129894669192,
-															"parameters": {
-																"instance-variable": "State",
-																"value": "\"Attack\""
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "En_MeleeGuard_Mask",
-															"sid": 500093205962272,
-															"parameters": {
-																"instance-variable": "State_Timer",
-																"value": "0"
-															}
-														},
-														{
-															"id": "set-instvar-value",
-															"objectClass": "En_MeleeGuard_Mask",
-															"sid": 662549673515302,
-															"parameters": {
-																"instance-variable": "StateLimit",
-																"value": "0.2 + random(0.8)"
-															}
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "En_MeleeGuard_Base",
+																	"sid": 556105830806616,
+																	"parameters": {
+																		"instance-variable": "Pair_ID",
+																		"comparison": 0,
+																		"value": "En_MeleeGuard_Mask.UID"
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_MeleeGuard_Mask",
+																	"sid": 740766051605257,
+																	"parameters": {
+																		"instance-variable": "State",
+																		"value": "\"Attack\""
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_MeleeGuard_Mask",
+																	"sid": 786990787602505,
+																	"parameters": {
+																		"instance-variable": "State_Timer",
+																		"value": "0"
+																	}
+																},
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_MeleeGuard_Mask",
+																	"sid": 579033948641330,
+																	"parameters": {
+																		"instance-variable": "StateLimit",
+																		"value": "0.2 + random(0.8)"
+																	}
+																}
+															],
+															"sid": 842530270587855
 														}
-													],
-													"sid": 340414914430318
+													]
 												},
 												{
 													"eventType": "block",
@@ -12517,9 +12543,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Gem",
-							"sid": 861590323070560,
+							"sid": 318111761623213,
 							"parameters": {
-								"animation": "choose(\"Gem\",\"Gold\",\"Coin\",\"Heart\")",
+								"animation": "choose(\"Gem\",\"Gold\",\"Coin\",\"Heart\", \"Heart\")",
 								"from": "beginning"
 							}
 						}
@@ -12981,7 +13007,64 @@
 							]
 						}
 					],
-					"sid": 966033861557752
+					"sid": 966033861557752,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 608508832830663,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Torre_Izquierda\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 871397791468567,
+									"parameters": {
+										"key": "\"hasTorre_Izquierda\"",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 885510372036581
+						},
+						{
+							"bookmark": true,
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 422047183586195,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Torre_Derecha\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 228977552759931,
+									"parameters": {
+										"key": "\"hasTorre_Derecha\"",
+										"value": "1"
+									}
+								}
+							],
+							"sid": 792851681171580
+						}
+					]
 				}
 			],
 			"sid": 466395262510090

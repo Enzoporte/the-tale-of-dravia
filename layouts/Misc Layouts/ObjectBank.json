@@ -2180,7 +2180,7 @@
 					"sid": 738632261906091,
 					"tags": "",
 					"instanceVariables": {
-						"Health": 2,
+						"Health": 4,
 						"Strength": 2,
 						"Pair_ID": 0,
 						"Direction": "",
@@ -2337,7 +2337,7 @@
 					"sid": 164306445446122,
 					"tags": "",
 					"instanceVariables": {
-						"Health": 6,
+						"Health": 3,
 						"Strength": 3,
 						"Pair_ID": 0,
 						"Direction": "",

@@ -242,7 +242,9 @@
 	"objectTypes": {
 		"items": [
 			"player_knife",
-			"Particles"
+			"Particles",
+			"DialogueBox2",
+			"NPC_01"
 		],
 		"subfolders": [
 			{
@@ -272,7 +274,9 @@
 					"JojoHutExterior",
 					"JojosHutBackground",
 					"Tilemap_Gatewood",
-					"BG_Template"
+					"BG_Template",
+					"Tilemap_DungeonObjects",
+					"Tilemap_Dungeon2"
 				],
 				"subfolders": [],
 				"name": "Backdrops"
@@ -548,7 +552,10 @@
 					"Dungeon_3_4",
 					"Dungeon_Puzzle_Test",
 					"Dungeon Puzzle",
-					"Dungeon Rey"
+					"Dungeon Rey",
+					"Torre_Derecha",
+					"Dungeon Inicial",
+					"Torre_Izquierda"
 				],
 				"subfolders": [
 					{
