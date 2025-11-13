@@ -335,7 +335,8 @@
 					"SwordSlash",
 					"En_RangeGuard_Mask",
 					"En_RangeGuard_Base",
-					"Projectile_RangeGuard"
+					"Projectile_RangeGuard",
+					"En_Empty"
 				],
 				"subfolders": [],
 				"name": "Enemies"
@@ -553,8 +554,8 @@
 					"Dungeon_Puzzle_Test",
 					"Dungeon Puzzle",
 					"Dungeon Rey",
+					"Torre_Inicio",
 					"Torre_Derecha",
-					"Dungeon Inicial",
 					"Torre_Izquierda"
 				],
 				"subfolders": [
@@ -870,6 +871,14 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "REINA 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 733160388575075,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -965,7 +974,7 @@
 	"properties": {
 		"description": "Juego hecho para Introducción a la Industria - UDIT 2025",
 		"version": "1.0.0.0",
-		"autoIncrementVersion": false,
+		"autoIncrementVersion": true,
 		"author": "Grupo C",
 		"authorEmail": "",
 		"authorWebsite": "http://construct.net",

@@ -23,6 +23,11 @@
 			"behaviorId": "MoveTo",
 			"name": "MoveTo",
 			"sid": 391828966575422
+		},
+		{
+			"behaviorId": "Timer",
+			"name": "Timer",
+			"sid": 594910587399669
 		}
 	],
 	"effectTypes": [],

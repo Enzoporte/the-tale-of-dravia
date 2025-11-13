@@ -38,7 +38,7 @@
 							"height": 22,
 							"max-width": 33,
 							"max-height": 22,
-							"data": "9x1v,13x1vd,9x1v,13x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,2x1v,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,1v,1vd,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,18x0,4x1vd,18x0,46x1vd,132x0"
+							"data": "9x1v,13x1vd,9x1v,13x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,2x1v,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,1v,1vd,3x0,3x1hv,6x0,3x1hv,3x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,2x1vd,2x1v,18x0,3x1vd,19x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,18x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,3x0,3x1hv,6x0,3x1hv,3x0,4x1vd,18x0,4x1vd,18x0,46x1vd,132x0"
 						},
 						"tile-width": 24,
 						"tile-height": 24,
@@ -458,7 +458,7 @@
 					"locked": false,
 					"world": {
 						"x": 300,
-						"y": 0,
+						"y": 12,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -837,6 +837,74 @@
 						"height": 48,
 						"originX": 0,
 						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_Demon_Mask",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Idle",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 948,
+					"sid": 669227088060824,
+					"tags": "",
+					"instanceVariables": {
+						"Hurt_FX": 0,
+						"Active": true,
+						"DontActivate": false,
+						"State": "Idle",
+						"State_Timer": 0,
+						"SlidePoint_ID": 0,
+						"BatSpawnDirection": false
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Brightness": {
+							"isEnabled": true,
+							"parameters": {
+								"brightness": 1
+							}
+						},
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 669227088060824,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 300,
+						"y": 108,
+						"width": 69,
+						"height": 102,
+						"originX": 0.5217391304347826,
+						"originY": 0.6372549019607843,
 						"color": [
 							1,
 							1,

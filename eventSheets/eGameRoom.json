@@ -107,7 +107,8 @@
 									}
 								}
 							],
-							"sid": 827572949495182
+							"sid": 827572949495182,
+							"disabled": true
 						},
 						{
 							"eventType": "comment",
@@ -2487,6 +2488,7 @@
 					"sid": 903289074906025
 				},
 				{
+					"bookmark": true,
 					"eventType": "group",
 					"disabled": false,
 					"title": "Player Hurt / Death",
@@ -10681,6 +10683,7 @@
 													"id": "create-object",
 													"objectClass": "System",
 													"sid": 710894988473424,
+													"disabled": true,
 													"parameters": {
 														"object-to-create": "En_Demon_Mask",
 														"layer": "\"Objects\"",
@@ -11700,10 +11703,10 @@
 												{
 													"id": "create-object",
 													"objectClass": "System",
-													"sid": 953199181364656,
+													"sid": 794694983644140,
 													"parameters": {
 														"object-to-create": "Projectile_Demon_Bat",
-														"layer": "\"Tilemap_Foreground\"",
+														"layer": "\"Objects\"",
 														"x": "En_Demon_Mask.ImagePointX(1)",
 														"y": "En_Demon_Mask.ImagePointY(1)",
 														"create-hierarchy": false,
@@ -11717,6 +11720,17 @@
 													"behaviorType": "Bullet",
 													"parameters": {
 														"angle": "angle(Self.X, Self.Y, Player_Base.X, Player_Base.Y)"
+													}
+												},
+												{
+													"id": "start-timer",
+													"objectClass": "Projectile_Demon_Bat",
+													"sid": 963879142266581,
+													"behaviorType": "Timer",
+													"parameters": {
+														"duration": "3",
+														"type": "once",
+														"tag": "\"DeathTimer\""
 													}
 												}
 											],
@@ -11891,48 +11905,29 @@
 							"eventType": "block",
 							"conditions": [
 								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 922388457281948
-								}
-							],
-							"actions": [
-								{
-									"id": "set-speed",
+									"id": "on-timer",
 									"objectClass": "Projectile_Demon_Bat",
-									"sid": 609124089342283,
-									"behaviorType": "Bullet",
+									"sid": 109622659553842,
+									"behaviorType": "Timer",
 									"parameters": {
-										"speed": "Self.Bullet.Speed + 60 * dt"
-									}
-								}
-							],
-							"sid": 739575830205399
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-speed",
-									"objectClass": "Projectile_Demon_Bat",
-									"sid": 512842913596830,
-									"behaviorType": "Bullet",
-									"parameters": {
-										"comparison": 5,
-										"speed": "200"
+										"tag": "\"DeathTimer\""
 									}
 								}
 							],
 							"actions": [
 								{
-									"id": "destroy",
-									"objectClass": "Projectile_Demon_Bat",
-									"sid": 114570143209981
+									"callFunction": "Drop_Collectible",
+									"sid": 519856296940793,
+									"parameters": [
+										"Projectile_Demon_Bat.X",
+										"Projectile_Demon_Bat.Y",
+										"int(random(2))"
+									]
 								},
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 860078415968322,
+									"sid": 646089650374020,
 									"parameters": {
 										"object-to-create": "Particle",
 										"layer": "\"Objects\"",
@@ -11941,6 +11936,11 @@
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Projectile_Demon_Bat",
+									"sid": 114570143209981
 								}
 							],
 							"sid": 786228654963713
@@ -12765,12 +12765,72 @@
 							"id": "go-to-layout-by-name",
 							"objectClass": "System",
 							"sid": 686620690405304,
+							"disabled": true,
 							"parameters": {
 								"layout": "\"Dungeon_\" & Dictionary.Get(\"DungeonFloor\") & \"_\" & Dictionary.Get(\"DungeonRoom\")"
 							}
 						}
 					],
-					"sid": 491154966945149
+					"sid": 491154966945149,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 151284433845735,
+									"parameters": {
+										"key": "\"hasTorre_Derecha\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 489429265883940,
+									"parameters": {
+										"key": "\"hasTorre_Izquierda\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 201648034765923,
+									"parameters": {
+										"layout": "Dungeon_3_4"
+									}
+								}
+							],
+							"sid": 792356643330153
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "else",
+									"objectClass": "System",
+									"sid": 563427994351873
+								}
+							],
+							"actions": [
+								{
+									"id": "go-to-layout",
+									"objectClass": "System",
+									"sid": 266227184389460,
+									"parameters": {
+										"layout": "Torre_Inicio"
+									}
+								}
+							],
+							"sid": 512575122069695
+						}
+					]
 				},
 				{
 					"eventType": "comment",
@@ -13037,7 +13097,6 @@
 							"sid": 885510372036581
 						},
 						{
-							"bookmark": true,
 							"eventType": "block",
 							"conditions": [
 								{
@@ -13068,630 +13127,6 @@
 				}
 			],
 			"sid": 466395262510090
-		},
-		{
-			"eventType": "group",
-			"disabled": false,
-			"title": "Puzzle Room",
-			"description": "",
-			"isActiveOnStart": true,
-			"children": [
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-start-of-layout",
-							"objectClass": "System",
-							"sid": 363220751568023
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 482218066402023,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Dungeon Puzzle\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 796732375276770,
-							"parameters": {
-								"group-name": "\"Player Engine\"",
-								"state": "deactivated"
-							}
-						},
-						{
-							"id": "set-eventvar-value",
-							"objectClass": "System",
-							"sid": 331914986041578,
-							"parameters": {
-								"variable": "PauseLock",
-								"value": "1"
-							}
-						},
-						{
-							"id": "start-timer",
-							"objectClass": "DialogueStatue",
-							"sid": 628288430970651,
-							"behaviorType": "Timer",
-							"parameters": {
-								"duration": "0.5",
-								"type": "once",
-								"tag": "\"Dialogo\""
-							}
-						},
-						{
-							"id": "set-position",
-							"objectClass": "PlayerLight",
-							"sid": 231803784919993,
-							"parameters": {
-								"x": "Player_Base.X",
-								"y": "Player_Base.Y - 8"
-							}
-						},
-						{
-							"id": "pin-to-object-properties",
-							"objectClass": "PlayerLight",
-							"sid": 347805639859583,
-							"behaviorType": "Pin",
-							"parameters": {
-								"pin-to": "Player_Mask",
-								"x": true,
-								"y": true,
-								"angle": false,
-								"width-type": "no",
-								"height-type": "no",
-								"z": false
-							}
-						},
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player_Mask",
-							"sid": 972456147554276,
-							"parameters": {
-								"instance-variable": "Event",
-								"value": "true"
-							}
-						},
-						{
-							"id": "stop-all",
-							"objectClass": "Audio",
-							"sid": 477680526072420
-						}
-					],
-					"sid": 457174343560835
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-timer",
-							"objectClass": "DialogueStatue",
-							"sid": 637054351532471,
-							"behaviorType": "Timer",
-							"parameters": {
-								"tag": "\"Dialogo\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 507043433457285,
-							"parameters": {
-								"object-to-create": "DialogueBox",
-								"layer": "\"Dialogue\"",
-								"x": "57",
-								"y": "122",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogueBox",
-							"sid": 412105380945603,
-							"parameters": {
-								"instance-variable": "Tag",
-								"value": "\"PuzzleRey\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 458818650811540,
-							"parameters": {
-								"object-to-create": "Dialogue_Arrow",
-								"layer": "\"Dialogue\"",
-								"x": "DialogueBox.BBoxRight - 8",
-								"y": "DialogueBox.BBoxBottom - 6",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 624555417886590,
-							"parameters": {
-								"object-to-create": "SpriteFont_Dialogue",
-								"layer": "\"Dialogue\"",
-								"x": "DialogueBox.X + 4",
-								"y": "DialogueBox.Y + 4",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "SpriteFont_Dialogue",
-							"sid": 722475130413124,
-							"parameters": {
-								"text": "\"Un tablero perfecto… para un mundo perfecto. \r\nAvanza, pieza.\""
-							}
-						}
-					],
-					"sid": 990987391377125
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-key-pressed",
-							"objectClass": "Keyboard",
-							"sid": 651337171377533,
-							"parameters": {
-								"key": 90
-							}
-						},
-						{
-							"id": "on-button-pressed",
-							"objectClass": "Gamepad",
-							"sid": 389011004779072,
-							"parameters": {
-								"gamepad": "0",
-								"button": "button-b"
-							}
-						}
-					],
-					"actions": [],
-					"sid": 524558041345595,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 248632070875353,
-									"parameters": {
-										"first-value": "DialogueBox.Count",
-										"comparison": 0,
-										"second-value": "1"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "DialogueBox",
-									"sid": 189594594698557,
-									"parameters": {
-										"instance-variable": "Tag",
-										"comparison": 0,
-										"value": "\"PuzzleRey\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "DialogueBox",
-									"sid": 487060100474164
-								},
-								{
-									"id": "destroy",
-									"objectClass": "SpriteFont_Dialogue",
-									"sid": 701781970685506
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Dialogue_Arrow",
-									"sid": 491558489441906
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 400709119600299,
-									"parameters": {
-										"group-name": "\"Player Engine\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 177655742366484,
-									"parameters": {
-										"variable": "PauseLock",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 696311493850379
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "compare-two-values",
-									"objectClass": "System",
-									"sid": 338588198461540,
-									"parameters": {
-										"first-value": "DialogueBox.Count",
-										"comparison": 0,
-										"second-value": "1"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "DialogueBox",
-									"sid": 477963890878911,
-									"parameters": {
-										"instance-variable": "Tag",
-										"comparison": 0,
-										"value": "\"PuzzlePista\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "DialogueBox",
-									"sid": 105599764326300
-								},
-								{
-									"id": "destroy",
-									"objectClass": "SpriteFont_Dialogue",
-									"sid": 803261400837740
-								},
-								{
-									"id": "destroy",
-									"objectClass": "Dialogue_Arrow",
-									"sid": 427752964399593
-								},
-								{
-									"id": "set-group-active",
-									"objectClass": "System",
-									"sid": 156156961521753,
-									"parameters": {
-										"group-name": "\"Player Engine\"",
-										"state": "activated"
-									}
-								},
-								{
-									"id": "set-eventvar-value",
-									"objectClass": "System",
-									"sid": 605617405321373,
-									"parameters": {
-										"variable": "PauseLock",
-										"value": "0"
-									}
-								}
-							],
-							"sid": 464487363102359
-						}
-					],
-					"isOrBlock": true
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Player_Base",
-							"sid": 258866212633814,
-							"parameters": {
-								"object": "ResetSquare"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "restart-layout",
-							"objectClass": "System",
-							"sid": 945046650607016
-						}
-					],
-					"sid": 168042697394290
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Player_Base",
-							"sid": 199271673023152,
-							"parameters": {
-								"object": "NeutralSquare"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "NeutralSquare",
-							"sid": 692094059679837,
-							"parameters": {
-								"instance-variable": "hasStepped",
-								"value": "true"
-							}
-						}
-					],
-					"sid": 679476349232556
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Player_Base",
-							"sid": 584039242353930,
-							"parameters": {
-								"object": "InstructionSquare"
-							}
-						},
-						{
-							"id": "trigger-once-while-true",
-							"objectClass": "System",
-							"sid": 546864040986509
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "InstructionSquare",
-							"sid": 821345658166595,
-							"parameters": {
-								"instance-variable": "hasStepped",
-								"value": "true"
-							}
-						},
-						{
-							"id": "set-group-active",
-							"objectClass": "System",
-							"sid": 500070843590012,
-							"parameters": {
-								"group-name": "\"Player Engine\"",
-								"state": "deactivated"
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 617977321999281,
-							"parameters": {
-								"object-to-create": "DialogueBox",
-								"layer": "\"Dialogue\"",
-								"x": "57",
-								"y": "122",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-instvar-value",
-							"objectClass": "DialogueBox",
-							"sid": 224265190885401,
-							"parameters": {
-								"instance-variable": "Tag",
-								"value": "\"PuzzlePista\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 751938990551285,
-							"parameters": {
-								"object-to-create": "Dialogue_Arrow",
-								"layer": "\"Dialogue\"",
-								"x": "DialogueBox.BBoxRight - 8",
-								"y": "DialogueBox.BBoxBottom - 6",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 226910507050523,
-							"parameters": {
-								"object-to-create": "SpriteFont_Dialogue",
-								"layer": "\"Dialogue\"",
-								"x": "DialogueBox.X + 4",
-								"y": "DialogueBox.Y + 4",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-text",
-							"objectClass": "SpriteFont_Dialogue",
-							"sid": 375969512667323,
-							"parameters": {
-								"text": "InstructionSquare.Text"
-							}
-						}
-					],
-					"sid": 928527958351563
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Player_Base",
-							"sid": 282633263143280,
-							"parameters": {
-								"object": "InstructionSquare"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "InstructionSquare",
-							"sid": 451899749885111,
-							"parameters": {
-								"instance-variable": "hasStepped"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 798379601851544,
-							"parameters": {
-								"seconds": "2",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "InstructionSquare",
-							"sid": 614627700996287
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 328093756140816,
-							"parameters": {
-								"object-to-create": "ResetSquare",
-								"layer": "\"Objects\"",
-								"x": "InstructionSquare.X",
-								"y": "InstructionSquare.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ResetSquare",
-							"sid": 392296029430883,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 161474410190560
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "for-each",
-							"objectClass": "System",
-							"sid": 326129518259970,
-							"parameters": {
-								"object": "NeutralSquare"
-							}
-						},
-						{
-							"id": "is-overlapping-another-object",
-							"objectClass": "Player_Base",
-							"sid": 828717096831318,
-							"parameters": {
-								"object": "NeutralSquare"
-							},
-							"isInverted": true
-						},
-						{
-							"id": "is-boolean-instance-variable-set",
-							"objectClass": "NeutralSquare",
-							"sid": 351539326688472,
-							"parameters": {
-								"instance-variable": "hasStepped"
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "wait",
-							"objectClass": "System",
-							"sid": 595962332333530,
-							"parameters": {
-								"seconds": "1.5",
-								"use-timescale": true
-							}
-						},
-						{
-							"id": "destroy",
-							"objectClass": "NeutralSquare",
-							"sid": 473363658154115
-						},
-						{
-							"id": "create-object",
-							"objectClass": "System",
-							"sid": 172262033531388,
-							"parameters": {
-								"object-to-create": "ResetSquare",
-								"layer": "\"Objects\"",
-								"x": "NeutralSquare.X",
-								"y": "NeutralSquare.Y",
-								"create-hierarchy": false,
-								"template-name": "\"\""
-							}
-						},
-						{
-							"id": "set-visible",
-							"objectClass": "ResetSquare",
-							"sid": 268996980416899,
-							"parameters": {
-								"visibility": "invisible"
-							}
-						}
-					],
-					"sid": 377945889552098
-				},
-				{
-					"bookmark": true,
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "on-end-of-layout",
-							"objectClass": "System",
-							"sid": 224949661206406
-						},
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 258481062767568,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Dungeon Puzzle\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-boolean-instvar",
-							"objectClass": "Player_Mask",
-							"sid": 580653373917918,
-							"parameters": {
-								"instance-variable": "Event",
-								"value": "false"
-							}
-						}
-					],
-					"sid": 885547514456243
-				}
-			],
-			"sid": 557962233667547
 		},
 		{
 			"eventType": "comment",
@@ -13755,6 +13190,786 @@
 				}
 			],
 			"sid": 788778866594578
+		},
+		{
+			"eventType": "comment",
+			"text": "Rooms"
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Puzzle Room",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 607886637298695
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 132464810803155,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Dungeon Puzzle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 117750390193075,
+							"parameters": {
+								"group-name": "\"Player Engine\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "set-eventvar-value",
+							"objectClass": "System",
+							"sid": 832149380609545,
+							"parameters": {
+								"variable": "PauseLock",
+								"value": "1"
+							}
+						},
+						{
+							"id": "start-timer",
+							"objectClass": "DialogueStatue",
+							"sid": 832233330352935,
+							"behaviorType": "Timer",
+							"parameters": {
+								"duration": "0.5",
+								"type": "once",
+								"tag": "\"Dialogo\""
+							}
+						},
+						{
+							"id": "set-position",
+							"objectClass": "PlayerLight",
+							"sid": 210328793286141,
+							"parameters": {
+								"x": "Player_Base.X",
+								"y": "Player_Base.Y - 8"
+							}
+						},
+						{
+							"id": "pin-to-object-properties",
+							"objectClass": "PlayerLight",
+							"sid": 837752231781293,
+							"behaviorType": "Pin",
+							"parameters": {
+								"pin-to": "Player_Mask",
+								"x": true,
+								"y": true,
+								"angle": false,
+								"width-type": "no",
+								"height-type": "no",
+								"z": false
+							}
+						},
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player_Mask",
+							"sid": 921110528997907,
+							"parameters": {
+								"instance-variable": "Event",
+								"value": "true"
+							}
+						},
+						{
+							"id": "stop-all",
+							"objectClass": "Audio",
+							"sid": 283230228576537
+						}
+					],
+					"sid": 973051170811443
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-timer",
+							"objectClass": "DialogueStatue",
+							"sid": 859596107387188,
+							"behaviorType": "Timer",
+							"parameters": {
+								"tag": "\"Dialogo\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 652805590702023,
+							"parameters": {
+								"object-to-create": "DialogueBox",
+								"layer": "\"Dialogue\"",
+								"x": "57",
+								"y": "122",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogueBox",
+							"sid": 381232388738262,
+							"parameters": {
+								"instance-variable": "Tag",
+								"value": "\"PuzzleRey\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 110665323352331,
+							"parameters": {
+								"object-to-create": "Dialogue_Arrow",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.BBoxRight - 8",
+								"y": "DialogueBox.BBoxBottom - 6",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 840277208397707,
+							"parameters": {
+								"object-to-create": "SpriteFont_Dialogue",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.X + 4",
+								"y": "DialogueBox.Y + 4",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont_Dialogue",
+							"sid": 504567605821981,
+							"parameters": {
+								"text": "\"Un tablero perfecto… para un mundo perfecto. \r\nAvanza, pieza.\""
+							}
+						}
+					],
+					"sid": 747341688791165
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-key-pressed",
+							"objectClass": "Keyboard",
+							"sid": 589972985330785,
+							"parameters": {
+								"key": 90
+							}
+						},
+						{
+							"id": "on-button-pressed",
+							"objectClass": "Gamepad",
+							"sid": 352000111978096,
+							"parameters": {
+								"gamepad": "0",
+								"button": "button-b"
+							}
+						}
+					],
+					"actions": [],
+					"sid": 130309653523511,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 176227225224909,
+									"parameters": {
+										"first-value": "DialogueBox.Count",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "DialogueBox",
+									"sid": 951296614828025,
+									"parameters": {
+										"instance-variable": "Tag",
+										"comparison": 0,
+										"value": "\"PuzzleRey\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DialogueBox",
+									"sid": 348394356659131
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 863648423849593
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogue_Arrow",
+									"sid": 808607380892201
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 825378222697409,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 126498681180010,
+									"parameters": {
+										"variable": "PauseLock",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 667819156069296
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 385453556305270,
+									"parameters": {
+										"first-value": "DialogueBox.Count",
+										"comparison": 0,
+										"second-value": "1"
+									}
+								},
+								{
+									"id": "compare-instance-variable",
+									"objectClass": "DialogueBox",
+									"sid": 499835578957424,
+									"parameters": {
+										"instance-variable": "Tag",
+										"comparison": 0,
+										"value": "\"PuzzlePista\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "DialogueBox",
+									"sid": 879518255585086
+								},
+								{
+									"id": "destroy",
+									"objectClass": "SpriteFont_Dialogue",
+									"sid": 800896986453245
+								},
+								{
+									"id": "destroy",
+									"objectClass": "Dialogue_Arrow",
+									"sid": 818407055949260
+								},
+								{
+									"id": "set-group-active",
+									"objectClass": "System",
+									"sid": 738347502647577,
+									"parameters": {
+										"group-name": "\"Player Engine\"",
+										"state": "activated"
+									}
+								},
+								{
+									"id": "set-eventvar-value",
+									"objectClass": "System",
+									"sid": 389222236466593,
+									"parameters": {
+										"variable": "PauseLock",
+										"value": "0"
+									}
+								}
+							],
+							"sid": 957937324746750
+						}
+					],
+					"isOrBlock": true
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 743785048110870,
+							"parameters": {
+								"object": "ResetSquare"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "restart-layout",
+							"objectClass": "System",
+							"sid": 119320337712110
+						}
+					],
+					"sid": 432937441044064
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 430014994436609,
+							"parameters": {
+								"object": "NeutralSquare"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "NeutralSquare",
+							"sid": 764035341057108,
+							"parameters": {
+								"instance-variable": "hasStepped",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 109222817807103
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 834041141750992,
+							"parameters": {
+								"object": "InstructionSquare"
+							}
+						},
+						{
+							"id": "trigger-once-while-true",
+							"objectClass": "System",
+							"sid": 841802453651309
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "InstructionSquare",
+							"sid": 200432583603521,
+							"parameters": {
+								"instance-variable": "hasStepped",
+								"value": "true"
+							}
+						},
+						{
+							"id": "set-group-active",
+							"objectClass": "System",
+							"sid": 539961433820147,
+							"parameters": {
+								"group-name": "\"Player Engine\"",
+								"state": "deactivated"
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 687757903637348,
+							"parameters": {
+								"object-to-create": "DialogueBox",
+								"layer": "\"Dialogue\"",
+								"x": "57",
+								"y": "122",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-instvar-value",
+							"objectClass": "DialogueBox",
+							"sid": 343891968772941,
+							"parameters": {
+								"instance-variable": "Tag",
+								"value": "\"PuzzlePista\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 836971833638831,
+							"parameters": {
+								"object-to-create": "Dialogue_Arrow",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.BBoxRight - 8",
+								"y": "DialogueBox.BBoxBottom - 6",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 701814225547775,
+							"parameters": {
+								"object-to-create": "SpriteFont_Dialogue",
+								"layer": "\"Dialogue\"",
+								"x": "DialogueBox.X + 4",
+								"y": "DialogueBox.Y + 4",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-text",
+							"objectClass": "SpriteFont_Dialogue",
+							"sid": 748912100583926,
+							"parameters": {
+								"text": "InstructionSquare.Text"
+							}
+						}
+					],
+					"sid": 245983608931077
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 586884727746069,
+							"parameters": {
+								"object": "InstructionSquare"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "InstructionSquare",
+							"sid": 278322969469961,
+							"parameters": {
+								"instance-variable": "hasStepped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 191882013624867,
+							"parameters": {
+								"seconds": "2",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "InstructionSquare",
+							"sid": 560004067711646
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 349230449400596,
+							"parameters": {
+								"object-to-create": "ResetSquare",
+								"layer": "\"Objects\"",
+								"x": "InstructionSquare.X",
+								"y": "InstructionSquare.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ResetSquare",
+							"sid": 943255437041943,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 633928887843972
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "for-each",
+							"objectClass": "System",
+							"sid": 504921098816706,
+							"parameters": {
+								"object": "NeutralSquare"
+							}
+						},
+						{
+							"id": "is-overlapping-another-object",
+							"objectClass": "Player_Base",
+							"sid": 504877612459020,
+							"parameters": {
+								"object": "NeutralSquare"
+							},
+							"isInverted": true
+						},
+						{
+							"id": "is-boolean-instance-variable-set",
+							"objectClass": "NeutralSquare",
+							"sid": 963034457991252,
+							"parameters": {
+								"instance-variable": "hasStepped"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "wait",
+							"objectClass": "System",
+							"sid": 883226876157046,
+							"parameters": {
+								"seconds": "1.5",
+								"use-timescale": true
+							}
+						},
+						{
+							"id": "destroy",
+							"objectClass": "NeutralSquare",
+							"sid": 130480037386036
+						},
+						{
+							"id": "create-object",
+							"objectClass": "System",
+							"sid": 732818487406206,
+							"parameters": {
+								"object-to-create": "ResetSquare",
+								"layer": "\"Objects\"",
+								"x": "NeutralSquare.X",
+								"y": "NeutralSquare.Y",
+								"create-hierarchy": false,
+								"template-name": "\"\""
+							}
+						},
+						{
+							"id": "set-visible",
+							"objectClass": "ResetSquare",
+							"sid": 330721615904847,
+							"parameters": {
+								"visibility": "invisible"
+							}
+						}
+					],
+					"sid": 459667204562465
+				},
+				{
+					"bookmark": true,
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-end-of-layout",
+							"objectClass": "System",
+							"sid": 855413018223727
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 760977771864318,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Dungeon Puzzle\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-boolean-instvar",
+							"objectClass": "Player_Mask",
+							"sid": 324311393553920,
+							"parameters": {
+								"instance-variable": "Event",
+								"value": "false"
+							}
+						}
+					],
+					"sid": 339662669546521
+				}
+			],
+			"sid": 775954138221547
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Torre del Rey",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 600231090877611,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"Torre_Inicio\""
+							}
+						}
+					],
+					"actions": [],
+					"sid": 791223040262982,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 611303520155112,
+									"parameters": {
+										"key": "\"hasTorre_Derecha\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								},
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 141038775716678,
+									"parameters": {
+										"key": "\"hasTorre_Izquierda\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "wait",
+									"objectClass": "System",
+									"sid": 992357668510173,
+									"disabled": true,
+									"parameters": {
+										"seconds": "0.5",
+										"use-timescale": true
+									}
+								},
+								{
+									"id": "destroy",
+									"objectClass": "En_Empty",
+									"sid": 839959591901580
+								}
+							],
+							"sid": 591908367226766
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 418621499971681,
+									"parameters": {
+										"key": "\"hasTorre_Izquierda\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 418015522409624,
+									"parameters": {
+										"object-to-create": "NPC_Quieto",
+										"layer": "\"Objects\"",
+										"x": "-36",
+										"y": "168",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "NPC_Quieto",
+									"sid": 125273133191963,
+									"parameters": {
+										"instance-variable": "DialogueText",
+										"value": "\"Desafio completado\""
+									}
+								}
+							],
+							"sid": 735585448215586
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-value",
+									"objectClass": "Dictionary",
+									"sid": 464529572607856,
+									"parameters": {
+										"key": "\"hasTorre_Derecha\"",
+										"comparison": 0,
+										"value": "1"
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 715061802172672,
+									"parameters": {
+										"object-to-create": "NPC_Quieto",
+										"layer": "\"Objects\"",
+										"x": "372",
+										"y": "168",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "set-instvar-value",
+									"objectClass": "NPC_Quieto",
+									"sid": 392108624204880,
+									"parameters": {
+										"instance-variable": "DialogueText",
+										"value": "\"Desafio completado\""
+									}
+								}
+							],
+							"sid": 926757347922890
+						}
+					]
+				}
+			],
+			"sid": 614115232745134
 		},
 		{
 			"eventType": "comment",
@@ -15873,11 +16088,25 @@
 													"id": "create-object",
 													"objectClass": "System",
 													"sid": 784830465274756,
+													"disabled": true,
 													"parameters": {
 														"object-to-create": "DialogueBox",
 														"layer": "\"Dialogue\"",
 														"x": "57",
 														"y": "122",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 190211074805097,
+													"parameters": {
+														"object-to-create": "DialogueBox",
+														"layer": "\"Dialogue\"",
+														"x": "(ViewportLeft(\"HUD\") + ViewportRight(\"HUD\")) / 4",
+														"y": "(ViewportTop(\"HUD\") + ViewportBottom(\"HUD\")) / 2",
 														"create-hierarchy": false,
 														"template-name": "\"\""
 													}
@@ -17046,6 +17275,29 @@
 							"text": "Pre Boss Room"
 						},
 						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 194749859711566,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Dungeon_3_4\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "stop-all",
+									"objectClass": "Audio",
+									"sid": 992012321319354
+								}
+							],
+							"sid": 415894227298410
+						},
+						{
 							"eventType": "comment",
 							"text": "Boss Room"
 						},
@@ -17055,11 +17307,11 @@
 								{
 									"id": "compare-two-values",
 									"objectClass": "System",
-									"sid": 891664362534244,
+									"sid": 685621276861076,
 									"parameters": {
 										"first-value": "LayoutName",
 										"comparison": 0,
-										"second-value": "\"Dungeon_3_5\""
+										"second-value": "\"Dungeon Rey\""
 									}
 								}
 							],
@@ -17072,11 +17324,11 @@
 								{
 									"id": "play",
 									"objectClass": "Audio",
-									"sid": 145207961829013,
+									"sid": 534280228512139,
 									"parameters": {
-										"audio-file": "Boss",
+										"audio-file": "REINA 2",
 										"loop": "looping",
-										"volume": "0",
+										"volume": "-15",
 										"stereo-pan": "0",
 										"tag-optional": "\"Boss\""
 									}
@@ -17089,33 +17341,6 @@
 				{
 					"eventType": "comment",
 					"text": "Adjust volume"
-				},
-				{
-					"eventType": "block",
-					"conditions": [
-						{
-							"id": "compare-two-values",
-							"objectClass": "System",
-							"sid": 382824762421061,
-							"parameters": {
-								"first-value": "LayoutName",
-								"comparison": 0,
-								"second-value": "\"Dungeon_3_4\""
-							}
-						}
-					],
-					"actions": [
-						{
-							"id": "set-volume",
-							"objectClass": "Audio",
-							"sid": 676226892890741,
-							"parameters": {
-								"tag": "\"Music\"",
-								"db": "Audio.Volume(\"Music\") - 8 * dt"
-							}
-						}
-					],
-					"sid": 392986197571950
 				},
 				{
 					"eventType": "comment",
@@ -17761,9 +17986,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "SpriteFont_Dialogue",
-											"sid": 935758490062162,
+											"sid": 815907327985739,
 											"parameters": {
-												"text": "\"Whew! Thanks for cleaning up my dungeon. Those monsters were becoming a real pest!\""
+												"text": "\"Felicitaciones! Aqui finaliza el ALFA!!!\""
 											}
 										}
 									],
@@ -18061,9 +18286,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "SpriteFont_AreaName",
-									"sid": 674814368333041,
+									"sid": 177063793111700,
 									"parameters": {
-										"text": "\"Torre del Rey\""
+										"text": "\"Entrada\""
 									}
 								},
 								{
@@ -18077,6 +18302,32 @@
 								}
 							],
 							"sid": 448983739598552
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 648008370060349,
+									"parameters": {
+										"first-value": "tokenat(LayoutName, 0, \"_\")",
+										"comparison": 0,
+										"second-value": "\"Torre\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SpriteFont_AreaName",
+									"sid": 694395216052424,
+									"parameters": {
+										"text": "\"Torre del Rey\""
+									}
+								}
+							],
+							"sid": 588870316578971
 						},
 						{
 							"eventType": "block",

@@ -3724,7 +3724,7 @@
 					"sid": 913359160882869,
 					"tags": "",
 					"instanceVariables": {
-						"Text": "Caballo habilidoso, solo la torre del Rey de Dravia te dará paso a su aposento.",
+						"Text": "Caballo habilidoso, solo la torre del Rey de Dravia te dara paso a su aposento.",
 						"hasStepped": false
 					},
 					"behaviors": {},
@@ -3883,7 +3883,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"SelectDelay": 0,
-						"DialogueText": "Ya no hay vuelta atras. Prosigue, elfo. El Rey espera. "
+						"DialogueText": "Ya no hay vuelta atras. Prosigue. El Rey espera. "
 					},
 					"behaviors": {
 						"Solid": {

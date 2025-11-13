@@ -97,6 +97,7 @@
 		"En_Golem_Base",
 		"En_Demon_Base",
 		"En_MeleeGuard_Base",
-		"En_RangeGuard_Base"
+		"En_RangeGuard_Base",
+		"En_Empty"
 	]
 }

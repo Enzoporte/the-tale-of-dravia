@@ -1815,8 +1815,8 @@
 					"sid": 864416802400587,
 					"tags": "",
 					"instanceVariables": {
-						"Health": 125,
-						"Strength": 6,
+						"Health": 30,
+						"Strength": 5,
 						"Pair_ID": 0,
 						"Direction": "",
 						"Player_AngleDiff": 0,
@@ -1914,7 +1914,7 @@
 					"behaviors": {
 						"Bullet": {
 							"properties": {
-								"speed": 100,
+								"speed": 125,
 								"acceleration": 0,
 								"gravity": 0,
 								"bounce-off-solids": false,
@@ -1925,14 +1925,17 @@
 						},
 						"MoveTo": {
 							"properties": {
-								"max-speed": 150,
-								"acceleration": 300,
+								"max-speed": 85,
+								"acceleration": 250,
 								"deceleration": 500,
-								"rotate-speed": 1000,
+								"rotate-speed": 800,
 								"set-angle": false,
 								"stop-on-solids": true,
 								"enabled": true
 							}
+						},
+						"Timer": {
+							"properties": {}
 						}
 					},
 					"showing": true,
@@ -2863,6 +2866,68 @@
 						"height": 48,
 						"originX": 0.5,
 						"originY": 0.833333,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "En_Empty",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1059,
+					"sid": 803644869444361,
+					"tags": "",
+					"instanceVariables": {
+						"Health": 2,
+						"Strength": 2,
+						"Pair_ID": 0,
+						"Direction": "",
+						"Player_AngleDiff": 0,
+						"Knockback_Timer": 0,
+						"Default_MaxSpeed": 150,
+						"Default_Acceleration": 3000,
+						"Default_Deceleration": 300,
+						"Hurt": false,
+						"CanBeKnockedBack": true
+					},
+					"behaviors": {
+						"8Direction": {
+							"properties": {
+								"max-speed": 150,
+								"acceleration": 3000,
+								"deceleration": 300,
+								"directions": "dir-8",
+								"set-angle": "no",
+								"allow-sliding": false,
+								"default-controls": false,
+								"enabled": true
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 803644869444361,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 312,
+						"y": 404,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,

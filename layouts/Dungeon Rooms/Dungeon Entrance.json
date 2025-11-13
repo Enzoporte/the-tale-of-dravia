@@ -626,8 +626,8 @@
 						"Room": "",
 						"ID": 0,
 						"Direction": "Up",
-						"StartingDoor": false,
-						"Void": true
+						"StartingDoor": true,
+						"Void": false
 					},
 					"behaviors": {},
 					"showing": true,
@@ -706,8 +706,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 216,
-						"y": -36,
+						"x": 156,
+						"y": 0,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -736,7 +736,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"SelectDelay": 0,
-						"DialogueText": "Hola buenas a todos! Enzo es un gilipollas"
+						"DialogueText": "Ascender la Torre? Retos debes completar"
 					},
 					"behaviors": {
 						"Solid": {
@@ -828,7 +828,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"SelectDelay": 0,
-						"DialogueText": "Hola"
+						"DialogueText": "Retos, Retos, Retos... No se, soy un NPC del Alfa. Suerte!"
 					},
 					"behaviors": {
 						"Solid": {
@@ -854,45 +854,6 @@
 						"height": 38,
 						"originX": 0.4375,
 						"originY": 0.8157894736842105,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "Trigger_Door",
-					"properties": {
-						"initially-visible": false,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 948,
-					"sid": 598036490243066,
-					"tags": "",
-					"instanceVariables": {
-						"Room": "Dungeon Inicial",
-						"ID": 0,
-						"Direction": "",
-						"StartingDoor": false,
-						"Void": false
-					},
-					"behaviors": {},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 156,
-						"y": 0,
-						"width": 24,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
 						"color": [
 							1,
 							1,
