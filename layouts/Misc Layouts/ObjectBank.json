@@ -3001,10 +3001,14 @@
 			"instanceVariables": {}
 		},
 		{
-			"type": "DialogueDict",
-			"properties": {},
+			"type": "tempNPCArray",
+			"properties": {
+				"width": 1,
+				"height": 1,
+				"depth": 1
+			},
 			"uid": 378,
-			"sid": 595891619717069,
+			"sid": 173304860956376,
 			"tags": "",
 			"instanceVariables": {}
 		}

@@ -1192,7 +1192,7 @@
 		{
 			"eventType": "group",
 			"disabled": false,
-			"title": "Load CSV",
+			"title": "Load NPC Dialogues",
 			"description": "",
 			"isActiveOnStart": true,
 			"children": [
@@ -1220,10 +1220,10 @@
 						{
 							"id": "request-project-file",
 							"objectClass": "AJAX",
-							"sid": 671533598027729,
+							"sid": 830377127814855,
 							"parameters": {
 								"tag": "\"LoadNPCDialogues\"",
-								"file": "dialogues_es.csv"
+								"file": "DialoguesNPCArray.json"
 							}
 						}
 					],
@@ -1243,86 +1243,15 @@
 					],
 					"actions": [
 						{
-							"id": "parse-csv",
-							"objectClass": "CSV",
-							"sid": 339546867592418,
+							"id": "load",
+							"objectClass": "DialogueArray",
+							"sid": 222505999888522,
 							"parameters": {
-								"csv": "AJAX.LastData",
-								"delimiter": "\";\"",
-								"array": "DialogueArray",
-								"data-type": "auto"
+								"json": "AJAX.LastData"
 							}
 						}
 					],
-					"sid": 133991275234211,
-					"children": [
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for",
-									"objectClass": "System",
-									"sid": 974598422942878,
-									"parameters": {
-										"name": "\"LoadArrayLoop\"",
-										"start-index": "0",
-										"end-index": "DialogueArray.Height - 1"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 749669045404604,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "has-key",
-											"objectClass": "DialogueDict",
-											"sid": 726635840865567,
-											"parameters": {
-												"key": "DialogueArray.At(0, loopindex)"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-key",
-											"objectClass": "DialogueDict",
-											"sid": 353157266800689,
-											"parameters": {
-												"key": "DialogueArray.At(0, loopindex)",
-												"value": "left(DialogueDict.Get(DialogueArray.At(0, loopindex)), len(DialogueDict.Get(DialogueArray.At(0, loopindex)))-1) & \",\"\"\" & DialogueArray.At(1, loopindex) & \"\"\"]\"\r\n"
-											}
-										}
-									],
-									"sid": 610711766764273
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "else",
-											"objectClass": "System",
-											"sid": 248689964722676
-										}
-									],
-									"actions": [
-										{
-											"id": "add-key",
-											"objectClass": "DialogueDict",
-											"sid": 310283746928274,
-											"parameters": {
-												"key": "DialogueArray.At(0,loopindex)",
-												"value": "\"[\"\"\" & DialogueArray.At(1, loopindex) & \"\"\"]\""
-											}
-										}
-									],
-									"sid": 171748153345755
-								}
-							]
-						}
-					]
+					"sid": 133991275234211
 				}
 			],
 			"sid": 518557437992549

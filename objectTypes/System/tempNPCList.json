@@ -1,0 +1,9 @@
+{
+	"name": "tempNPCList",
+	"plugin-id": "List",
+	"sid": 716631276213110,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": []
+}

@@ -13901,6 +13901,14 @@
 												"variable": "DialogueLineIndex",
 												"value": "0"
 											}
+										},
+										{
+											"id": "clear",
+											"objectClass": "tempNPCArray",
+											"sid": 875422445443724,
+											"parameters": {
+												"value": "0"
+											}
 										}
 									],
 									"sid": 346180301761059
@@ -13936,17 +13944,17 @@
 										{
 											"id": "set-text",
 											"objectClass": "SpriteFont_Dialogue",
-											"sid": 333493877757707,
+											"sid": 590967242364546,
 											"parameters": {
-												"text": "DialogueArray.At(DialogueLineIndex,0)"
+												"text": "tempNPCArray.At(DialogueLineIndex,0)"
 											}
 										},
 										{
 											"id": "set-text",
 											"objectClass": "SpriteFont_Menu",
-											"sid": 633277145271216,
+											"sid": 989797062632481,
 											"parameters": {
-												"text": "DialogueLineIndex >= DialogueArray.Width ? \"OK\" : \">>\""
+												"text": "DialogueLineIndex >= tempNPCArray.Width -1 ? \"OK\" : \">>\""
 											}
 										}
 									],
@@ -15388,8 +15396,73 @@
 									"children": [
 										{
 											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 207622011202992,
+													"parameters": {
+														"name": "\"ThisNPCsDialogues\"",
+														"start-index": "0",
+														"end-index": "DialogueArray.Height -1"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 972547094647888,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-at-xy",
+															"objectClass": "DialogueArray",
+															"sid": 393044093706617,
+															"parameters": {
+																"x": "0",
+																"y": "loopindex",
+																"comparison": 0,
+																"value": "NPC_Chat.NPC_Name"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "push",
+															"objectClass": "tempNPCArray",
+															"sid": 675275955131753,
+															"parameters": {
+																"where": "back",
+																"value": "DialogueArray.At(1,loopindex)",
+																"axis": "x"
+															}
+														},
+														{
+															"id": "add-item",
+															"objectClass": "tempNPCList",
+															"sid": 890881794227252,
+															"parameters": {
+																"text": "DialogueArray.At(1, loopindex)"
+															}
+														}
+													],
+													"sid": 677640199781276
+												}
+											]
+										},
+										{
+											"eventType": "block",
 											"conditions": [],
 											"actions": [
+												{
+													"id": "pop",
+													"objectClass": "tempNPCArray",
+													"sid": 665109159427142,
+													"parameters": {
+														"where": "front",
+														"axis": "x"
+													}
+												},
 												{
 													"type": "comment",
 													"text": "Supongo que se puede generalizar esto para cualquier tipo de npc... Pero por las dudas, dejo para que esto funcione para el quieto en caso de que haya otro? --> Por ejemplo uno que te pregunte si o no. eso cambia el setchat, habria que hacer uno con un tag distinto (tag = \"DosPreg\" ?)"
@@ -15401,22 +15474,6 @@
 													"parameters": {
 														"instance-variable": "SelectDelay",
 														"value": "0.1"
-													}
-												},
-												{
-													"id": "clear",
-													"objectClass": "DialogueArray",
-													"sid": 205987391161559,
-													"parameters": {
-														"value": "0"
-													}
-												},
-												{
-													"id": "load",
-													"objectClass": "DialogueArray",
-													"sid": 276808407648070,
-													"parameters": {
-														"json": "DialogueDict.AsJSON"
 													}
 												},
 												{
@@ -15511,9 +15568,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "SpriteFont_Dialogue",
-									"sid": 956064510396479,
+									"sid": 588133966886757,
 									"parameters": {
-										"text": "DialogueArray.At(DialogueLineIndex,0)"
+										"text": "tempNPCArray.At(DialogueLineIndex,0)"
 									}
 								},
 								{
@@ -15545,9 +15602,9 @@
 								{
 									"id": "set-text",
 									"objectClass": "SpriteFont_Menu",
-									"sid": 259267308458868,
+									"sid": 912727601508013,
 									"parameters": {
-										"text": "DialogueLineIndex >= DialogueArray.Height? \"OK\" : \">>\""
+										"text": "DialogueLineIndex >= tempNPCArray.Width -1 ? \"OK\" : \">>\""
 									}
 								},
 								{
