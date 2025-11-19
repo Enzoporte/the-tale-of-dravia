@@ -736,8 +736,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"NPC_Name": "Example",
-						"SelectDelay": 0,
-						"DialogueText": "Ascender la Torre? Retos debes completar"
+						"SelectDelay": 0
 					},
 					"behaviors": {
 						"Solid": {
@@ -829,8 +828,7 @@
 					"tags": "",
 					"instanceVariables": {
 						"NPC_Name": "Robert",
-						"SelectDelay": 0,
-						"DialogueText": "Retos, Retos, Retos... No se, soy un NPC del Alfa. Suerte!"
+						"SelectDelay": 0
 					},
 					"behaviors": {
 						"Solid": {

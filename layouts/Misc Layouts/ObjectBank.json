@@ -2509,9 +2509,8 @@
 					"sid": 119984185874260,
 					"tags": "",
 					"instanceVariables": {
-						"NPC_Name": "",
-						"SelectDelay": 0,
-						"DialogueText": "\"Hola buenas a todos! Enzo es un gilipollas\""
+						"NPC_Name": "Example",
+						"SelectDelay": 0
 					},
 					"behaviors": {
 						"Solid": {

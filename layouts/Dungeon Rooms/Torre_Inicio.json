@@ -559,9 +559,8 @@
 					"sid": 383699580168350,
 					"tags": "",
 					"instanceVariables": {
-						"NPC_Name": "",
-						"SelectDelay": 0,
-						"DialogueText": "Para avanzar, completa los desafios a cada lado de esta sala"
+						"NPC_Name": "TorreInicio",
+						"SelectDelay": 0
 					},
 					"behaviors": {
 						"Solid": {

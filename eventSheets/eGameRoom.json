@@ -13692,10 +13692,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "NPC_Chat",
-									"sid": 125273133191963,
+									"sid": 657453827648864,
 									"parameters": {
-										"instance-variable": "DialogueText",
-										"value": "\"Desafio completado\""
+										"instance-variable": "NPC_Name",
+										"value": "\"GuardiaPuertaCompleta\""
 									}
 								}
 							],
@@ -13732,10 +13732,10 @@
 								{
 									"id": "set-instvar-value",
 									"objectClass": "NPC_Chat",
-									"sid": 392108624204880,
+									"sid": 430870606432630,
 									"parameters": {
-										"instance-variable": "DialogueText",
-										"value": "\"Desafio completado\""
+										"instance-variable": "NPC_Name",
+										"value": "\"GuardiaPuertaCompleta\""
 									}
 								}
 							],
@@ -13899,14 +13899,6 @@
 											"sid": 565068315513977,
 											"parameters": {
 												"variable": "DialogueLineIndex",
-												"value": "0"
-											}
-										},
-										{
-											"id": "clear",
-											"objectClass": "tempNPCArray",
-											"sid": 875422445443724,
-											"parameters": {
 												"value": "0"
 											}
 										}
@@ -15391,9 +15383,45 @@
 											}
 										}
 									],
-									"actions": [],
+									"actions": [
+										{
+											"id": "clear",
+											"objectClass": "tempNPCArray",
+											"sid": 875422445443724,
+											"parameters": {
+												"value": "0"
+											}
+										}
+									],
 									"sid": 199127830911355,
 									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "for",
+													"objectClass": "System",
+													"sid": 491865334324725,
+													"parameters": {
+														"name": "\"ClearArray\"",
+														"start-index": "0",
+														"end-index": "tempNPCArray.Width - 1"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "pop",
+													"objectClass": "tempNPCArray",
+													"sid": 644728406065503,
+													"parameters": {
+														"where": "front",
+														"axis": "x"
+													}
+												}
+											],
+											"sid": 248628281852488
+										},
 										{
 											"eventType": "block",
 											"conditions": [
@@ -15436,14 +15464,6 @@
 																"value": "DialogueArray.At(1,loopindex)",
 																"axis": "x"
 															}
-														},
-														{
-															"id": "add-item",
-															"objectClass": "tempNPCList",
-															"sid": 890881794227252,
-															"parameters": {
-																"text": "DialogueArray.At(1, loopindex)"
-															}
 														}
 													],
 													"sid": 677640199781276
@@ -15454,15 +15474,6 @@
 											"eventType": "block",
 											"conditions": [],
 											"actions": [
-												{
-													"id": "pop",
-													"objectClass": "tempNPCArray",
-													"sid": 665109159427142,
-													"parameters": {
-														"where": "front",
-														"axis": "x"
-													}
-												},
 												{
 													"type": "comment",
 													"text": "Supongo que se puede generalizar esto para cualquier tipo de npc... Pero por las dudas, dejo para que esto funcione para el quieto en caso de que haya otro? --> Por ejemplo uno que te pregunte si o no. eso cambia el setchat, habria que hacer uno con un tag distinto (tag = \"DosPreg\" ?)"

@@ -16,13 +16,6 @@
 			"desc": "",
 			"show": true,
 			"sid": 208201534651667
-		},
-		{
-			"name": "DialogueText",
-			"type": "string",
-			"desc": "",
-			"show": true,
-			"sid": 749711868242682
 		}
 	],
 	"behaviorTypes": [

@@ -64,13 +64,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "List",
-			"name": "List",
-			"author": "Scirra",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "LocalStorage",
 			"name": "Local storage",
 			"author": "Scirra",
@@ -265,8 +258,7 @@
 					"CSV_Array",
 					"AJAX",
 					"DialogueArray",
-					"tempNPCArray",
-					"tempNPCList"
+					"tempNPCArray"
 				],
 				"subfolders": [],
 				"name": "System"
@@ -954,25 +946,9 @@
 		"general": {
 			"items": [
 				{
-					"name": "dialogues_es.csv",
-					"type": "text/csv",
-					"sid": 729441374831098,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
 					"name": "dialogues_es2.csv",
 					"type": "text/csv",
 					"sid": 644995966488754,
-					"file-info": {
-						"purpose": "none"
-					}
-				},
-				{
-					"name": "tempJSON.json",
-					"type": "application/json",
-					"sid": 387057636462377,
 					"file-info": {
 						"purpose": "none"
 					}

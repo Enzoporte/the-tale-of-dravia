@@ -2,7 +2,7 @@
     "c2array": true,
     "size": [
         2,
-        8,
+        9,
         1
     ],
     "data": [
@@ -23,13 +23,16 @@
                 "Robert"
             ],
             [
-                "Bowlie"
+                "PuzzleRey1"
             ],
             [
-                "Bowlie"
+                "PuzzleRey2"
             ],
             [
-                "Bowlie"
+                "TorreInicio"
+            ],
+            [
+                "GuardiaPuertaCompleta"
             ]
         ],
         [
@@ -43,19 +46,22 @@
                 "Adios"
             ],
             [
-                "Wazaaaa"
+                "Wazaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaa a"
             ],
             [
-                "bye"
+                "Bye"
             ],
             [
-                "Bowlieee"
+                "Tu juego comienza en la casilla de la Reina, peon."
             ],
             [
-                "Yu huu"
+                "Ya no hay vuelta atras. Prosigue. El Rey espera. "
             ],
             [
-                "Ba bye"
+                "Para avanzar, completa los desafios a cada lado de esta sala"
+            ],
+            [
+                "Desafio Completado"
             ]
         ]
     ]
