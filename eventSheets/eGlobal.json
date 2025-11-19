@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DialogueLineIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 321647571687507
+		},
+		{
+			"eventType": "variable",
 			"name": "Game_Initialized",
 			"type": "number",
 			"initialValue": "0",
@@ -1178,6 +1188,144 @@
 				}
 			],
 			"sid": 235254977773472
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Load CSV",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 351599304786186
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 975354005825190,
+							"disabled": true,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"TitleScreen\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 671533598027729,
+							"parameters": {
+								"tag": "\"LoadNPCDialogues\"",
+								"file": "dialogues_es.csv"
+							}
+						}
+					],
+					"sid": 763856342346806
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 795835394275274,
+							"parameters": {
+								"tag": "\"LoadNPCDialogues\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "parse-csv",
+							"objectClass": "CSV",
+							"sid": 339546867592418,
+							"parameters": {
+								"csv": "AJAX.LastData",
+								"delimiter": "\";\"",
+								"array": "DialogueArray",
+								"data-type": "auto"
+							}
+						}
+					],
+					"sid": 133991275234211,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "for",
+									"objectClass": "System",
+									"sid": 974598422942878,
+									"parameters": {
+										"name": "\"LoadArrayLoop\"",
+										"start-index": "0",
+										"end-index": "DialogueArray.Height - 1"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 749669045404604,
+							"children": [
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "has-key",
+											"objectClass": "DialogueDict",
+											"sid": 726635840865567,
+											"parameters": {
+												"key": "DialogueArray.At(0, loopindex)"
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-key",
+											"objectClass": "DialogueDict",
+											"sid": 353157266800689,
+											"parameters": {
+												"key": "DialogueArray.At(0, loopindex)",
+												"value": "left(DialogueDict.Get(DialogueArray.At(0, loopindex)), len(DialogueDict.Get(DialogueArray.At(0, loopindex)))-1) & \",\"\"\" & DialogueArray.At(1, loopindex) & \"\"\"]\"\r\n"
+											}
+										}
+									],
+									"sid": 610711766764273
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "else",
+											"objectClass": "System",
+											"sid": 248689964722676
+										}
+									],
+									"actions": [
+										{
+											"id": "add-key",
+											"objectClass": "DialogueDict",
+											"sid": 310283746928274,
+											"parameters": {
+												"key": "DialogueArray.At(0,loopindex)",
+												"value": "\"[\"\"\" & DialogueArray.At(1, loopindex) & \"\"\"]\""
+											}
+										}
+									],
+									"sid": 171748153345755
+								}
+							]
+						}
+					]
+				}
+			],
+			"sid": 518557437992549
 		}
 	],
 	"sid": 731063185878615

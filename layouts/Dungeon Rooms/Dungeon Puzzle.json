@@ -3422,7 +3422,7 @@
 					}
 				},
 				{
-					"type": "NPC_Quieto",
+					"type": "NPC_Chat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -3434,6 +3434,7 @@
 					"sid": 751659597314179,
 					"tags": "",
 					"instanceVariables": {
+						"NPC_Name": "",
 						"SelectDelay": 0,
 						"DialogueText": "Tu juego comienza en la casilla de la Reina, peon."
 					},
@@ -3870,7 +3871,7 @@
 					}
 				},
 				{
-					"type": "NPC_Quieto",
+					"type": "NPC_Chat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -3882,6 +3883,7 @@
 					"sid": 237031744104021,
 					"tags": "",
 					"instanceVariables": {
+						"NPC_Name": "",
 						"SelectDelay": 0,
 						"DialogueText": "Ya no hay vuelta atras. Prosigue. El Rey espera. "
 					},

@@ -2497,7 +2497,7 @@
 					}
 				},
 				{
-					"type": "NPC_Quieto",
+					"type": "NPC_Chat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -2509,6 +2509,7 @@
 					"sid": 119984185874260,
 					"tags": "",
 					"instanceVariables": {
+						"NPC_Name": "",
 						"SelectDelay": 0,
 						"DialogueText": "\"Hola buenas a todos! Enzo es un gilipollas\""
 					},
@@ -2984,6 +2985,26 @@
 			},
 			"uid": 726,
 			"sid": 593612924348204,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "DialogueArray",
+			"properties": {
+				"width": 0,
+				"height": 0,
+				"depth": 0
+			},
+			"uid": 342,
+			"sid": 230003050662158,
+			"tags": "",
+			"instanceVariables": {}
+		},
+		{
+			"type": "DialogueDict",
+			"properties": {},
+			"uid": 378,
+			"sid": 595891619717069,
 			"tags": "",
 			"instanceVariables": {}
 		}

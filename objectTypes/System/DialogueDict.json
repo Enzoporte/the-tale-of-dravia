@@ -1,0 +1,8 @@
+{
+	"name": "DialogueDict",
+	"plugin-id": "Dictionary",
+	"sid": 327093102014664,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": []
+}

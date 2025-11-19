@@ -54,10 +54,10 @@
 				{
 					"id": "request-project-file",
 					"objectClass": "AJAX",
-					"sid": 478620247872767,
+					"sid": 839428748622906,
 					"parameters": {
 						"tag": "\"Request_Dialogues\"",
-						"file": "dialogues_es.csv"
+						"file": "dialogues_es2.csv"
 					}
 				},
 				{

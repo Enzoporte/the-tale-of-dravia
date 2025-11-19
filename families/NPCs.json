@@ -4,6 +4,13 @@
 	"sid": 270652620046250,
 	"instanceVariables": [
 		{
+			"name": "NPC_Name",
+			"type": "string",
+			"desc": "",
+			"show": true,
+			"sid": 473762571414122
+		},
+		{
 			"name": "SelectDelay",
 			"type": "number",
 			"desc": "",
@@ -27,6 +34,6 @@
 	],
 	"effectTypes": [],
 	"members": [
-		"NPC_Quieto"
+		"NPC_Chat"
 	]
 }

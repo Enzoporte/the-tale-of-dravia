@@ -723,7 +723,7 @@
 					}
 				},
 				{
-					"type": "NPC_Quieto",
+					"type": "NPC_Chat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -735,6 +735,7 @@
 					"sid": 740715463939348,
 					"tags": "",
 					"instanceVariables": {
+						"NPC_Name": "Example",
 						"SelectDelay": 0,
 						"DialogueText": "Ascender la Torre? Retos debes completar"
 					},
@@ -815,7 +816,7 @@
 					}
 				},
 				{
-					"type": "NPC_Quieto",
+					"type": "NPC_Chat",
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Idle",
@@ -827,6 +828,7 @@
 					"sid": 138450513377404,
 					"tags": "",
 					"instanceVariables": {
+						"NPC_Name": "Robert",
 						"SelectDelay": 0,
 						"DialogueText": "Retos, Retos, Retos... No se, soy un NPC del Alfa. Suerte!"
 					},
