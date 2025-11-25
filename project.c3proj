@@ -335,7 +335,9 @@
 					"En_RangeGuard_Mask",
 					"En_RangeGuard_Base",
 					"Projectile_RangeGuard",
-					"En_Empty"
+					"En_Empty",
+					"En_BufferGuard_Mask",
+					"En_BufferGuard_Base"
 				],
 				"subfolders": [],
 				"name": "Enemies"
@@ -508,6 +510,12 @@
 				"Player_Base",
 				"Player_Mask"
 			]
+		},
+		{
+			"members": [
+				"En_BufferGuard_Base",
+				"En_BufferGuard_Mask"
+			]
 		}
 	],
 	"families": {
@@ -562,18 +570,8 @@
 						"items": [
 							"Dungeon Entrance2",
 							"Dungeon_1_1x",
-							"Dungeon_1_2",
-							"Dungeon_1_3",
-							"Dungeon_1_4",
 							"Dungeon_1_5",
 							"Dungeon_2_1",
-							"Dungeon_2_2",
-							"Dungeon_2_3",
-							"Dungeon_2_4",
-							"Dungeon_2_5",
-							"Dungeon_3_1",
-							"Dungeon_3_2",
-							"Dungeon_3_3",
 							"Dungeon_3_5x"
 						],
 						"subfolders": [],

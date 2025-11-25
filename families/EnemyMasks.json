@@ -46,6 +46,7 @@
 		"En_Golem_Mask",
 		"En_Demon_Mask",
 		"En_MeleeGuard_Mask",
-		"En_RangeGuard_Mask"
+		"En_RangeGuard_Mask",
+		"En_BufferGuard_Mask"
 	]
 }

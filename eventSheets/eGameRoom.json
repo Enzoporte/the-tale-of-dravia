@@ -4304,141 +4304,6 @@
 									"conditions": [
 										{
 											"id": "pick-by-unique-id",
-											"objectClass": "En_Slime_Mask",
-											"sid": 904815710571748,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "En_Slime_Mask",
-											"sid": 216642413935572,
-											"parameters": {
-												"animation": "\"Idle_\" & En_Slime_Base.Direction",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Slime_Mask",
-											"sid": 920377784542816,
-											"parameters": {
-												"instance-variable": "State",
-												"value": "\"Idle\""
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Slime_Mask",
-											"sid": 939827475916303,
-											"parameters": {
-												"instance-variable": "State_Timer",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-collisions-enabled",
-											"objectClass": "En_Slime_Mask",
-											"sid": 258678448493351,
-											"parameters": {
-												"collisions": "enabled"
-											}
-										}
-									],
-									"sid": 557897525318169
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 982320366887102,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 801656878253907,
-											"parameters": {
-												"animation": "\"Idle_\" & En_Slime_Base2.Direction",
-												"from": "beginning"
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 296260948845866,
-											"parameters": {
-												"instance-variable": "State",
-												"value": "\"Idle\""
-											}
-										},
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 997955695151202,
-											"parameters": {
-												"instance-variable": "State_Timer",
-												"value": "0"
-											}
-										},
-										{
-											"id": "set-collisions-enabled",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 699066813643553,
-											"parameters": {
-												"collisions": "enabled"
-											}
-										}
-									],
-									"sid": 131632031672669
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 354672232637948,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 368002520563503,
-											"parameters": {
-												"instance-variable": "State",
-												"value": "choose(\"Idle\", \"Attack\")"
-											}
-										},
-										{
-											"id": "set-collisions-enabled",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 302017090177413,
-											"parameters": {
-												"collisions": "enabled"
-											}
-										}
-									],
-									"sid": 921722889974638
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
 											"objectClass": "En_RangeGuard_Mask",
 											"sid": 931459339135666,
 											"parameters": {
@@ -4523,8 +4388,8 @@
 									"conditions": [
 										{
 											"id": "pick-by-unique-id",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 136030410332422,
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 719461477544391,
 											"parameters": {
 												"unique-id": "pairUid"
 											}
@@ -4532,42 +4397,56 @@
 									],
 									"actions": [
 										{
-											"id": "set-animation",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 345162021346075,
-											"parameters": {
-												"animation": "\"Idle_\" & En_Ghost_Base.Direction",
-												"from": "beginning"
-											}
-										},
-										{
 											"id": "set-instvar-value",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 142625936050384,
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 253182099240607,
 											"parameters": {
 												"instance-variable": "State",
-												"value": "\"Idle\""
+												"value": "\"Escape\""
 											}
 										},
 										{
 											"id": "set-instvar-value",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 360251973079703,
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 578886688471087,
 											"parameters": {
 												"instance-variable": "State_Timer",
 												"value": "0"
 											}
 										},
 										{
+											"id": "set-instvar-value",
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 945778741483754,
+											"parameters": {
+												"instance-variable": "StateLimit",
+												"value": "3 + random(0, 2) "
+											}
+										},
+										{
+											"callFunction": "SetRandomDirection",
+											"sid": 251261881796571,
+											"parameters": [
+												"En_BufferGuard_Mask.UID"
+											]
+										},
+										{
+											"callFunction": "EndBuffing",
+											"sid": 989708980301762,
+											"parameters": [
+												"En_BufferGuard_Mask.UID"
+											]
+										},
+										{
 											"id": "set-collisions-enabled",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 871038399618855,
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 298586921133515,
 											"parameters": {
 												"collisions": "enabled"
 											}
 										}
 									],
-									"sid": 644333807084228
+									"sid": 124624353788989
 								}
 							]
 						},
@@ -4592,162 +4471,6 @@
 							"actions": [],
 							"sid": 173670609708168,
 							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Slime_Mask",
-											"sid": 462840118839273,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Audio_Play_Sound",
-											"sid": 686242566479837,
-											"parameters": [
-												"\"Enemy_Destroy\"",
-												"0",
-												"\"Enemy_Destroy\""
-											]
-										},
-										{
-											"id": "destroy",
-											"objectClass": "En_Slime_Mask",
-											"sid": 317446365946991
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 687703181054342,
-											"parameters": {
-												"object-to-create": "Particle",
-												"layer": "\"Objects\"",
-												"x": "En_Slime_Mask.X",
-												"y": "En_Slime_Mask.Y - 8",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"callFunction": "Drop_Collectible",
-											"sid": 891185299508861,
-											"parameters": [
-												"En_Slime_Mask.X",
-												"En_Slime_Mask.Y - 8",
-												"int(2 + random(2))"
-											]
-										}
-									],
-									"sid": 706194966150815
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 688861075699001,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Audio_Play_Sound",
-											"sid": 568338037047963,
-											"parameters": [
-												"\"Enemy_Destroy\"",
-												"0",
-												"\"Enemy_Destroy\""
-											]
-										},
-										{
-											"id": "destroy",
-											"objectClass": "En_Slime_Mask2",
-											"sid": 497306734124098
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 561092797723154,
-											"parameters": {
-												"object-to-create": "Particle",
-												"layer": "\"Objects\"",
-												"x": "En_Slime_Mask2.X",
-												"y": "En_Slime_Mask2.Y - 8",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"callFunction": "Drop_Collectible",
-											"sid": 425527003455215,
-											"parameters": [
-												"En_Slime_Mask2.X",
-												"En_Slime_Mask2.Y - 8",
-												"int(3 + random(3))"
-											]
-										}
-									],
-									"sid": 761025773371141
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 472304325590134,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Audio_Play_Sound",
-											"sid": 453304926261995,
-											"parameters": [
-												"\"Enemy_Destroy\"",
-												"0",
-												"\"Enemy_Destroy\""
-											]
-										},
-										{
-											"id": "destroy",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 755743254860660
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 285208225092919,
-											"parameters": {
-												"object-to-create": "Particle",
-												"layer": "\"Objects\"",
-												"x": "En_Skeleton_Mask.X",
-												"y": "En_Skeleton_Mask.Y - 8",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"callFunction": "Drop_Collectible",
-											"sid": 184573288948564,
-											"parameters": [
-												"En_Skeleton_Mask.X",
-												"En_Skeleton_Mask.Y - 8",
-												"int(3 + random(6))"
-											]
-										}
-									],
-									"sid": 762170528745716
-								},
 								{
 									"eventType": "block",
 									"conditions": [
@@ -4790,11 +4513,11 @@
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 985462494191914,
+											"sid": 805913081312908,
 											"parameters": [
 												"En_MeleeGuard_Mask.X",
 												"En_MeleeGuard_Mask.Y - 8",
-												"int(1+ random(5))"
+												"int(1+ random(3))"
 											]
 										}
 									],
@@ -4842,11 +4565,11 @@
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 605695925612955,
+											"sid": 329651010557797,
 											"parameters": [
 												"En_RangeGuard_Mask.X",
 												"En_RangeGuard_Mask.Y - 8",
-												"int(1+ random(5))"
+												"int(1+ random(3))"
 											]
 										}
 									],
@@ -4857,8 +4580,8 @@
 									"conditions": [
 										{
 											"id": "pick-by-unique-id",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 885396871246611,
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 797136673309691,
 											"parameters": {
 												"unique-id": "pairUid"
 											}
@@ -4867,7 +4590,7 @@
 									"actions": [
 										{
 											"callFunction": "Audio_Play_Sound",
-											"sid": 148560730344064,
+											"sid": 150329124433585,
 											"parameters": [
 												"\"Enemy_Destroy\"",
 												"0",
@@ -4876,117 +4599,33 @@
 										},
 										{
 											"id": "destroy",
-											"objectClass": "En_Ghost_Mask",
-											"sid": 393038725346289
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 739668497262662
 										},
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 360075258811868,
+											"sid": 916864036769543,
 											"parameters": {
 												"object-to-create": "Particle",
 												"layer": "\"Objects\"",
-												"x": "En_Ghost_Mask.X",
-												"y": "En_Ghost_Mask.Y - 8",
+												"x": "En_BufferGuard_Mask.X",
+												"y": "En_BufferGuard_Mask.Y - 8",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 816176924266381,
+											"sid": 345091177420892,
 											"parameters": [
-												"En_Ghost_Mask.X",
-												"En_Ghost_Mask.Y - 8",
-												"int(2 + random(2))"
+												"En_BufferGuard_Mask.X",
+												"En_BufferGuard_Mask.Y - 8",
+												"int(1+ random(3))"
 											]
 										}
 									],
-									"sid": 260751928516665
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "pick-by-unique-id",
-											"objectClass": "En_Golem_Mask",
-											"sid": 942969870274272,
-											"parameters": {
-												"unique-id": "pairUid"
-											}
-										}
-									],
-									"actions": [
-										{
-											"callFunction": "Audio_Play_Sound",
-											"sid": 806398971610336,
-											"parameters": [
-												"\"Enemy_Destroy\"",
-												"0",
-												"\"Enemy_Destroy\""
-											]
-										},
-										{
-											"id": "destroy",
-											"objectClass": "En_Golem_Mask",
-											"sid": 225291441817106
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 955449187368532,
-											"parameters": {
-												"object-to-create": "Particle",
-												"layer": "\"Objects\"",
-												"x": "En_Golem_Mask.X",
-												"y": "En_Golem_Mask.Y - 8",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										}
-									],
-									"sid": 417202382582714,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "Projectile_Golem",
-													"sid": 797339625406419,
-													"parameters": {
-														"instance-variable": "ID",
-														"comparison": 0,
-														"value": "En_Golem_Mask.UID"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "destroy",
-													"objectClass": "Projectile_Golem",
-													"sid": 498062771416989
-												}
-											],
-											"sid": 765055265073069
-										},
-										{
-											"eventType": "block",
-											"conditions": [],
-											"actions": [
-												{
-													"callFunction": "Drop_Collectible",
-													"sid": 332593139411197,
-													"parameters": [
-														"En_Golem_Mask.X",
-														"En_Golem_Mask.Y - 8",
-														"int(2 + random(2))"
-													]
-												}
-											],
-											"sid": 700745014554176
-										}
-									]
+									"sid": 522594060614883
 								},
 								{
 									"eventType": "block",
@@ -6196,871 +5835,6 @@
 						}
 					],
 					"sid": 506766416296540
-				},
-				{
-					"eventType": "group",
-					"disabled": false,
-					"title": "Skeleton",
-					"description": "",
-					"isActiveOnStart": true,
-					"children": [
-						{
-							"eventType": "comment",
-							"text": "Passive"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "on-created",
-									"objectClass": "En_Skeleton_Base",
-									"sid": 965970523003272
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "En_Skeleton_Base",
-									"sid": 133818758665758,
-									"parameters": {
-										"instance-variable": "Pair_ID",
-										"value": "En_Skeleton_Mask.UID"
-									}
-								}
-							],
-							"sid": 738085641281253
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "every-tick",
-									"objectClass": "System",
-									"sid": 833388536254501
-								}
-							],
-							"actions": [
-								{
-									"id": "set-position",
-									"objectClass": "En_Skeleton_Mask",
-									"sid": 594965305179157,
-									"parameters": {
-										"x": "En_Skeleton_Base.X",
-										"y": "En_Skeleton_Base.Y"
-									}
-								}
-							],
-							"sid": 854232863456428
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "for-each",
-									"objectClass": "System",
-									"sid": 942366315834115,
-									"parameters": {
-										"object": "En_Skeleton_Base"
-									}
-								},
-								{
-									"id": "compare-instance-variable",
-									"objectClass": "En_Skeleton_Mask",
-									"sid": 920967938435983,
-									"parameters": {
-										"instance-variable": "State",
-										"comparison": 0,
-										"value": "\"Idle\""
-									}
-								}
-							],
-							"actions": [
-								{
-									"id": "set-instvar-value",
-									"objectClass": "En_Skeleton_Base",
-									"sid": 141230711036228,
-									"parameters": {
-										"instance-variable": "Player_AngleDiff",
-										"value": "((angle(Player_Base.X,Player_Base.Y,En_Skeleton_Base.X,En_Skeleton_Base.Y)+360)%360) - 180"
-									}
-								}
-							],
-							"sid": 614614799096141,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-within-angle",
-											"objectClass": "System",
-											"sid": 219903937008552,
-											"parameters": {
-												"angle-1": "En_Skeleton_Base.Player_AngleDiff",
-												"within": "45",
-												"angle-2": "270"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Skeleton_Base",
-											"sid": 248024274150982,
-											"parameters": {
-												"instance-variable": "Direction",
-												"value": "\"Up\""
-											}
-										}
-									],
-									"sid": 694694067883559
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-within-angle",
-											"objectClass": "System",
-											"sid": 452470303599355,
-											"parameters": {
-												"angle-1": "En_Skeleton_Base.Player_AngleDiff",
-												"within": "45",
-												"angle-2": "180"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Skeleton_Base",
-											"sid": 880313518443361,
-											"parameters": {
-												"instance-variable": "Direction",
-												"value": "\"Left\""
-											}
-										}
-									],
-									"sid": 650883620045882
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-within-angle",
-											"objectClass": "System",
-											"sid": 404337613371562,
-											"parameters": {
-												"angle-1": "En_Skeleton_Base.Player_AngleDiff",
-												"within": "45",
-												"angle-2": "90"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Skeleton_Base",
-											"sid": 284816249695721,
-											"parameters": {
-												"instance-variable": "Direction",
-												"value": "\"Down\""
-											}
-										}
-									],
-									"sid": 536528543142813
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "is-within-angle",
-											"objectClass": "System",
-											"sid": 364784378822830,
-											"parameters": {
-												"angle-1": "En_Skeleton_Base.Player_AngleDiff",
-												"within": "45",
-												"angle-2": "0"
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-instvar-value",
-											"objectClass": "En_Skeleton_Base",
-											"sid": 204865537804713,
-											"parameters": {
-												"instance-variable": "Direction",
-												"value": "\"Right\""
-											}
-										}
-									],
-									"sid": 810703622697904
-								}
-							]
-						},
-						{
-							"eventType": "comment",
-							"text": ""
-						},
-						{
-							"eventType": "comment",
-							"text": ""
-						},
-						{
-							"eventType": "comment",
-							"text": "Behavior"
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-boolean-instance-variable-set",
-									"objectClass": "En_Skeleton_Mask",
-									"sid": 194137872489303,
-									"parameters": {
-										"instance-variable": "Active"
-									}
-								}
-							],
-							"actions": [],
-							"sid": 871235929826146,
-							"children": [
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 968478068147528,
-											"parameters": {
-												"instance-variable": "State_Timer",
-												"comparison": 1,
-												"value": "-1"
-											}
-										},
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 138529478170744,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 1,
-												"value": "\"\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "add-to-instvar",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 582377059174015,
-											"parameters": {
-												"instance-variable": "State_Timer",
-												"value": "dt"
-											}
-										}
-									],
-									"sid": 576191474915245
-								},
-								{
-									"eventType": "comment",
-									"text": " Idle"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 336398705361461,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Idle\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 544964344077687,
-											"parameters": {
-												"animation": "\"Idle_\" & En_Skeleton_Base.Direction",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 885187556069243,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 811092430169342,
-													"parameters": {
-														"instance-variable": "State_Timer",
-														"comparison": 5,
-														"value": "Self.StateLimit"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 896912021495883,
-													"parameters": {
-														"instance-variable": "State",
-														"value": "choose(\"Walk\", \"Walk\", \"Attack\")"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 965213084876480,
-													"parameters": {
-														"instance-variable": "State_Timer",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 878554826809494,
-													"parameters": {
-														"instance-variable": "StateLimit",
-														"value": "0.2 + random(0.8)"
-													}
-												}
-											],
-											"sid": 489992073875857
-										}
-									]
-								},
-								{
-									"eventType": "comment",
-									"text": "Walk"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 682639211788850,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Walk\""
-											}
-										}
-									],
-									"actions": [
-										{
-											"id": "set-animation",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 368267568132488,
-											"parameters": {
-												"animation": "\"Walk_\" & En_Skeleton_Base.Direction",
-												"from": "beginning"
-											}
-										}
-									],
-									"sid": 814315758063134,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 774740934044169,
-													"parameters": {
-														"instance-variable": "Direction",
-														"comparison": 0,
-														"value": "\"Up\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 904664733831094,
-													"behaviorType": "8Direction",
-													"parameters": {
-														"control": "up"
-													}
-												}
-											],
-											"sid": 344268493682506,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-overlapping-at-offset",
-															"objectClass": "En_Skeleton_Base",
-															"sid": 379347638424865,
-															"parameters": {
-																"object": "Tilemap_Collision",
-																"offset-x": "0",
-																"offset-y": "-1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Skeleton_State_Idle",
-															"sid": 645805304977610,
-															"parameters": [
-																"En_Skeleton_Mask.UID"
-															]
-														}
-													],
-													"sid": 200409361843497
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 438899107363783,
-													"parameters": {
-														"instance-variable": "Direction",
-														"comparison": 0,
-														"value": "\"Down\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 796624674815663,
-													"behaviorType": "8Direction",
-													"parameters": {
-														"control": "down"
-													}
-												}
-											],
-											"sid": 976671127681741,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-overlapping-at-offset",
-															"objectClass": "En_Skeleton_Base",
-															"sid": 356667626832722,
-															"parameters": {
-																"object": "Tilemap_Collision",
-																"offset-x": "0",
-																"offset-y": "1"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Skeleton_State_Idle",
-															"sid": 188209058914883,
-															"parameters": [
-																"En_Skeleton_Mask.UID"
-															]
-														}
-													],
-													"sid": 302469633085700
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 659958548536615,
-													"parameters": {
-														"instance-variable": "Direction",
-														"comparison": 0,
-														"value": "\"Right\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 123569823721961,
-													"behaviorType": "8Direction",
-													"parameters": {
-														"control": "right"
-													}
-												}
-											],
-											"sid": 596429938114125,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-overlapping-at-offset",
-															"objectClass": "En_Skeleton_Base",
-															"sid": 131945392403015,
-															"parameters": {
-																"object": "Tilemap_Collision",
-																"offset-x": "1",
-																"offset-y": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Skeleton_State_Idle",
-															"sid": 708588362433053,
-															"parameters": [
-																"En_Skeleton_Mask.UID"
-															]
-														}
-													],
-													"sid": 317324051445978
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 873286104985936,
-													"parameters": {
-														"instance-variable": "Direction",
-														"comparison": 0,
-														"value": "\"Left\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "simulate-control",
-													"objectClass": "En_Skeleton_Base",
-													"sid": 576161930176114,
-													"behaviorType": "8Direction",
-													"parameters": {
-														"control": "left"
-													}
-												}
-											],
-											"sid": 103305897576025,
-											"children": [
-												{
-													"eventType": "block",
-													"conditions": [
-														{
-															"id": "is-overlapping-at-offset",
-															"objectClass": "En_Skeleton_Base",
-															"sid": 436650818882230,
-															"parameters": {
-																"object": "Tilemap_Collision",
-																"offset-x": "-1",
-																"offset-y": "0"
-															}
-														}
-													],
-													"actions": [
-														{
-															"callFunction": "Skeleton_State_Idle",
-															"sid": 165435754271156,
-															"parameters": [
-																"En_Skeleton_Mask.UID"
-															]
-														}
-													],
-													"sid": 418769807258927
-												}
-											]
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 768512892340326,
-													"parameters": {
-														"instance-variable": "State_Timer",
-														"comparison": 5,
-														"value": "Self.StateLimit"
-													}
-												}
-											],
-											"actions": [
-												{
-													"callFunction": "Skeleton_State_Idle",
-													"sid": 482397689668832,
-													"parameters": [
-														"En_Skeleton_Mask.UID"
-													]
-												}
-											],
-											"sid": 160162567492680
-										},
-										{
-											"functionName": "Skeleton_State_Idle",
-											"functionDescription": "Automatically converted from 'Skeleton_State_Idle'",
-											"functionCategory": "",
-											"functionReturnType": "none",
-											"functionCopyPicked": false,
-											"functionIsAsync": false,
-											"functionParameters": [
-												{
-													"name": "skeletonUid",
-													"type": "number",
-													"initialValue": "0",
-													"comment": "",
-													"sid": 709118491889194
-												}
-											],
-											"eventType": "function-block",
-											"conditions": [
-												{
-													"id": "pick-by-unique-id",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 263793273052230,
-													"parameters": {
-														"unique-id": "skeletonUid"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 815730588855414,
-													"parameters": {
-														"instance-variable": "State",
-														"value": "\"Idle\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 750299266760558,
-													"parameters": {
-														"instance-variable": "State_Timer",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 129209955306823,
-													"parameters": {
-														"instance-variable": "StateLimit",
-														"value": "0.2 + random(0.5)"
-													}
-												}
-											],
-											"sid": 534614927784579
-										}
-									]
-								},
-								{
-									"eventType": "comment",
-									"text": "Attack"
-								},
-								{
-									"eventType": "block",
-									"conditions": [
-										{
-											"id": "compare-instance-variable",
-											"objectClass": "En_Skeleton_Mask",
-											"sid": 895816884330342,
-											"parameters": {
-												"instance-variable": "State",
-												"comparison": 0,
-												"value": "\"Attack\""
-											}
-										}
-									],
-									"actions": [],
-									"sid": 191754322859053,
-									"children": [
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "is-animation-playing",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 409058194488393,
-													"parameters": {
-														"animation": "\"Attack_\" & En_Skeleton_Base.Direction"
-													},
-													"isInverted": true
-												}
-											],
-											"actions": [
-												{
-													"id": "set-animation",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 727733518404457,
-													"parameters": {
-														"animation": "\"Attack_\" & En_Skeleton_Base.Direction",
-														"from": "beginning"
-													}
-												}
-											],
-											"sid": 685342486092766
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-animation-frame-changed",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 157821256200402
-												},
-												{
-													"id": "is-animation-playing",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 291626106374393,
-													"parameters": {
-														"animation": "\"Attack_\" & En_Skeleton_Base.Direction"
-													}
-												},
-												{
-													"id": "compare-animation-frame",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 499612933024487,
-													"parameters": {
-														"comparison": 0,
-														"number": "1"
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "create-object",
-													"objectClass": "System",
-													"sid": 103768540555015,
-													"parameters": {
-														"object-to-create": "Projectile_Skeleton",
-														"layer": "\"Objects\"",
-														"x": "En_Skeleton_Mask.X",
-														"y": "En_Skeleton_Mask.Y - 10",
-														"create-hierarchy": false,
-														"template-name": "\"\""
-													}
-												},
-												{
-													"id": "set-angle-of-motion",
-													"objectClass": "Projectile_Skeleton",
-													"sid": 964551929390878,
-													"behaviorType": "Bullet",
-													"parameters": {
-														"angle": "angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)"
-													}
-												},
-												{
-													"callFunction": "Audio_Play_Sound",
-													"sid": 822745788023571,
-													"parameters": [
-														"\"Skeleton_Throw\"",
-														"0",
-														"\"\""
-													]
-												}
-											],
-											"sid": 995566649092426
-										},
-										{
-											"eventType": "block",
-											"conditions": [
-												{
-													"id": "on-animation-finished",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 775973109229391,
-													"parameters": {
-														"animation": "\"Attack_\" & En_Skeleton_Base.Direction"
-													}
-												},
-												{
-													"id": "compare-instance-variable",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 246544881011888,
-													"parameters": {
-														"instance-variable": "State",
-														"comparison": 0,
-														"value": "\"Attack\""
-													}
-												}
-											],
-											"actions": [
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 929173320519302,
-													"parameters": {
-														"instance-variable": "State",
-														"value": "\"Idle\""
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 965968975356821,
-													"parameters": {
-														"instance-variable": "State_Timer",
-														"value": "0"
-													}
-												},
-												{
-													"id": "set-instvar-value",
-													"objectClass": "En_Skeleton_Mask",
-													"sid": 275607447860163,
-													"parameters": {
-														"instance-variable": "StateLimit",
-														"value": "0.2 + random(0.5)"
-													}
-												}
-											],
-											"sid": 470595632591557
-										}
-									]
-								}
-							]
-						},
-						{
-							"eventType": "comment",
-							"text": ""
-						},
-						{
-							"eventType": "block",
-							"conditions": [
-								{
-									"id": "is-on-screen",
-									"objectClass": "Projectile_Skeleton",
-									"sid": 343566458579755,
-									"isInverted": true
-								}
-							],
-							"actions": [
-								{
-									"id": "destroy",
-									"objectClass": "Projectile_Skeleton",
-									"sid": 528762647622972
-								}
-							],
-							"sid": 952031615517168
-						}
-					],
-					"sid": 690704085781586
 				},
 				{
 					"eventType": "group",
@@ -8801,19 +7575,19 @@
 										{
 											"id": "set-vector-x",
 											"objectClass": "En_RangeGuard_Base",
-											"sid": 184325566262174,
+											"sid": 419409043084929,
 											"behaviorType": "8Direction",
 											"parameters": {
-												"vector-x": "cos(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)+180) * 100"
+												"vector-x": "cos(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y)+180) * 50"
 											}
 										},
 										{
 											"id": "set-vector-y",
 											"objectClass": "En_RangeGuard_Base",
-											"sid": 489807601840670,
+											"sid": 459804248178674,
 											"behaviorType": "8Direction",
 											"parameters": {
-												"vector-y": "sin(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y) +180) * 100"
+												"vector-y": "sin(angle(Self.X,Self.Y,Player_Base.X,Player_Base.Y) +180) * 50"
 											}
 										}
 									],
@@ -9052,10 +7826,10 @@
 												{
 													"id": "set-instvar-value",
 													"objectClass": "En_RangeGuard_Mask",
-													"sid": 220286346514613,
+													"sid": 218526995141965,
 													"parameters": {
 														"instance-variable": "StateLimit",
-														"value": "1 + random(0.5)"
+														"value": "1 + random(1.5)"
 													}
 												}
 											],
@@ -9072,15 +7846,6 @@
 						{
 							"eventType": "block",
 							"conditions": [
-								{
-									"id": "on-collision-with-another-object",
-									"objectClass": "Projectile_RangeGuard",
-									"sid": 270365557141893,
-									"disabled": true,
-									"parameters": {
-										"object": "Tilemap_Collision"
-									}
-								},
 								{
 									"id": "is-on-screen",
 									"objectClass": "Projectile_RangeGuard",
@@ -9103,6 +7868,530 @@
 						}
 					],
 					"sid": 930344513043330
+				},
+				{
+					"eventType": "group",
+					"disabled": false,
+					"title": "BufferGuard",
+					"description": "",
+					"isActiveOnStart": true,
+					"children": [
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-created",
+									"objectClass": "En_BufferGuard_Base",
+									"sid": 707759457844473
+								}
+							],
+							"actions": [
+								{
+									"id": "set-instvar-value",
+									"objectClass": "En_BufferGuard_Base",
+									"sid": 536913219144014,
+									"parameters": {
+										"instance-variable": "Pair_ID",
+										"value": "En_BufferGuard_Mask.UID"
+									}
+								}
+							],
+							"sid": 905573395155070
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "every-tick",
+									"objectClass": "System",
+									"sid": 232046796760678
+								}
+							],
+							"actions": [
+								{
+									"id": "set-position",
+									"objectClass": "En_BufferGuard_Mask",
+									"sid": 969012757362810,
+									"parameters": {
+										"x": "En_BufferGuard_Base.X",
+										"y": "En_BufferGuard_Base.Y"
+									}
+								}
+							],
+							"sid": 525581438087440
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-boolean-instance-variable-set",
+									"objectClass": "En_BufferGuard_Mask",
+									"sid": 337468907858337,
+									"parameters": {
+										"instance-variable": "Active"
+									}
+								}
+							],
+							"actions": [],
+							"sid": 739694796667966,
+							"children": [
+								{
+									"eventType": "comment",
+									"text": " Idle --> Buff"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 390054163565537,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Idle\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 818619168461456,
+											"parameters": {
+												"animation": "\"Idle_Down\"",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 579751636805570,
+									"children": [
+										{
+											"eventType": "comment",
+											"text": "BuffEnemies ()"
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 146210089080580
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "BuffEnemies",
+													"sid": 584453821170091
+												}
+											],
+											"sid": 645907179475569
+										},
+										{
+											"functionName": "BuffEnemies",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [],
+											"eventType": "function-block",
+											"conditions": [],
+											"actions": [],
+											"sid": 501124833870750
+										}
+									]
+								},
+								{
+									"eventType": "comment",
+									"text": "Escape"
+								},
+								{
+									"eventType": "block",
+									"conditions": [
+										{
+											"id": "compare-instance-variable",
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 833539898522488,
+											"parameters": {
+												"instance-variable": "State",
+												"comparison": 0,
+												"value": "\"Escape\""
+											}
+										}
+									],
+									"actions": [
+										{
+											"id": "set-animation",
+											"objectClass": "En_BufferGuard_Mask",
+											"sid": 919226098153872,
+											"parameters": {
+												"animation": "\"Walk_\" & En_BufferGuard_Base.Direction",
+												"from": "beginning"
+											}
+										}
+									],
+									"sid": 691702460440822,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 369467097757499,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"comparison": 1,
+														"value": "-1"
+													}
+												},
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 774698917349090,
+													"parameters": {
+														"instance-variable": "State",
+														"comparison": 1,
+														"value": "\"\""
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "add-to-instvar",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 686406910972886,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"value": "dt"
+													}
+												},
+												{
+													"id": "set-vector-x",
+													"objectClass": "En_BufferGuard_Base",
+													"sid": 364068251428863,
+													"behaviorType": "8Direction",
+													"parameters": {
+														"vector-x": "cos(En_BufferGuard_Mask.RandomAngle) * 125"
+													}
+												},
+												{
+													"id": "set-vector-y",
+													"objectClass": "En_BufferGuard_Base",
+													"sid": 796109723154954,
+													"behaviorType": "8Direction",
+													"parameters": {
+														"vector-y": "sin(En_BufferGuard_Mask.RandomAngle) * 125"
+													}
+												}
+											],
+											"sid": 886512691506202
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-overlapping-at-offset",
+													"objectClass": "En_BufferGuard_Base",
+													"sid": 883365668767065,
+													"parameters": {
+														"object": "Tilemap_Collision",
+														"offset-x": "cos(En_BufferGuard_Mask.RandomAngle)",
+														"offset-y": "sin(En_BufferGuard_Mask.RandomAngle)"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "SetRandomDirection",
+													"sid": 249181135673250,
+													"parameters": [
+														"En_BufferGuard_Base.Pair_ID"
+													]
+												}
+											],
+											"sid": 117672257535917
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "compare-instance-variable",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 419932523005283,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"comparison": 5,
+														"value": "Self.StateLimit"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Buffer_State_Idle",
+													"sid": 533712796193514,
+													"parameters": [
+														"En_BufferGuard_Mask.UID"
+													]
+												}
+											],
+											"sid": 693427657253218
+										},
+										{
+											"functionName": "EndBuffing",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [
+												{
+													"name": "bufferUid",
+													"type": "number",
+													"initialValue": "0",
+													"comment": "",
+													"sid": 356079880591353
+												}
+											],
+											"eventType": "function-block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 644559023602299,
+													"parameters": {
+														"unique-id": "bufferUid"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 284652904761764
+										},
+										{
+											"functionName": "SetRandomDirection",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [
+												{
+													"name": "bufferUid",
+													"type": "number",
+													"initialValue": "0",
+													"comment": "",
+													"sid": 935672616783285
+												}
+											],
+											"eventType": "function-block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 337071089666496,
+													"parameters": {
+														"unique-id": "bufferUid"
+													}
+												}
+											],
+											"actions": [],
+											"sid": 810318612353484,
+											"children": [
+												{
+													"eventType": "block",
+													"conditions": [
+														{
+															"id": "compare-instance-variable",
+															"objectClass": "En_BufferGuard_Base",
+															"sid": 794208222154737,
+															"parameters": {
+																"instance-variable": "Pair_ID",
+																"comparison": 0,
+																"value": "En_BufferGuard_Mask.UID"
+															}
+														}
+													],
+													"actions": [
+														{
+															"id": "set-instvar-value",
+															"objectClass": "En_BufferGuard_Base",
+															"sid": 453553048540312,
+															"parameters": {
+																"instance-variable": "Direction",
+																"value": "choose(\"Up\",\"Right\",\"Left\",\"Down\")"
+															}
+														}
+													],
+													"sid": 951491031050017,
+													"children": [
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "En_BufferGuard_Base",
+																	"sid": 514514959476357,
+																	"parameters": {
+																		"instance-variable": "Direction",
+																		"comparison": 0,
+																		"value": "\"Up\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_BufferGuard_Mask",
+																	"sid": 424422094638228,
+																	"parameters": {
+																		"instance-variable": "RandomAngle",
+																		"value": "random(random(225, 315))"
+																	}
+																}
+															],
+															"sid": 311383061185074
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "En_BufferGuard_Base",
+																	"sid": 382300304417356,
+																	"parameters": {
+																		"instance-variable": "Direction",
+																		"comparison": 0,
+																		"value": "\"Down\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_BufferGuard_Mask",
+																	"sid": 595210477222428,
+																	"parameters": {
+																		"instance-variable": "RandomAngle",
+																		"value": "random(random(45,135))"
+																	}
+																}
+															],
+															"sid": 541663920420853
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "En_BufferGuard_Base",
+																	"sid": 746644736700899,
+																	"parameters": {
+																		"instance-variable": "Direction",
+																		"comparison": 0,
+																		"value": "\"Right\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_BufferGuard_Mask",
+																	"sid": 688362665152641,
+																	"parameters": {
+																		"instance-variable": "RandomAngle",
+																		"value": "random(random(-45,45))"
+																	}
+																}
+															],
+															"sid": 371682459861121
+														},
+														{
+															"eventType": "block",
+															"conditions": [
+																{
+																	"id": "compare-instance-variable",
+																	"objectClass": "En_BufferGuard_Base",
+																	"sid": 571796761741593,
+																	"parameters": {
+																		"instance-variable": "Direction",
+																		"comparison": 0,
+																		"value": "\"Left\""
+																	}
+																}
+															],
+															"actions": [
+																{
+																	"id": "set-instvar-value",
+																	"objectClass": "En_BufferGuard_Mask",
+																	"sid": 371076384526515,
+																	"parameters": {
+																		"instance-variable": "RandomAngle",
+																		"value": "random(random(135,225))"
+																	}
+																}
+															],
+															"sid": 804765499034590
+														}
+													]
+												}
+											]
+										},
+										{
+											"functionName": "Buffer_State_Idle",
+											"functionDescription": "",
+											"functionCategory": "",
+											"functionReturnType": "none",
+											"functionCopyPicked": false,
+											"functionIsAsync": false,
+											"functionParameters": [
+												{
+													"name": "bufferUid",
+													"type": "number",
+													"initialValue": "0",
+													"comment": "",
+													"sid": 632178569263354
+												}
+											],
+											"eventType": "function-block",
+											"conditions": [
+												{
+													"id": "pick-by-unique-id",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 751241211973426,
+													"parameters": {
+														"unique-id": "bufferUid"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 641830019793489,
+													"parameters": {
+														"instance-variable": "State",
+														"value": "\"Idle\""
+													}
+												},
+												{
+													"id": "set-instvar-value",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 717834315721481,
+													"parameters": {
+														"instance-variable": "State_Timer",
+														"value": "0"
+													}
+												}
+											],
+											"sid": 350091963390932
+										}
+									]
+								}
+							]
+						}
+					],
+					"sid": 294427169502383
 				},
 				{
 					"eventType": "group",
