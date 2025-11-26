@@ -1,0 +1,29 @@
+{
+	"name": "Tilemap_Dungeon2",
+	"plugin-id": "Tilemap",
+	"sid": 113908582891439,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [
+		{
+			"effectId": "tint",
+			"name": "Tint"
+		}
+	],
+	"image": {
+		"width": 592,
+		"height": 736,
+		"originX": 0.5,
+		"originY": 0.5,
+		"originalSource": "C:\\Users\\tokin\\Dropbox\\Demonoir\\Art\\Final Art\\tiles_dungeon.png",
+		"exportFormat": "lossless",
+		"exportQuality": 0.8,
+		"fileType": "image/png",
+		"imageSpriteId": 7604302,
+		"useCollisionPoly": true,
+		"tag": ""
+	},
+	"tile-collision-polys": {}
+}

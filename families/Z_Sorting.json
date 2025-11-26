@@ -10,12 +10,16 @@
 		"En_Slime_Mask",
 		"Gem",
 		"Particle",
-		"Player_Mask",
 		"En_Slime_Mask2",
 		"En_Skeleton_Mask",
 		"En_Ghost_Mask",
 		"En_Golem_Mask",
 		"En_Demon_Mask",
-		"JoJo"
+		"JoJo",
+		"En_MeleeGuard_Mask",
+		"En_RangeGuard_Mask",
+		"NPC_Chat",
+		"Player_Mask",
+		"En_BufferGuard_Mask"
 	]
 }

@@ -13,6 +13,16 @@
 		},
 		{
 			"eventType": "variable",
+			"name": "DialogueLineIndex",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 321647571687507
+		},
+		{
+			"eventType": "variable",
 			"name": "Game_Initialized",
 			"type": "number",
 			"initialValue": "0",
@@ -70,6 +80,16 @@
 			"isStatic": false,
 			"isConstant": false,
 			"sid": 987616381341813
+		},
+		{
+			"eventType": "variable",
+			"name": "hasTriggeredADialogue",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 497995537894219
 		},
 		{
 			"eventType": "variable",
@@ -228,10 +248,10 @@
 						{
 							"id": "add-key",
 							"objectClass": "Dictionary",
-							"sid": 109466839064416,
+							"sid": 388098277825209,
 							"parameters": {
 								"key": "\"Gems\"",
-								"value": "999"
+								"value": "0"
 							}
 						},
 						{
@@ -321,6 +341,24 @@
 							"sid": 653934751237229,
 							"parameters": {
 								"key": "\"DungeonKey\"",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 901003766290918,
+							"parameters": {
+								"key": "\"hasTorre_Izquierda\"",
+								"value": "0"
+							}
+						},
+						{
+							"id": "add-key",
+							"objectClass": "Dictionary",
+							"sid": 779972764390219,
+							"parameters": {
+								"key": "\"hasTorre_Derecha\"",
 								"value": "0"
 							}
 						}
@@ -1150,6 +1188,73 @@
 				}
 			],
 			"sid": 235254977773472
+		},
+		{
+			"eventType": "group",
+			"disabled": false,
+			"title": "Load NPC Dialogues",
+			"description": "",
+			"isActiveOnStart": true,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-start-of-layout",
+							"objectClass": "System",
+							"sid": 351599304786186
+						},
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 975354005825190,
+							"disabled": true,
+							"parameters": {
+								"first-value": "LayoutName",
+								"comparison": 0,
+								"second-value": "\"TitleScreen\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "request-project-file",
+							"objectClass": "AJAX",
+							"sid": 830377127814855,
+							"parameters": {
+								"tag": "\"LoadNPCDialogues\"",
+								"file": "DialoguesNPCArray.json"
+							}
+						}
+					],
+					"sid": 763856342346806
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-completed",
+							"objectClass": "AJAX",
+							"sid": 795835394275274,
+							"parameters": {
+								"tag": "\"LoadNPCDialogues\""
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "load",
+							"objectClass": "DialogueArray",
+							"sid": 222505999888522,
+							"parameters": {
+								"json": "AJAX.LastData"
+							}
+						}
+					],
+					"sid": 133991275234211
+				}
+			],
+			"sid": 518557437992549
 		}
 	],
 	"sid": 731063185878615

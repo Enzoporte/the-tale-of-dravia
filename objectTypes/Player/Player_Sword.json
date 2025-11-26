@@ -1,7 +1,7 @@
 {
 	"name": "Player_Sword",
 	"plugin-id": "Sprite",
-	"sid": 290222105899807,
+	"sid": 152040146947446,
 	"isGlobal": false,
 	"editorNewInstanceIsReplica": true,
 	"instanceVariables": [
@@ -10,14 +10,14 @@
 			"type": "string",
 			"desc": "",
 			"show": true,
-			"sid": 249238002988424
+			"sid": 258976043979139
 		},
 		{
 			"name": "Attacking",
 			"type": "boolean",
 			"desc": "",
 			"show": true,
-			"sid": 260676646975317
+			"sid": 727304247387499
 		}
 	],
 	"behaviorTypes": [],
@@ -35,7 +35,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 18,
+						"imageSpriteId": 1194378,
 						"collisionPoly": {
 							"points": [
 								0.25,
@@ -53,7 +53,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 844133216614495,
+				"sid": 184855035884423,
 				"name": "Slash_Down",
 				"isLooping": false,
 				"isPingPong": false,
@@ -72,7 +72,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 19,
+						"imageSpriteId": 4098859,
 						"collisionPoly": {
 							"points": [
 								0.0625,
@@ -90,7 +90,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 239220580549884,
+				"sid": 405870707831850,
 				"name": "Slash_Up",
 				"isLooping": false,
 				"isPingPong": false,
@@ -109,7 +109,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 20,
+						"imageSpriteId": 8944283,
 						"collisionPoly": {
 							"points": [
 								0.479167,
@@ -127,7 +127,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 519272877308531,
+				"sid": 379193433840039,
 				"name": "Slash_Right",
 				"isLooping": false,
 				"isPingPong": false,
@@ -146,7 +146,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 21,
+						"imageSpriteId": 8701787,
 						"collisionPoly": {
 							"points": [
 								0.520833,
@@ -164,7 +164,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 458325035075586,
+				"sid": 489601544445396,
 				"name": "Slash_Left",
 				"isLooping": false,
 				"isPingPong": false,

@@ -21,6 +21,8 @@
 		"Projectile_Demon_Bat",
 		"Projectile_Demon_Sword",
 		"En_Demon_Sword",
-		"En_FlameTrap"
+		"En_FlameTrap",
+		"SwordSlash",
+		"Projectile_RangeGuard"
 	]
 }

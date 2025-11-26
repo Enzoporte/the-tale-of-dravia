@@ -1,0 +1,105 @@
+{
+	"name": "player_knife",
+	"plugin-id": "Sprite",
+	"sid": 569411756213827,
+	"isGlobal": false,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Bullet",
+			"sid": 836005998785222
+		},
+		{
+			"behaviorId": "MoveTo",
+			"name": "MoveTo",
+			"sid": 327106276958147
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.25,
+						"originY": 0.5625,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 7305065,
+						"collisionPoly": {
+							"points": [
+								0.4375,
+								0.4375,
+								0.5,
+								0.4375,
+								0.875,
+								0.5,
+								0.9375,
+								0.5625,
+								0.9375,
+								0.625,
+								0.875,
+								0.6875,
+								0.5,
+								0.75,
+								0.4375,
+								0.75,
+								0.25,
+								0.6875,
+								0.1875,
+								0.625,
+								0.1875,
+								0.5625,
+								0.25,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0.5,
+						"tag": ""
+					},
+					{
+						"width": 16,
+						"height": 16,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"fileType": "image/png",
+						"imageSpriteId": 6566041,
+						"collisionPoly": {
+							"points": [
+								0.21022744612260297,
+								0.4772727489471435,
+								0.9119318181818183,
+								0.4517045454545455,
+								0.9176138097589664,
+								0.7244318181818181,
+								0.19318199157714838,
+								0.724431818181818
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 0.5,
+						"tag": ""
+					}
+				],
+				"sid": 253987918536653,
+				"name": "Animation 1",
+				"isLooping": true,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

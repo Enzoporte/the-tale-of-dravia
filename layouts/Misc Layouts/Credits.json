@@ -15,12 +15,14 @@
 						"bottom-margin": 4,
 						"edges": "stretch",
 						"fill": "stretch",
+						"image-scale-x": 1,
+						"image-scale-y": 1,
 						"initially-visible": true,
 						"origin": "top-left",
 						"seams": "overlap"
 					},
-					"uid": 123,
-					"sid": 934139171458061,
+					"uid": 957,
+					"sid": 650826498503130,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -32,7 +34,7 @@
 						"x": 0,
 						"y": 272,
 						"width": 312,
-						"height": 156,
+						"height": 268,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -48,7 +50,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "-----Created for Scirra by-----",
+						"text": "-----Created by Team Concha-----",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -64,8 +66,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 582,
-					"sid": 824593677574341,
+					"uid": 958,
+					"sid": 915874657293727,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -110,7 +112,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "Matthew Gruber",
+						"text": "Enzo Cantoni",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -126,8 +128,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 583,
-					"sid": 487794371559981,
+					"uid": 959,
+					"sid": 946699145057104,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -172,7 +174,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "(Tokinsom)",
+						"text": "Adrian Cabrera",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -188,70 +190,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 584,
-					"sid": 222107557706404,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									0.10196078431372549,
-									0.9921568627450981,
-									0,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 288,
-						"width": 312,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont_Dialogue",
-					"properties": {
-						"text": "Henrique Lazarini",
-						"enable-bbcode": false,
-						"character-width": 7,
-						"character-height": 11,
-						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 586,
-					"sid": 354749038772835,
+					"uid": 961,
+					"sid": 903741633248715,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -296,7 +236,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "(7Soul)",
+						"text": "Juan Parra",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -312,70 +252,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 587,
-					"sid": 571355093446436,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": ""
-					},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									0.9450980392156862,
-									0.5215686274509804,
-									0.23921568627450981,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 340,
-						"width": 312,
-						"height": 16,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont_Dialogue",
-					"properties": {
-						"text": "Christopher Moore",
-						"enable-bbcode": false,
-						"character-width": 7,
-						"character-height": 11,
-						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 589,
-					"sid": 459647067785791,
+					"uid": 963,
+					"sid": 483131658271066,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -420,7 +298,417 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "(Betatronic)",
+						"text": "Using DEMONOIRE template with Construct3",
+						"enable-bbcode": false,
+						"character-width": 7,
+						"character-height": 11,
+						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 966,
+					"sid": 421897461044164,
+					"tags": "",
+					"instanceVariables": {
+						"Tag": ""
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 8,
+						"y": 584,
+						"width": 312,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Dialogue",
+					"properties": {
+						"text": "(Red Social)",
+						"enable-bbcode": false,
+						"character-width": 7,
+						"character-height": 11,
+						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 967,
+					"sid": 623579124974174,
+					"tags": "",
+					"instanceVariables": {
+						"Tag": ""
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									0.10196078431372549,
+									0.9921568627450981,
+									0,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 8,
+						"y": 600,
+						"width": 312,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Dialogue",
+					"properties": {
+						"text": "(Red Social)",
+						"enable-bbcode": false,
+						"character-width": 7,
+						"character-height": 11,
+						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": 0,
+						"line-height": 0,
+						"horizontal-alignment": "left",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 970,
+					"sid": 715237564861458,
+					"tags": "",
+					"instanceVariables": {
+						"Tag": "EndCredits"
+					},
+					"behaviors": {
+						"Flash": {
+							"properties": {}
+						}
+					},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									0.9450980392156862,
+									0.5215686274509804,
+									0.23921568627450981,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 8,
+						"y": 616,
+						"width": 312,
+						"height": 24,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Tiny",
+					"properties": {
+						"text": "SPECIAL THANKS TO\n\n♥ GARCIA MORUECO LLUIS",
+						"enable-bbcode": false,
+						"character-width": 8,
+						"character-height": 8,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "right",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 972,
+					"sid": 872181363032790,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									0.5254901960784314,
+									0.5254901960784314,
+									0.5254901960784314,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 148,
+						"y": 584,
+						"width": 160,
+						"height": 52,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Tiny",
+					"properties": {
+						"text": "PROGRAMMING • GAME DESIGN • LEVEL DESIGN",
+						"enable-bbcode": false,
+						"character-width": 8,
+						"character-height": 8,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 978,
+					"sid": 337126572243074,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 296,
+						"width": 312,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Tiny",
+					"properties": {
+						"text": "PROGRAMMING • SPRITES • GAME DESIGN",
+						"enable-bbcode": false,
+						"character-width": 8,
+						"character-height": 8,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 979,
+					"sid": 523061001330299,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 348,
+						"width": 312,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Tiny",
+					"properties": {
+						"text": "LEVEL DESIGN • GAME DESIGN • SCRIPTS",
+						"enable-bbcode": false,
+						"character-width": 8,
+						"character-height": 8,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 981,
+					"sid": 204502424883633,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 404,
+						"width": 312,
+						"height": 12,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Dialogue",
+					"properties": {
+						"text": "Alissa Zuniga",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -436,8 +724,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 590,
-					"sid": 732166725707489,
+					"uid": 984,
+					"sid": 727429290086572,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -464,7 +752,7 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 392,
+						"y": 432,
 						"width": 312,
 						"height": 16,
 						"originX": 0,
@@ -482,7 +770,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "Construct.net",
+						"text": "Lucia Baquero",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -491,15 +779,15 @@
 						"scale": 1,
 						"character-spacing": 0,
 						"line-height": 0,
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 592,
-					"sid": 969794430629653,
+					"uid": 985,
+					"sid": 334764763521942,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -514,9 +802,9 @@
 							"isEnabled": true,
 							"parameters": {
 								"color": [
-									1,
-									1,
-									1,
+									0.9568627450980393,
+									0.9725490196078431,
+									0.38823529411764707,
 									1
 								]
 							}
@@ -526,9 +814,9 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 436,
+						"y": 468,
 						"width": 312,
-						"height": 24,
+						"height": 16,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -544,7 +832,7 @@
 				{
 					"type": "SpriteFont_Dialogue",
 					"properties": {
-						"text": "Twitter.com/Tokinsom",
+						"text": "Ray",
 						"enable-bbcode": false,
 						"character-width": 7,
 						"character-height": 11,
@@ -553,15 +841,15 @@
 						"scale": 1,
 						"character-spacing": 0,
 						"line-height": 0,
-						"horizontal-alignment": "left",
+						"horizontal-alignment": "center",
 						"vertical-alignment": "center",
 						"wrapping": "word",
 						"initially-visible": true,
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 593,
-					"sid": 822100460924377,
+					"uid": 986,
+					"sid": 958346984097908,
 					"tags": "",
 					"instanceVariables": {
 						"Tag": ""
@@ -576,9 +864,65 @@
 							"isEnabled": true,
 							"parameters": {
 								"color": [
-									0.10196078431372549,
-									0.9921568627450981,
-									0,
+									0.9568627450980393,
+									0.9725490196078431,
+									0.38823529411764707,
+									1
+								]
+							}
+						}
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 0,
+						"y": 500,
+						"width": 312,
+						"height": 16,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "SpriteFont_Tiny",
+					"properties": {
+						"text": "PROGAMMING • LEVEL DESIGN ",
+						"enable-bbcode": false,
+						"character-width": 8,
+						"character-height": 8,
+						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
+						"spacing-data": "",
+						"scale": 1,
+						"character-spacing": -3,
+						"line-height": 0,
+						"horizontal-alignment": "center",
+						"vertical-alignment": "bottom",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left",
+						"read-aloud": false
+					},
+					"uid": 988,
+					"sid": 260196403035504,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"effects": {
+						"Tint": {
+							"isEnabled": true,
+							"parameters": {
+								"color": [
+									1,
+									1,
+									1,
 									1
 								]
 							}
@@ -590,69 +934,7 @@
 						"x": 0,
 						"y": 448,
 						"width": 312,
-						"height": 24,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont_Dialogue",
-					"properties": {
-						"text": "Twitter.com/7SoulDesign",
-						"enable-bbcode": false,
-						"character-width": 7,
-						"character-height": 11,
-						"character-set": " !\"   '`() +,-./0123456789:;<=>? ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": 0,
-						"line-height": 0,
-						"horizontal-alignment": "left",
-						"vertical-alignment": "center",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 594,
-					"sid": 189860167683366,
-					"tags": "",
-					"instanceVariables": {
-						"Tag": "EndCredits"
-					},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									0.9450980392156862,
-									0.5215686274509804,
-									0.23921568627450981,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 460,
-						"width": 312,
-						"height": 24,
+						"height": 12,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -668,63 +950,7 @@
 				{
 					"type": "SpriteFont_Tiny",
 					"properties": {
-						"text": "SPECIAL THANKS TO\n\n♥ JORDAN L WESTMORELAND\n☻ MICHAEL GRUBER",
-						"enable-bbcode": false,
-						"character-width": 8,
-						"character-height": 8,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": -3,
-						"line-height": 0,
-						"horizontal-alignment": "right",
-						"vertical-alignment": "bottom",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 34,
-					"sid": 115728526640395,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									0.5254901960784314,
-									0.5254901960784314,
-									0.5254901960784314,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 152,
-						"y": 428,
-						"width": 160,
-						"height": 52,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont_Tiny",
-					"properties": {
-						"text": "PROGRAMMING • MUSIC • SOUNDS • GAME DESIGN • LEVEL DESIGN",
+						"text": " • TITLE • CONCEPT ART",
 						"enable-bbcode": false,
 						"character-width": 8,
 						"character-height": 8,
@@ -740,8 +966,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 35,
-					"sid": 767928883365795,
+					"uid": 989,
+					"sid": 648474254736694,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -762,7 +988,7 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 304,
+						"y": 484,
 						"width": 312,
 						"height": 12,
 						"originX": 0,
@@ -780,7 +1006,7 @@
 				{
 					"type": "SpriteFont_Tiny",
 					"properties": {
-						"text": "ENVIRONMENT ART • SPRITES • GAME DESIGN",
+						"text": " • MUSIC •",
 						"enable-bbcode": false,
 						"character-width": 8,
 						"character-height": 8,
@@ -796,8 +1022,8 @@
 						"origin": "top-left",
 						"read-aloud": false
 					},
-					"uid": 39,
-					"sid": 846761121642318,
+					"uid": 990,
+					"sid": 358369024139509,
 					"tags": "",
 					"instanceVariables": {},
 					"behaviors": {},
@@ -818,63 +1044,7 @@
 					"locked": false,
 					"world": {
 						"x": 0,
-						"y": 356,
-						"width": 312,
-						"height": 12,
-						"originX": 0,
-						"originY": 0,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "SpriteFont_Tiny",
-					"properties": {
-						"text": "SPRITES • GAME DESIGN",
-						"enable-bbcode": false,
-						"character-width": 8,
-						"character-height": 8,
-						"character-set": "ABCDEFGHIJKLMNOPQRSTUVWXYZ()♥☻•",
-						"spacing-data": "",
-						"scale": 1,
-						"character-spacing": -3,
-						"line-height": 0,
-						"horizontal-alignment": "center",
-						"vertical-alignment": "bottom",
-						"wrapping": "word",
-						"initially-visible": true,
-						"origin": "top-left",
-						"read-aloud": false
-					},
-					"uid": 122,
-					"sid": 130905384205792,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"effects": {
-						"Tint": {
-							"isEnabled": true,
-							"parameters": {
-								"color": [
-									1,
-									1,
-									1,
-									1
-								]
-							}
-						}
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 0,
-						"y": 408,
+						"y": 520,
 						"width": 312,
 						"height": 12,
 						"originX": 0,
@@ -890,7 +1060,7 @@
 					}
 				}
 			],
-			"sid": 944944944886008,
+			"sid": 235929144114418,
 			"effectTypes": [],
 			"isInitiallyVisible": true,
 			"isInitiallyInteractive": true,
@@ -924,7 +1094,7 @@
 		"items": [],
 		"subfolders": []
 	},
-	"sid": 239081365634643,
+	"sid": 241564524632102,
 	"nonworld-instances": [],
 	"effectTypes": [],
 	"width": 312,

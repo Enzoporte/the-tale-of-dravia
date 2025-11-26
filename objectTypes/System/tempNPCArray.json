@@ -1,0 +1,8 @@
+{
+	"name": "tempNPCArray",
+	"plugin-id": "Arr",
+	"sid": 997929799770144,
+	"isGlobal": true,
+	"editorNewInstanceIsReplica": true,
+	"instanceVariables": []
+}

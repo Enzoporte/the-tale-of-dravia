@@ -1,0 +1,68 @@
+{
+    "c2array": true,
+    "size": [
+        2,
+        9,
+        1
+    ],
+    "data": [
+        [
+            [
+                "Example"
+            ],
+            [
+                "Example"
+            ],
+            [
+                "Example"
+            ],
+            [
+                "Robert"
+            ],
+            [
+                "Robert"
+            ],
+            [
+                "PuzzleRey1"
+            ],
+            [
+                "PuzzleRey2"
+            ],
+            [
+                "TorreInicio"
+            ],
+            [
+                "GuardiaPuertaCompleta"
+            ]
+        ],
+        [
+            [
+                "Hola"
+            ],
+            [
+                "Como estas"
+            ],
+            [
+                "Adios"
+            ],
+            [
+                "Wazaaaa aaaaaaaaaa aaaaaaaaa aaaaaaaaa a"
+            ],
+            [
+                "Bye"
+            ],
+            [
+                "Tu juego comienza en la casilla de la Reina, peon."
+            ],
+            [
+                "Ya no hay vuelta atras. Prosigue. El Rey espera. "
+            ],
+            [
+                "Para avanzar, completa los desafios a cada lado de esta sala"
+            ],
+            [
+                "Desafio Completado"
+            ]
+        ]
+    ]
+}

@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 44902,
+	"savedWithRelease": 45802,
 	"name": "The Tale of Dravia",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -92,6 +92,13 @@
 		},
 		{
 			"type": "plugin",
+			"id": "Particles",
+			"name": "Particles",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
 			"id": "Sprite",
 			"name": "Sprite",
 			"author": "Scirra",
@@ -157,6 +164,13 @@
 			"type": "behavior",
 			"id": "Flash",
 			"name": "Flash",
+			"author": "Scirra",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Move To",
 			"author": "Scirra",
 			"bundled": false
 		},
@@ -242,7 +256,9 @@
 					"Gamepad",
 					"CSV",
 					"CSV_Array",
-					"AJAX"
+					"AJAX",
+					"DialogueArray",
+					"tempNPCArray"
 				],
 				"subfolders": [],
 				"name": "System"
@@ -255,7 +271,9 @@
 					"JojoHutExterior",
 					"JojosHutBackground",
 					"Tilemap_Gatewood",
-					"BG_Template"
+					"BG_Template",
+					"Tilemap_DungeonObjects",
+					"Tilemap_Dungeon2"
 				],
 				"subfolders": [],
 				"name": "Backdrops"
@@ -273,9 +291,11 @@
 			},
 			{
 				"items": [
+					"Player_Base",
 					"Player_Sword",
 					"Player_Mask",
-					"Player_Base"
+					"player_knife",
+					"Particles"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -308,7 +328,16 @@
 					"Projectile_Demon_Sword",
 					"Projectile_Golem",
 					"En_FlameTrap",
-					"En_FlameTimer"
+					"En_FlameTimer",
+					"En_MeleeGuard_Base",
+					"En_MeleeGuard_Mask",
+					"SwordSlash",
+					"En_RangeGuard_Mask",
+					"En_RangeGuard_Base",
+					"Projectile_RangeGuard",
+					"En_Empty",
+					"En_BufferGuard_Mask",
+					"En_BufferGuard_Base"
 				],
 				"subfolders": [],
 				"name": "Enemies"
@@ -322,7 +351,8 @@
 					"CameraZone",
 					"Door",
 					"Trigger_Warp",
-					"DungeonDoor"
+					"DungeonDoor",
+					"DialogueStatue"
 				],
 				"subfolders": [],
 				"name": "Objects"
@@ -352,7 +382,6 @@
 					"DialogueBox",
 					"SpriteFont_Dialogue",
 					"SpriteFont_Menu",
-					"DialogueBox2",
 					"DialogueBox_AreaName",
 					"Pause_Item",
 					"SpriteFont_AreaName",
@@ -387,18 +416,41 @@
 				],
 				"subfolders": [],
 				"name": "JoJos Hut"
+			},
+			{
+				"items": [
+					"NPC_Zone",
+					"NPC_Arrow"
+				],
+				"subfolders": [
+					{
+						"items": [
+							"NPC_Chat"
+						],
+						"subfolders": [],
+						"name": "NPCs"
+					}
+				],
+				"name": "NPC"
+			},
+			{
+				"items": [
+					"InstructionSquare",
+					"ResetSquare",
+					"NeutralSquare",
+					"PlayerLight",
+					"tile_1",
+					"tile_2",
+					"Darkness2"
+				],
+				"subfolders": [],
+				"name": "Puzzle"
 			}
 		]
 	},
 	"functionsName": "Functions",
 	"autosaveData": null,
 	"containers": [
-		{
-			"members": [
-				"Player_Base",
-				"Player_Mask"
-			]
-		},
 		{
 			"members": [
 				"En_Slime_Base",
@@ -434,6 +486,36 @@
 				"En_Demon_Base",
 				"En_Demon_Mask"
 			]
+		},
+		{
+			"members": [
+				"En_MeleeGuard_Base",
+				"En_MeleeGuard_Mask"
+			]
+		},
+		{
+			"members": [
+				"En_RangeGuard_Base",
+				"En_RangeGuard_Mask"
+			]
+		},
+		{
+			"members": [
+				"NPC_Chat",
+				"NPC_Zone"
+			]
+		},
+		{
+			"members": [
+				"Player_Base",
+				"Player_Mask"
+			]
+		},
+		{
+			"members": [
+				"En_BufferGuard_Base",
+				"En_BufferGuard_Mask"
+			]
 		}
 	],
 	"families": {
@@ -441,7 +523,8 @@
 			"EnemyBases",
 			"Z_Sorting",
 			"EnemyMasks",
-			"Hazards"
+			"Hazards",
+			"NPCs"
 		],
 		"subfolders": []
 	},
@@ -453,8 +536,9 @@
 					"ObjectBank",
 					"GlobalLayers",
 					"TitleScreen",
-					"Credits",
-					"NarrativeTemplate"
+					"CreditsDemonoire",
+					"NarrativeTemplate",
+					"Credits"
 				],
 				"subfolders": [],
 				"name": "Misc Layouts"
@@ -470,25 +554,30 @@
 			{
 				"items": [
 					"Dungeon Intro",
-					"Dungeon Entrance",
 					"Dungeon_Template",
+					"Dungeon Entrance",
 					"Dungeon_1_1",
-					"Dungeon_1_2",
-					"Dungeon_1_3",
-					"Dungeon_1_4",
-					"Dungeon_1_5",
-					"Dungeon_2_1",
-					"Dungeon_2_2",
-					"Dungeon_2_3",
-					"Dungeon_2_4",
-					"Dungeon_2_5",
-					"Dungeon_3_1",
-					"Dungeon_3_2",
-					"Dungeon_3_3",
 					"Dungeon_3_4",
-					"Dungeon_3_5"
+					"Dungeon_Puzzle_Test",
+					"Dungeon Puzzle",
+					"Dungeon Rey",
+					"Torre_Inicio",
+					"Torre_Derecha",
+					"Torre_Izquierda"
 				],
-				"subfolders": [],
+				"subfolders": [
+					{
+						"items": [
+							"Dungeon Entrance2",
+							"Dungeon_1_1x",
+							"Dungeon_1_5",
+							"Dungeon_2_1",
+							"Dungeon_3_5x"
+						],
+						"subfolders": [],
+						"name": "Demonoire Rooms"
+					}
+				],
 				"name": "Dungeon Rooms"
 			}
 		]
@@ -771,6 +860,22 @@
 					"file-info": {
 						"purpose": "none"
 					}
+				},
+				{
+					"name": "townmusic.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 688270875311231,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "REINA 2.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 733160388575075,
+					"file-info": {
+						"purpose": "none"
+					}
 				}
 			],
 			"subfolders": []
@@ -839,9 +944,17 @@
 		"general": {
 			"items": [
 				{
-					"name": "dialogues_es.csv",
+					"name": "dialogues_es2.csv",
 					"type": "text/csv",
-					"sid": 729441374831098,
+					"sid": 644995966488754,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "DialoguesNPCArray.json",
+					"type": "application/json",
+					"sid": 490713274092442,
 					"file-info": {
 						"purpose": "none"
 					}
@@ -865,8 +978,8 @@
 	},
 	"properties": {
 		"description": "Juego hecho para Introducción a la Industria - UDIT 2025",
-		"version": "1.0.0.0",
-		"autoIncrementVersion": false,
+		"version": "1.0.0.3",
+		"autoIncrementVersion": true,
 		"author": "Grupo C",
 		"authorEmail": "",
 		"authorWebsite": "http://construct.net",
@@ -875,7 +988,7 @@
 		"zAxisScale": "normalized",
 		"fov": 0.7853981633974483,
 		"useLoaderLayout": false,
-		"fullscreenMode": "letterbox-scale",
+		"fullscreenMode": "letterbox-integer-scale",
 		"fullscreenQuality": "low",
 		"viewportFit": "auto",
 		"backgroundColor": [
@@ -899,8 +1012,8 @@
 		],
 		"orientations": "any",
 		"webgpu": "auto",
+		"multitexturing": "auto",
 		"gpuPreference": "high-performance",
-		"scriptsType": "module",
 		"framerateMode": "vsync",
 		"sampling": "nearest",
 		"downscaling": "medium",
@@ -909,14 +1022,15 @@
 		"zNear": 1,
 		"zFar": 10000,
 		"maxSpriteSheetSize": 2048,
-		"loaderStyle": "progress",
+		"loaderStyle": "none",
 		"preloadSounds": true,
+		"uidAllocationMode": "increment",
 		"cordovaiOSScheme": "app",
 		"cordovaAndroidScheme": "https",
 		"exportFileStructure": "folders",
-		"uidAllocationMode": "increment"
+		"scriptsType": "module"
 	},
-	"viewportWidth": 960,
-	"viewportHeight": 540,
-	"firstLayout": "NarrativeTemplate"
+	"viewportWidth": 312,
+	"viewportHeight": 240,
+	"firstLayout": "TitleScreen"
 }
