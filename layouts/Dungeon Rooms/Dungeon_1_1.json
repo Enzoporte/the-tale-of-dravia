@@ -841,8 +841,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 228,
-						"y": 192,
+						"x": 232,
+						"y": 176,
 						"width": 48,
 						"height": 48,
 						"originX": 0.5,
@@ -988,7 +988,9 @@
 						"State": "Idle",
 						"State_Timer": 0,
 						"StateLimit": 0,
-						"RandomAngle": 0
+						"RandomAngle": 0,
+						"isBuffing": false,
+						"DamageAmp": 1
 					},
 					"behaviors": {
 						"Flash": {
@@ -1010,69 +1012,12 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 228,
-						"y": 132,
+						"x": 185,
+						"y": 184,
 						"width": 48,
 						"height": 48,
 						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "En_BufferGuard_Mask",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Idle_Down",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 393,
-					"sid": 693149302524582,
-					"tags": "",
-					"instanceVariables": {
-						"Hurt_FX": 0,
-						"Active": true,
-						"DontActivate": false,
-						"State": "Idle",
-						"State_Timer": 0.25,
-						"StateLimit": 0,
-						"RandomAngle": 0
-					},
-					"behaviors": {
-						"Flash": {
-							"properties": {}
-						}
-					},
-					"effects": {
-						"Brightness": {
-							"isEnabled": true,
-							"parameters": {
-								"brightness": 1
-							}
-						}
-					},
-					"instanceFolderItem": {
-						"sid": 693149302524582,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 156,
-						"y": 372,
-						"width": 48,
-						"height": 48,
-						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.8333333333333334,
 						"color": [
 							1,
 							1,

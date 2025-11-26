@@ -2486,7 +2486,32 @@
 											}
 										}
 									],
-									"sid": 388106276980148
+									"sid": 388106276980148,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 859802049826258,
+													"parameters": {
+														"instance-variable": "isBuffing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Adjust_Health",
+													"sid": 473192670459342,
+													"parameters": [
+														"- En_BufferGuard_Mask.DamageAmp"
+													]
+												}
+											],
+											"sid": 298645465295582
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -2531,7 +2556,40 @@
 											}
 										}
 									],
-									"sid": 393312078411448
+									"sid": 393312078411448,
+									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 112084986716662,
+													"parameters": {
+														"instance-variable": "Active"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 646161028677703,
+													"parameters": {
+														"instance-variable": "isBuffing"
+													}
+												}
+											],
+											"actions": [
+												{
+													"callFunction": "Adjust_Health",
+													"sid": 796959786076530,
+													"parameters": [
+														"- En_BufferGuard_Mask.DamageAmp"
+													]
+												}
+											],
+											"sid": 899079721281518
+										}
+									]
 								},
 								{
 									"eventType": "comment",
@@ -3452,7 +3510,7 @@
 								{
 									"id": "set-boolean-instvar",
 									"objectClass": "EnemyMasks",
-									"sid": 383461181872813,
+									"sid": 955906193815646,
 									"parameters": {
 										"instance-variable": "Active",
 										"value": "true"
@@ -6625,14 +6683,6 @@
 						},
 						{
 							"eventType": "comment",
-							"text": ""
-						},
-						{
-							"eventType": "comment",
-							"text": ""
-						},
-						{
-							"eventType": "comment",
 							"text": "Behavior"
 						},
 						{
@@ -7082,11 +7132,6 @@
 														"instance-variable": "StateLimit",
 														"value": "0.5+ random(0.5)"
 													}
-												},
-												{
-													"id": "destroy",
-													"objectClass": "SwordSlash",
-													"sid": 375818672497700
 												}
 											],
 											"sid": 735758941488687
@@ -7096,8 +7141,22 @@
 							]
 						},
 						{
-							"eventType": "comment",
-							"text": ""
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "on-any-animation-finished",
+									"objectClass": "SwordSlash",
+									"sid": 178358722921443
+								}
+							],
+							"actions": [
+								{
+									"id": "destroy",
+									"objectClass": "SwordSlash",
+									"sid": 341040123152604
+								}
+							],
+							"sid": 889306844961076
 						}
 					],
 					"sid": 739732151319412
@@ -7967,25 +8026,46 @@
 									"sid": 579751636805570,
 									"children": [
 										{
-											"eventType": "comment",
-											"text": "BuffEnemies ()"
-										},
-										{
 											"eventType": "block",
 											"conditions": [
 												{
 													"id": "trigger-once-while-true",
 													"objectClass": "System",
-													"sid": 146210089080580
+													"sid": 319416828804945
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 680516710036809,
+													"parameters": {
+														"instance-variable": "isBuffing",
+														"value": "true"
+													}
+												}
+											],
+											"sid": 933909175627136
+										},
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "every-x-seconds",
+													"objectClass": "System",
+													"sid": 160461173036845,
+													"parameters": {
+														"interval-seconds": ".5"
+													}
 												}
 											],
 											"actions": [
 												{
 													"callFunction": "BuffEnemies",
-													"sid": 584453821170091
+													"sid": 282771128860121
 												}
 											],
-											"sid": 645907179475569
+											"sid": 172175177146926
 										},
 										{
 											"functionName": "BuffEnemies",
@@ -7996,8 +8076,48 @@
 											"functionIsAsync": false,
 											"functionParameters": [],
 											"eventType": "function-block",
-											"conditions": [],
-											"actions": [],
+											"conditions": [
+												{
+													"id": "for-each",
+													"objectClass": "System",
+													"sid": 560899946777554,
+													"parameters": {
+														"object": "EnemyMasks"
+													}
+												},
+												{
+													"id": "is-boolean-instance-variable-set",
+													"objectClass": "EnemyMasks",
+													"sid": 954542590236859,
+													"parameters": {
+														"instance-variable": "Active"
+													}
+												}
+											],
+											"actions": [
+												{
+													"id": "create-object",
+													"objectClass": "System",
+													"sid": 965444219068924,
+													"parameters": {
+														"object-to-create": "Particle",
+														"layer": "\"Objects\"",
+														"x": "EnemyMasks.X",
+														"y": "EnemyMasks.Y - 8",
+														"create-hierarchy": false,
+														"template-name": "\"\""
+													}
+												},
+												{
+													"id": "set-animation",
+													"objectClass": "Particle",
+													"sid": 701195971553188,
+													"parameters": {
+														"animation": "\"Buffing\"",
+														"from": "beginning"
+													}
+												}
+											],
 											"sid": 501124833870750
 										}
 									]
@@ -8033,6 +8153,28 @@
 									],
 									"sid": 691702460440822,
 									"children": [
+										{
+											"eventType": "block",
+											"conditions": [
+												{
+													"id": "trigger-once-while-true",
+													"objectClass": "System",
+													"sid": 512696047276832
+												}
+											],
+											"actions": [
+												{
+													"id": "set-boolean-instvar",
+													"objectClass": "En_BufferGuard_Mask",
+													"sid": 853122877307498,
+													"parameters": {
+														"instance-variable": "isBuffing",
+														"value": "false"
+													}
+												}
+											],
+											"sid": 365740419593478
+										},
 										{
 											"eventType": "block",
 											"conditions": [

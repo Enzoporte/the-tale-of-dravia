@@ -2957,7 +2957,9 @@
 						"State": "Idle",
 						"State_Timer": 0,
 						"StateLimit": 0,
-						"RandomAngle": 0
+						"RandomAngle": 0,
+						"isBuffing": false,
+						"DamageAmp": 2
 					},
 					"behaviors": {
 						"Flash": {
@@ -2984,7 +2986,7 @@
 						"width": 48,
 						"height": 48,
 						"originX": 0.5,
-						"originY": 0.5,
+						"originY": 0.8333333333333334,
 						"color": [
 							1,
 							1,
