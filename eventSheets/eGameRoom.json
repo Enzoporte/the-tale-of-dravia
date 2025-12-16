@@ -1545,7 +1545,7 @@
 												{
 													"id": "is-boolean-instance-variable-set",
 													"objectClass": "Player_Mask",
-													"sid": 754037256437748,
+													"sid": 962178672371123,
 													"parameters": {
 														"instance-variable": "canThrow"
 													}
@@ -1553,7 +1553,18 @@
 												{
 													"id": "compare-value",
 													"objectClass": "Dictionary",
+													"sid": 431378439703604,
+													"parameters": {
+														"key": "\"Gems\"",
+														"comparison": 5,
+														"value": "0"
+													}
+												},
+												{
+													"id": "compare-value",
+													"objectClass": "Dictionary",
 													"sid": 780494073777765,
+													"disabled": true,
 													"parameters": {
 														"key": "\"Stamina\"",
 														"comparison": 4,
@@ -1618,6 +1629,15 @@
 													"parameters": {
 														"instance-variable": "canThrow",
 														"value": "true"
+													}
+												},
+												{
+													"id": "add-key",
+													"objectClass": "Dictionary",
+													"sid": 149094913107700,
+													"parameters": {
+														"key": "\"Gems\"",
+														"value": "Self.Get(\"Gems\") - 1"
 													}
 												}
 											],
@@ -4571,11 +4591,11 @@
 										},
 										{
 											"callFunction": "Drop_Collectible",
-											"sid": 805913081312908,
+											"sid": 654970608933693,
 											"parameters": [
 												"En_MeleeGuard_Mask.X",
 												"En_MeleeGuard_Mask.Y - 8",
-												"int(1+ random(3))"
+												"int(random(3))"
 											]
 										}
 									],
@@ -4607,28 +4627,6 @@
 											"id": "destroy",
 											"objectClass": "En_RangeGuard_Mask",
 											"sid": 648869447654017
-										},
-										{
-											"id": "create-object",
-											"objectClass": "System",
-											"sid": 114965177097320,
-											"parameters": {
-												"object-to-create": "Particle",
-												"layer": "\"Objects\"",
-												"x": "En_RangeGuard_Mask.X",
-												"y": "En_RangeGuard_Mask.Y - 8",
-												"create-hierarchy": false,
-												"template-name": "\"\""
-											}
-										},
-										{
-											"callFunction": "Drop_Collectible",
-											"sid": 329651010557797,
-											"parameters": [
-												"En_RangeGuard_Mask.X",
-												"En_RangeGuard_Mask.Y - 8",
-												"int(1+ random(3))"
-											]
 										}
 									],
 									"sid": 872610515570784
@@ -4672,15 +4670,6 @@
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
-										},
-										{
-											"callFunction": "Drop_Collectible",
-											"sid": 345091177420892,
-											"parameters": [
-												"En_BufferGuard_Mask.X",
-												"En_BufferGuard_Mask.Y - 8",
-												"int(1+ random(3))"
-											]
 										}
 									],
 									"sid": 522594060614883
@@ -11415,16 +11404,17 @@
 					"sid": 794644843181152,
 					"children": [
 						{
+							"bookmark": true,
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
 								{
 									"callFunction": "Drop_Collectible",
-									"sid": 722897566183199,
+									"sid": 587737225681804,
 									"parameters": [
 										"Destructible.X",
 										"Destructible.Y",
-										"int(random(2))"
+										"int(1+ random(5))"
 									]
 								}
 							],
@@ -11601,6 +11591,38 @@
 						},
 						{
 							"eventType": "block",
+							"conditions": [
+								{
+									"id": "is-animation-playing",
+									"objectClass": "Gem",
+									"sid": 784166264348004,
+									"parameters": {
+										"animation": "\"Knife\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"callFunction": "Audio_Play_Sound",
+									"sid": 442547211705577,
+									"parameters": [
+										"\"Collectible_Pickup\"",
+										"0",
+										"\"Collectible_Pickup\""
+									]
+								},
+								{
+									"callFunction": "Adjust_Gems",
+									"sid": 220379826584607,
+									"parameters": [
+										"int(1 + random(5))"
+									]
+								}
+							],
+							"sid": 729345047666691
+						},
+						{
+							"eventType": "block",
 							"conditions": [],
 							"actions": [
 								{
@@ -11749,9 +11771,9 @@
 						{
 							"id": "set-animation",
 							"objectClass": "Gem",
-							"sid": 318111761623213,
+							"sid": 281105420564597,
 							"parameters": {
-								"animation": "choose(\"Gem\",\"Gold\",\"Coin\",\"Heart\", \"Heart\")",
+								"animation": "choose(\"Knife\", \"Heart\")",
 								"from": "beginning"
 							}
 						}
@@ -12007,7 +12029,7 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 201648034765923,
+									"sid": 400930314034475,
 									"parameters": {
 										"layout": "Dungeon_3_4"
 									}
@@ -12028,7 +12050,7 @@
 								{
 									"id": "go-to-layout",
 									"objectClass": "System",
-									"sid": 266227184389460,
+									"sid": 836571748786416,
 									"parameters": {
 										"layout": "Torre_Inicio"
 									}
@@ -14972,11 +14994,25 @@
 									"id": "create-object",
 									"objectClass": "System",
 									"sid": 426326501930233,
+									"disabled": true,
 									"parameters": {
 										"object-to-create": "DialogueBox",
 										"layer": "\"Dialogue\"",
 										"x": "(ViewportLeft(\"HUD\") + ViewportRight(\"HUD\")) / 4",
 										"y": "(ViewportTop(\"HUD\") + ViewportBottom(\"HUD\")) / 2",
+										"create-hierarchy": false,
+										"template-name": "\"\""
+									}
+								},
+								{
+									"id": "create-object",
+									"objectClass": "System",
+									"sid": 535198418489043,
+									"parameters": {
+										"object-to-create": "DialogueBox",
+										"layer": "\"Dialogue\"",
+										"x": "1",
+										"y": "1",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}

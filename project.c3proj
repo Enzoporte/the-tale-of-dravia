@@ -273,7 +273,11 @@
 					"Tilemap_Gatewood",
 					"BG_Template",
 					"Tilemap_DungeonObjects",
-					"Tilemap_Dungeon2"
+					"Tilemap_Dungeon2",
+					"Tilemap",
+					"Tilemap2",
+					"Tilemap7",
+					"Tilemap_DungeonObjects2"
 				],
 				"subfolders": [],
 				"name": "Backdrops"
@@ -352,7 +356,10 @@
 					"Door",
 					"Trigger_Warp",
 					"DungeonDoor",
-					"DialogueStatue"
+					"DialogueStatue",
+					"Animated_Candle_C",
+					"Animated_Candle_D",
+					"Animated_torch"
 				],
 				"subfolders": [],
 				"name": "Objects"
@@ -554,15 +561,15 @@
 			{
 				"items": [
 					"Dungeon Intro",
-					"Dungeon_Template",
 					"Dungeon Entrance",
+					"Dungeon_Template",
 					"Dungeon_1_1",
-					"Dungeon_3_4",
-					"Dungeon_Puzzle_Test",
-					"Dungeon Puzzle",
-					"Dungeon Rey",
 					"Torre_Inicio",
+					"Dungeon_Puzzle_Test",
 					"Torre_Derecha",
+					"Dungeon Rey",
+					"Dungeon_3_4",
+					"Dungeon Puzzle",
 					"Torre_Izquierda"
 				],
 				"subfolders": [

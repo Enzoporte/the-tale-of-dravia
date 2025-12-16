@@ -80,7 +80,7 @@
 				{
 					"id": "go-to-layout",
 					"objectClass": "System",
-					"sid": 538172148162458,
+					"sid": 492039984644516,
 					"parameters": {
 						"layout": "Dungeon Entrance"
 					}

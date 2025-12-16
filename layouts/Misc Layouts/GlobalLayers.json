@@ -301,7 +301,7 @@
 					"properties": {
 						"initially-visible": true,
 						"initial-animation": "Default",
-						"initial-frame": 1,
+						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
 					},
@@ -313,10 +313,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": -1,
-						"y": 17,
-						"width": 18,
-						"height": 19,
+						"x": 7,
+						"y": 24,
+						"width": 28,
+						"height": 10,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -358,7 +358,7 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 15,
+						"x": 25,
 						"y": 24,
 						"width": 76,
 						"height": 12,
