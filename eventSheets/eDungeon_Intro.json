@@ -16,7 +16,9 @@
 					"objectClass": "Audio",
 					"sid": 396761113626622,
 					"parameters": {
-						"audio-file": "EvilLaugh",
+						"audio-file": {
+							"path": "EvilLaugh"
+						},
 						"loop": "not-looping",
 						"volume": "0",
 						"stereo-pan": "0",

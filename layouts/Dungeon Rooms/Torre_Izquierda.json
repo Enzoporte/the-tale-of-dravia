@@ -28,6 +28,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -520,6 +521,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -529,9 +531,9 @@
 							"isEnabled": true,
 							"parameters": {
 								"color": [
-									1,
-									1,
-									1,
+									0.4196078431372549,
+									0.4196078431372549,
+									0.4196078431372549,
 									1
 								]
 							}
@@ -544,10 +546,10 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 63.438020231711775,
-						"y": 22.71074241310808,
-						"width": 32,
-						"height": 48,
+						"x": 66.17007405317206,
+						"y": 35.34810906707895,
+						"width": 24.030431200929456,
+						"height": 54.48701009625108,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -603,7 +605,7 @@
 					"type": "En_MeleeGuard_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Idle_Up",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -659,7 +661,7 @@
 					"type": "En_MeleeGuard_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Idle_Up",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -715,7 +717,7 @@
 					"type": "En_MeleeGuard_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Idle_Up",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -846,8 +848,8 @@
 					"showing": true,
 					"locked": false,
 					"world": {
-						"x": 84,
-						"y": 36,
+						"x": 78.53589235707943,
+						"y": 46.928215285841134,
 						"width": 24,
 						"height": 24,
 						"originX": 0.5,
@@ -879,6 +881,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -923,6 +926,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -967,6 +971,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -1011,6 +1016,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -1055,6 +1061,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -1099,6 +1106,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -1127,10 +1135,100 @@
 					}
 				},
 				{
+					"type": "Destructible",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 188,
+					"sid": 578829981697757,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"use-instance-tags": false,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 578829981697757,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 292.7615661621094,
+						"y": 85.99193572998047,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Destructible",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Default",
+						"initial-frame": 4,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 189,
+					"sid": 501177107431231,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {
+						"Solid": {
+							"properties": {
+								"enabled": true,
+								"use-instance-tags": false,
+								"tags": ""
+							}
+						}
+					},
+					"instanceFolderItem": {
+						"sid": 501177107431231,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 337.1574716244261,
+						"y": 111.26345640935091,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
 					"type": "En_MeleeGuard_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Idle_Up",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false

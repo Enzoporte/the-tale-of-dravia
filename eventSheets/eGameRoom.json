@@ -4870,7 +4870,9 @@
 													"objectClass": "Audio",
 													"sid": 123951244808429,
 													"parameters": {
-														"audio-file": "JojosHut",
+														"audio-file": {
+															"path": "JojosHut"
+														},
 														"loop": "looping",
 														"volume": "0",
 														"stereo-pan": "0",
@@ -9736,12 +9738,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 610279323533156,
+											"sid": 683942087302184,
 											"parameters": {
 												"object-to-create": "DialogueBox",
 												"layer": "\"Dialogue\"",
-												"x": "57",
-												"y": "122",
+												"x": "clamp(Player_Base.X, CameraZone.BBoxLeft + (Res_Width / 2), CameraZone.BBoxRight - (Res_Width / 2)) - (Res_Width / 4)",
+												"y": "clamp(Player_Base.Y, CameraZone.BBoxTop + (Res_Height / 2), CameraZone.BBoxBottom - (Res_Height / 2))",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -9784,9 +9786,9 @@
 										{
 											"id": "set-text",
 											"objectClass": "SpriteFont_Dialogue",
-											"sid": 763554669761700,
+											"sid": 173523232849885,
 											"parameters": {
-												"text": "\"Ah... Te estaba esperando >:(\""
+												"text": "\"Hasta aquí llegas, elfo\""
 											}
 										}
 									],
@@ -11404,7 +11406,6 @@
 					"sid": 794644843181152,
 					"children": [
 						{
-							"bookmark": true,
 							"eventType": "block",
 							"conditions": [],
 							"actions": [
@@ -12537,12 +12538,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 652805590702023,
+							"sid": 570921465661843,
 							"parameters": {
 								"object-to-create": "DialogueBox",
 								"layer": "\"Dialogue\"",
-								"x": "57",
-								"y": "122",
+								"x": "clamp(Player_Base.X, CameraZone.BBoxLeft + (Res_Width / 2), CameraZone.BBoxRight - (Res_Width / 2)) - (Res_Width / 4)",
+								"y": "clamp(Player_Base.Y, CameraZone.BBoxTop + (Res_Height / 2), CameraZone.BBoxBottom - (Res_Height / 2))",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -12827,12 +12828,12 @@
 						{
 							"id": "create-object",
 							"objectClass": "System",
-							"sid": 687757903637348,
+							"sid": 553070761089675,
 							"parameters": {
 								"object-to-create": "DialogueBox",
 								"layer": "\"Dialogue\"",
-								"x": "57",
-								"y": "122",
+								"x": "clamp(Player_Base.X, CameraZone.BBoxLeft + (Res_Width / 2), CameraZone.BBoxRight - (Res_Width / 2)) - (Res_Width / 4)",
+								"y": "clamp(Player_Base.Y, CameraZone.BBoxTop + (Res_Height / 2), CameraZone.BBoxBottom - (Res_Height / 2))",
 								"create-hierarchy": false,
 								"template-name": "\"\""
 							}
@@ -13012,7 +13013,6 @@
 					"sid": 459667204562465
 				},
 				{
-					"bookmark": true,
 					"eventType": "block",
 					"conditions": [
 						{
@@ -14993,26 +14993,12 @@
 								{
 									"id": "create-object",
 									"objectClass": "System",
-									"sid": 426326501930233,
-									"disabled": true,
+									"sid": 663612622088139,
 									"parameters": {
 										"object-to-create": "DialogueBox",
 										"layer": "\"Dialogue\"",
-										"x": "(ViewportLeft(\"HUD\") + ViewportRight(\"HUD\")) / 4",
-										"y": "(ViewportTop(\"HUD\") + ViewportBottom(\"HUD\")) / 2",
-										"create-hierarchy": false,
-										"template-name": "\"\""
-									}
-								},
-								{
-									"id": "create-object",
-									"objectClass": "System",
-									"sid": 535198418489043,
-									"parameters": {
-										"object-to-create": "DialogueBox",
-										"layer": "\"Dialogue\"",
-										"x": "1",
-										"y": "1",
+										"x": "clamp(Player_Base.X, CameraZone.BBoxLeft + (Res_Width / 2), CameraZone.BBoxRight - (Res_Width / 2)) - (Res_Width / 4)",
+										"y": "clamp(Player_Base.Y, CameraZone.BBoxTop + (Res_Height / 2), CameraZone.BBoxBottom - (Res_Height / 2))",
 										"create-hierarchy": false,
 										"template-name": "\"\""
 									}
@@ -15988,6 +15974,7 @@
 			"isActiveOnStart": true,
 			"children": [
 				{
+					"bookmark": true,
 					"eventType": "block",
 					"conditions": [
 						{
@@ -16069,7 +16056,9 @@
 									"objectClass": "Audio",
 									"sid": 365170803959313,
 									"parameters": {
-										"audio-file": "Town",
+										"audio-file": {
+											"path": "Town"
+										},
 										"loop": "looping",
 										"volume": "0",
 										"stereo-pan": "0",
@@ -16104,7 +16093,9 @@
 									"objectClass": "Audio",
 									"sid": 150583639860239,
 									"parameters": {
-										"audio-file": "JojosHut",
+										"audio-file": {
+											"path": "JojosHut"
+										},
 										"loop": "looping",
 										"volume": "0",
 										"stereo-pan": "0",
@@ -16170,7 +16161,9 @@
 									"objectClass": "Audio",
 									"sid": 534280228512139,
 									"parameters": {
-										"audio-file": "REINA 2",
+										"audio-file": {
+											"path": "REINA 2"
+										},
 										"loop": "looping",
 										"volume": "-15",
 										"stereo-pan": "0",
@@ -16216,7 +16209,9 @@
 							"objectClass": "Audio",
 							"sid": 166032520092838,
 							"parameters": {
-								"audio-file": "Dungeon",
+								"audio-file": {
+									"path": "Dungeon"
+								},
 								"loop": "looping",
 								"volume": "-15",
 								"stereo-pan": "0",
@@ -16470,7 +16465,9 @@
 									"objectClass": "Audio",
 									"sid": 919983777972632,
 									"parameters": {
-										"audio-file": "Pre_Dungeon",
+										"audio-file": {
+											"path": "Pre_Dungeon"
+										},
 										"loop": "not-looping",
 										"volume": "-15",
 										"stereo-pan": "0",
@@ -16782,12 +16779,12 @@
 										{
 											"id": "create-object",
 											"objectClass": "System",
-											"sid": 535408311902712,
+											"sid": 275374876504238,
 											"parameters": {
 												"object-to-create": "DialogueBox",
 												"layer": "\"Dialogue\"",
-												"x": "57",
-												"y": "122",
+												"x": "clamp(Player_Base.X, CameraZone.BBoxLeft + (Res_Width / 2), CameraZone.BBoxRight - (Res_Width / 2)) - (Res_Width / 4)",
+												"y": "clamp(Player_Base.Y, CameraZone.BBoxTop + (Res_Height / 2), CameraZone.BBoxBottom - (Res_Height / 2))",
 												"create-hierarchy": false,
 												"template-name": "\"\""
 											}
@@ -17146,6 +17143,41 @@
 								}
 							],
 							"sid": 448983739598552
+						},
+						{
+							"eventType": "block",
+							"conditions": [
+								{
+									"id": "compare-two-values",
+									"objectClass": "System",
+									"sid": 726753501311332,
+									"parameters": {
+										"first-value": "LayoutName",
+										"comparison": 0,
+										"second-value": "\"Dungeon Puzzle\""
+									}
+								}
+							],
+							"actions": [
+								{
+									"id": "set-text",
+									"objectClass": "SpriteFont_AreaName",
+									"sid": 150904097532892,
+									"parameters": {
+										"text": "\"???\""
+									}
+								},
+								{
+									"id": "add-key",
+									"objectClass": "Dictionary",
+									"sid": 538722735856627,
+									"parameters": {
+										"key": "\"Health\"",
+										"value": "Self.Get(\"MaxHealth\")"
+									}
+								}
+							],
+							"sid": 449933755187904
 						},
 						{
 							"eventType": "block",

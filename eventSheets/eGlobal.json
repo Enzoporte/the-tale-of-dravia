@@ -1223,7 +1223,9 @@
 							"sid": 830377127814855,
 							"parameters": {
 								"tag": "\"LoadNPCDialogues\"",
-								"file": "DialoguesNPCArray.json"
+								"file": {
+									"path": "DialoguesNPCArray.json"
+								}
 							}
 						}
 					],

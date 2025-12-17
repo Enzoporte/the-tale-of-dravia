@@ -57,7 +57,9 @@
 					"sid": 839428748622906,
 					"parameters": {
 						"tag": "\"Request_Dialogues\"",
-						"file": "dialogues_es2.csv"
+						"file": {
+							"path": "dialogues_es2.csv"
+						}
 					}
 				},
 				{

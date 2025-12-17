@@ -20,6 +20,7 @@
 		"En_RangeGuard_Mask",
 		"NPC_Chat",
 		"Player_Mask",
-		"En_BufferGuard_Mask"
+		"En_BufferGuard_Mask",
+		"Player_Mask2"
 	]
 }

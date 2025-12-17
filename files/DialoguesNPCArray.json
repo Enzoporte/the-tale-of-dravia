@@ -2,22 +2,13 @@
     "c2array": true,
     "size": [
         2,
-        9,
+        6,
         1
     ],
     "data": [
         [
             [
                 "Example"
-            ],
-            [
-                "Example"
-            ],
-            [
-                "Example"
-            ],
-            [
-                "Robert"
             ],
             [
                 "Robert"
@@ -40,16 +31,7 @@
                 "Que haces TU aqui"
             ],
             [
-                "Como estas"
-            ],
-            [
-                "Adios"
-            ],
-            [
                 "Adentrate si quieres y sufre por lo que nos has hecho. "
-            ],
-            [
-                "Bye"
             ],
             [
                 "Tu juego comienza en la casilla de la Reina, peon."

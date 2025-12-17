@@ -9,7 +9,7 @@
 				{
 					"type": "NPC_Zone",
 					"properties": {
-						"initially-visible": true,
+						"initially-visible": false,
 						"initial-animation": "Animation 1",
 						"initial-frame": 0,
 						"enable-collisions": true,
@@ -465,6 +465,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -912,6 +913,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -2236,7 +2238,7 @@
 					"type": "En_MeleeGuard_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Hurt_Down",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2482,8 +2484,8 @@
 					"world": {
 						"x": 212,
 						"y": 496,
-						"width": 15,
-						"height": 15,
+						"width": 12,
+						"height": 12,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -2516,6 +2518,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						},
@@ -2664,7 +2667,7 @@
 					"type": "Player_Mask",
 					"properties": {
 						"initially-visible": true,
-						"initial-animation": "Idle_Down",
+						"initial-animation": "Walk_Left",
 						"initial-frame": 0,
 						"enable-collisions": true,
 						"live-preview": false
@@ -2822,8 +2825,8 @@
 					"world": {
 						"x": 24,
 						"y": 28,
-						"width": 32,
-						"height": 32,
+						"width": 24,
+						"height": 34,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -3010,13 +3013,13 @@
 					"sid": 758649171353782,
 					"tags": "",
 					"instanceVariables": {
-						"Health": 5,
+						"Health": 2,
 						"Strength": 1,
 						"Pair_ID": 0,
 						"Direction": "",
 						"Player_AngleDiff": 0,
 						"Knockback_Timer": 0,
-						"Default_MaxSpeed": 175,
+						"Default_MaxSpeed": 125,
 						"Default_Acceleration": 3000,
 						"Default_Deceleration": 300,
 						"Hurt": false,
@@ -3025,7 +3028,7 @@
 					"behaviors": {
 						"8Direction": {
 							"properties": {
-								"max-speed": 175,
+								"max-speed": 125,
 								"acceleration": 3000,
 								"deceleration": 2000,
 								"directions": "dir-8",
@@ -3037,7 +3040,7 @@
 						},
 						"Bullet": {
 							"properties": {
-								"speed": 175,
+								"speed": 130,
 								"acceleration": 3000,
 								"gravity": 0,
 								"bounce-off-solids": true,
@@ -3087,6 +3090,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": false,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -3131,6 +3135,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": true,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}
@@ -3175,6 +3180,7 @@
 						"Solid": {
 							"properties": {
 								"enabled": false,
+								"use-instance-tags": false,
 								"tags": ""
 							}
 						}

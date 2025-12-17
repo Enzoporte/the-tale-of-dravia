@@ -20,7 +20,9 @@
 					"objectClass": "Audio",
 					"sid": 881013939642057,
 					"parameters": {
-						"audio-file": "townmusic",
+						"audio-file": {
+							"path": "townmusic"
+						},
 						"loop": "looping",
 						"volume": "0",
 						"stereo-pan": "0",

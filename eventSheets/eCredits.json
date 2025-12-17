@@ -21,7 +21,9 @@
 					"objectClass": "Audio",
 					"sid": 833442170549705,
 					"parameters": {
-						"audio-file": "Credits",
+						"audio-file": {
+							"path": "Credits"
+						},
 						"loop": "looping",
 						"volume": "0",
 						"stereo-pan": "0",

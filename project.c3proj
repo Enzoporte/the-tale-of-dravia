@@ -1,6 +1,6 @@
 {
 	"projectFormatVersion": 1,
-	"savedWithRelease": 45802,
+	"savedWithRelease": 46600,
 	"name": "The Tale of Dravia",
 	"runtime": "c3",
 	"useWorker": "auto",
@@ -299,7 +299,8 @@
 					"Player_Sword",
 					"Player_Mask",
 					"player_knife",
-					"Particles"
+					"Particles",
+					"Player_Mask2"
 				],
 				"subfolders": [],
 				"name": "Player"
@@ -566,11 +567,11 @@
 					"Dungeon_1_1",
 					"Torre_Inicio",
 					"Dungeon_Puzzle_Test",
+					"Torre_Izquierda",
 					"Torre_Derecha",
 					"Dungeon Rey",
 					"Dungeon_3_4",
-					"Dungeon Puzzle",
-					"Torre_Izquierda"
+					"Dungeon Puzzle"
 				],
 				"subfolders": [
 					{

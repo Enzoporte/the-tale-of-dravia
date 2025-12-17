@@ -26,7 +26,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7503877,
+						"imageSpriteId": 8166764,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -52,7 +52,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1141303,
+						"imageSpriteId": 9734519,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -78,7 +78,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 7565091,
+						"imageSpriteId": 7218186,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -97,14 +97,14 @@
 					},
 					{
 						"width": 34,
-						"height": 38,
+						"height": 37,
 						"originX": 0.4117647058823529,
-						"originY": 0.8157894736842105,
+						"originY": 0.8108108108108109,
 						"originalSource": "",
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 5823270,
+						"imageSpriteId": 6661680,
 						"collisionPoly": {
 							"points": [
 								0,
@@ -112,9 +112,9 @@
 								1,
 								0,
 								1,
-								0.9736842105263158,
+								0.972972972972973,
 								0,
-								0.9736842105263158
+								0.972972972972973
 							]
 						},
 						"useCollisionPoly": true,
@@ -122,7 +122,7 @@
 						"tag": ""
 					}
 				],
-				"sid": 225528267571071,
+				"sid": 856446209114647,
 				"name": "Idle",
 				"isLooping": true,
 				"isPingPong": false,
@@ -141,7 +141,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1095750,
+						"imageSpriteId": 6911270,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -155,7 +155,7 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 6603546,
+						"imageSpriteId": 7576779,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
@@ -169,13 +169,13 @@
 						"exportFormat": "lossless",
 						"exportQuality": 0.8,
 						"fileType": "image/png",
-						"imageSpriteId": 1483963,
+						"imageSpriteId": 849711,
 						"useCollisionPoly": true,
 						"duration": 1,
 						"tag": ""
 					}
 				],
-				"sid": 687997355135407,
+				"sid": 774545312634665,
 				"name": "LiftStaff",
 				"isLooping": true,
 				"isPingPong": false,
