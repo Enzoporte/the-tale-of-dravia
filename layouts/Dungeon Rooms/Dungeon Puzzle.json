@@ -754,7 +754,7 @@
 					"sid": 821772649103690,
 					"tags": "",
 					"instanceVariables": {
-						"Text": "Torre, da la frente al Rey al que tanto quieres conocer",
+						"Text": "{\"is-c3-clipboard-data\":true,\"type\":\"world-instances\",\"items\":[{\"type\":\"tile_1\",\"properties\":{\"initially-visible\":true,\"initial-animation\":\"Animation 1\",\"initial-frame\":0,\"enable-collisions\":true,\"live-preview\":false},\"tags\":\"\",\"instanceVariables\":{},\"behaviors\":{},\"instanceFolderItem\":{\"sid\":769840234977615,\"expanded\":true},\"showing\":true,\"locked\":false,\"world\":{\"x\":312,\"y\":264,\"width\":24,\"height\":24,\"originX\":0.5,\"originY\":0.5,\"color\":[1,1,1,1],\"angle\":0,\"zElevation\":0}}],\"object-types\":[{\"name\":\"tile_1\",\"plugin-id\":\"Sprite\",\"isGlobal\":false,\"editorNewInstanceIsReplica\":true,\"instanceVariables\":[],\"behaviorTypes\":[],\"effectTypes\":[],\"animations\":{\"items\":[{\"frames\":[{\"width\":16,\"height\":16,\"originX\":0.5,\"originY\":0.5,\"originalSource\":\"\",\"exportFormat\":\"lossless\",\"exportQuality\":0.8,\"fileType\":\"image/png\",\"imageDataIndex\":0,\"useCollisionPoly\":true,\"duration\":1,\"tag\":\"\"}],\"name\":\"Animation 1\",\"isLooping\":false,\"isPingPong\":false,\"repeatCount\":1,\"repeatTo\":0,\"speed\":5}],\"subfolders\":[],\"name\":\"Animations\"}}],\"imageData\":[\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAANQTFRFAAAAp3o92gAAAAxJREFUCNdjYCANAAAAMAABx6qFjgAAAABJRU5ErkJggg==\"]}",
 						"hasStepped": false
 					},
 					"behaviors": {},
@@ -1230,7 +1230,7 @@
 					"sid": 800434689331386,
 					"tags": "",
 					"instanceVariables": {
-						"Text": "Hazte un paso atras, Alfil. La reina contraria quiere ver bien tu cara. ",
+						"Text": "{\"is-c3-clipboard-data\":true,\"type\":\"world-instances\",\"items\":[{\"type\":\"tile_1\",\"properties\":{\"initially-visible\":true,\"initial-animation\":\"Animation 1\",\"initial-frame\":0,\"enable-collisions\":true,\"live-preview\":false},\"tags\":\"\",\"instanceVariables\":{},\"behaviors\":{},\"instanceFolderItem\":{\"sid\":761420409117862,\"expanded\":true},\"showing\":true,\"locked\":false,\"world\":{\"x\":336,\"y\":240,\"width\":24,\"height\":24,\"originX\":0.5,\"originY\":0.5,\"color\":[1,1,1,1],\"angle\":0,\"zElevation\":0}}],\"object-types\":[{\"name\":\"tile_1\",\"plugin-id\":\"Sprite\",\"isGlobal\":false,\"editorNewInstanceIsReplica\":true,\"instanceVariables\":[],\"behaviorTypes\":[],\"effectTypes\":[],\"animations\":{\"items\":[{\"frames\":[{\"width\":16,\"height\":16,\"originX\":0.5,\"originY\":0.5,\"originalSource\":\"\",\"exportFormat\":\"lossless\",\"exportQuality\":0.8,\"fileType\":\"image/png\",\"imageDataIndex\":0,\"useCollisionPoly\":true,\"duration\":1,\"tag\":\"\"}],\"name\":\"Animation 1\",\"isLooping\":false,\"isPingPong\":false,\"repeatCount\":1,\"repeatTo\":0,\"speed\":5}],\"subfolders\":[],\"name\":\"Animations\"}}],\"imageData\":[\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAANQTFRFAAAAp3o92gAAAAxJREFUCNdjYCANAAAAMAABx6qFjgAAAABJRU5ErkJggg==\"]}{\"is-c3-clipboard-data\":true,\"type\":\"world-instances\",\"items\":[{\"type\":\"tile_1\",\"properties\":{\"initially-visible\":true,\"initial-animation\":\"Animation 1\",\"initial-frame\":0,\"enable-collisions\":true,\"live-preview\":false},\"tags\":\"\",\"instanceVariables\":{},\"behaviors\":{},\"instanceFolderItem\":{\"sid\":761420409117862,\"expanded\":true},\"showing\":true,\"locked\":false,\"world\":{\"x\":336,\"y\":240,\"width\":24,\"height\":24,\"originX\":0.5,\"originY\":0.5,\"color\":[1,1,1,1],\"angle\":0,\"zElevation\":0}}],\"object-types\":[{\"name\":\"tile_1\",\"plugin-id\":\"Sprite\",\"isGlobal\":false,\"editorNewInstanceIsReplica\":true,\"instanceVariables\":[],\"behaviorTypes\":[],\"effectTypes\":[],\"animations\":{\"items\":[{\"frames\":[{\"width\":16,\"height\":16,\"originX\":0.5,\"originY\":0.5,\"originalSource\":\"\",\"exportFormat\":\"lossless\",\"exportQuality\":0.8,\"fileType\":\"image/png\",\"imageDataIndex\":0,\"useCollisionPoly\":true,\"duration\":1,\"tag\":\"\"}],\"name\":\"Animation 1\",\"isLooping\":false,\"isPingPong\":false,\"repeatCount\":1,\"repeatTo\":0,\"speed\":5}],\"subfolders\":[],\"name\":\"Animations\"}}],\"imageData\":[\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAQMAAAAlPW0iAAAABGdBTUEAALGPC/xhBQAAAANQTFRFAAAAp3o92gAAAAxJREFUCNdjYCANAAAAMAABx6qFjgAAAABJRU5ErkJggg==\"]}",
 						"hasStepped": false
 					},
 					"behaviors": {},
@@ -3472,43 +3472,6 @@
 						"enable-collisions": true,
 						"live-preview": false
 					},
-					"uid": 1064,
-					"sid": 769840234977615,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 769840234977615,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 312,
-						"y": 264,
-						"width": 24,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "tile_1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
 					"uid": 1065,
 					"sid": 667916579297175,
 					"tags": "",
@@ -3707,43 +3670,6 @@
 					"locked": false,
 					"world": {
 						"x": 288,
-						"y": 240,
-						"width": 24,
-						"height": 24,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
-					"type": "tile_1",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 1071,
-					"sid": 761420409117862,
-					"tags": "",
-					"instanceVariables": {},
-					"behaviors": {},
-					"instanceFolderItem": {
-						"sid": 761420409117862,
-						"expanded": true
-					},
-					"showing": true,
-					"locked": false,
-					"world": {
-						"x": 336,
 						"y": 240,
 						"width": 24,
 						"height": 24,
@@ -4613,6 +4539,80 @@
 						"height": 38,
 						"originX": 0.4375,
 						"originY": 0.8157894736842105,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tile_1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1071,
+					"sid": 408995539019639,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 408995539019639,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 336,
+						"y": 240,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "tile_1",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Animation 1",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 1064,
+					"sid": 150355875276994,
+					"tags": "",
+					"instanceVariables": {},
+					"behaviors": {},
+					"instanceFolderItem": {
+						"sid": 150355875276994,
+						"expanded": true
+					},
+					"showing": true,
+					"locked": false,
+					"world": {
+						"x": 312,
+						"y": 264,
+						"width": 24,
+						"height": 24,
+						"originX": 0.5,
+						"originY": 0.5,
 						"color": [
 							1,
 							1,
